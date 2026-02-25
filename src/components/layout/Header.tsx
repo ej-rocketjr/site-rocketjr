@@ -1,13 +1,21 @@
+'use client';
+
 import Image from "next/image";
 import LogoRocket from "@/assets/logo-rocket.svg";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
+
+  const isActive = (href: string) => pathname === href;
+
   return (
-    <header className="w-full bg-black">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <header className="w-full bg-white dark:bg-black">
+      <div className="flex items-center justify-between py-16 px-8 gap-8">
         
         {/* Logo - Esquerda */}
-        <div className="flex-shrink-0">
+        <div className="flex-shrink-0 ml-2">
           <Image
             src={LogoRocket}
             alt="Logo Rocket JR"
@@ -19,40 +27,68 @@ export default function Navbar() {
 
         {/* Navbar - Centro */}
         <nav className="flex-1 flex justify-center">
-          <ul className="flex gap-8 text-white font-medium">
+          <ul className="flex gap-8 text-black dark:text-white font-medium text-2xl">
             <li>
-              <a href="/" className="hover:text-red-600 transition-colors duration-200">
+              <Link 
+                href="/" 
+                className={`transition-colors duration-200 ${
+                  isActive('/') ? 'text-red-600' : 'hover:text-red-600'
+                }`}
+              >
                 Início
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/servicos" className="hover:text-red-600 transition-colors duration-200">
+              <Link 
+                href="/servicos" 
+                className={`transition-colors duration-200 ${
+                  isActive('/servicos') ? 'text-red-600' : 'hover:text-red-600'
+                }`}
+              >
                 Serviços
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/quem-somos" className="hover:text-red-600 transition-colors duration-200">
+              <Link 
+                href="/quem-somos" 
+                className={`transition-colors duration-200 ${
+                  isActive('/quem-somos') ? 'text-red-600' : 'hover:text-red-600'
+                }`}
+              >
                 Quem Somos
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:text-red-600 transition-colors duration-200">
+              <Link 
+                href="#" 
+                className={`transition-colors duration-200 hover:text-red-600`}
+              >
                 Clientes
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/contato" className="hover:text-red-600 transition-colors duration-200">
+              <Link 
+                href="/contato" 
+                className={`transition-colors duration-200 ${
+                  isActive('/contato') ? 'text-red-600' : 'hover:text-red-600'
+                }`}
+              >
                 Contato
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
 
-        {/* Botão - Direita */}
+        {/* PS Rocket Jr - Link */}
         <div className="flex-shrink-0">
-          <button className="border border-red-600 text-red-600 px-5 py-2 rounded-md font-medium transition-all duration-200 hover:bg-red-600 hover:text-white">
+          <Link 
+            href="https://forms.gle/seu-formulario-aqui" 
+            className="text-2xl text-red-600 font-medium transition-colors duration-200 hover:text-black dark:hover:text-white"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             PS Rocket Jr
-          </button>
+          </Link>
         </div>
 
       </div>
