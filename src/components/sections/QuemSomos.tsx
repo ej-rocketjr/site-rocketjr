@@ -1,32 +1,44 @@
 import Image from "next/image";
 import EquipeRocketFoto from "@/assets/Img_EquipeRocketJR_Section_QuemSomos.png"
-import FogueteAnimado from "@/assets/Foguete_Animado_Section_QuemSomos.svg"
+
+
+
 
 
 function QuemSomos() {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center bg-[#000000] gap-5">
-      <h1 className="text-3xl text-color-[#FFFFFF] font-bold text-center mb-4">Quem Somos</h1>
+    
 
-       <Image className="z-0 mt-6"
-        src={FogueteAnimado}
-        alt="Foguete vermelho com animação da RocketJR"
-      />
+      <section className="min-h-screen flex flex-col justify-center items-center bg-[#000000] gap-5   bg-[url('/Foguete_Animado_Section_QuemSomos.svg'),url('/Logo_Rocket_Animada_Section_QuemSomos.svg')]
+      bg-position-[left_top_26rem,right_bottom_26rem]
+      md:bg-position-[left_top_33rem,right_bottom_32rem] 
+      lg:bg-position-[left_top_20rem,right_bottom_14rem] 
+      bg-no-repeat bg-contain z-0 animate-background-flow">
+        
+        
 
-      <Image className="mt-6 w-2xl h-[27.6 rem] "
+        <h1 className="text-3xl text-color-[#FFFFFF] font-bold text-center mb-4">Quem Somos</h1>
+      
+
+      
+
+        <Image className="mt-6 w-xs h-56 md:w-sm md:h-[14.8rem] 
+        lg:w-2xl lg:h-[27.6rem] "
         src={EquipeRocketFoto}
         alt="Foto da equipe RocketJR"
-      />
-
-     
+        />
 
 
-      <p className="mt-8 text-center text-xl text-red-600">ATENÇÃO TEXTO DE EXEMPLO (AINDA NÃO TEM O TEXTO OFICIAL DO SITE) <br /></p>
-      <p className="text-center text-xl text-color-[#E7E7E7]">
-        Somos uma empresa apaixonada por tecnologia e inovação.<br></br>Nossa missão é transformar ideias em soluções digitais que impulsionam negócios.
-      </p>
+        <p className="mt-6 text-center text-[10px] md:text-sm lg:text-base text-color-[#E7E7E7]">
+        A Rocket Júnior (RJR) É A Empresa Júnior do Curso De Sistemas De Informação Do Campos Arapiraca - Unidade Educacional De Penedo.Somos Um Time De Estudantes Apaixonados Por Tecnologia E Inovação,Que Aplicam Na Prática Os Conhecimentos Adquiridos Em Sala De Aula Para Desenvolver Soluções Digitais Para O Mercado. Nosso Principal Objetivo É Proporcionar Aos Nossos Membros Uma Experiência Empresarial Real, Preparando-Os Para Os Desafios Do Mercado De Trabalho E Impulsionando Suas Carreiras!
+        </p>
+
+        
       
-    </section>
+      </section> 
+
+ 
+
   );
 }
 export default QuemSomos;
