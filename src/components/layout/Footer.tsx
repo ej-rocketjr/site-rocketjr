@@ -1,13 +1,20 @@
+<<<<<<< HEAD
 
 "use client";
+=======
+'use client';
+>>>>>>> baecad9 (feat/style: implementa funcionalidade de voltar ao topo da página e criação do footer)
 
 import Image from "next/image"
 import { Instagram } from 'lucide-react';
 import { Linkedin } from 'lucide-react';
+<<<<<<< HEAD
 import logoCircular from "@/assets/logo-circular-rocket.svg";
 import mascote from "@/assets/mascote-rocket-jr.svg";
 import rocketLogoHorizontal from "@/assets/rocket-logo-horizontal.svg";
 import setaVermelha from "@/assets/seta-vermelha.svg";
+=======
+>>>>>>> baecad9 (feat/style: implementa funcionalidade de voltar ao topo da página e criação do footer)
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -15,6 +22,7 @@ export default function Footer() {
   };
 
   return (
+<<<<<<< HEAD
     <footer className="flex flex-col bg-zinc-900 px-4 pt-4 text-white text-center justify-center">
       <div className="flex flex-col justify-center items-center mt-4">
         <div className="flex flex-row items-start gap-8 w-full justify-between">
@@ -24,6 +32,17 @@ export default function Footer() {
               <span className="text-xs">IR PARA O TOPO</span>
               <Image
                 src={setaVermelha}
+=======
+    <footer className="flex flex-col bg-zinc-900 pl-4 pt-4 pr-4 text-white text-center justify-center">
+      <div className="flex flex-col justify-center items-center mt-4">
+        <div className="flex flex-row items-start gap-8 w-full justify-between">
+          <div className="flex-1"></div>
+          <div className="flex flex-col justify-center items-center gap-20 flex-1">
+            <button onClick={scrollToTop} className="flex flex-row justify-center items-center w-fit gap-2 p-3 rounded-4xl border-1 border-red-600 cursor-pointer">
+              <span className="text-xs">IR PARA O TOPO</span>
+              <Image
+                src="/seta-vermelha.svg"
+>>>>>>> baecad9 (feat/style: implementa funcionalidade de voltar ao topo da página e criação do footer)
                 alt="Descrição da Imagem"
                 width={10}
                 height={300}
@@ -31,6 +50,7 @@ export default function Footer() {
             </button>
 
             <Image
+<<<<<<< HEAD
               src={rocketLogoHorizontal}
               alt="Logo da RocketJR"
               width={800}
@@ -61,11 +81,47 @@ export default function Footer() {
                 <Linkedin />
                 <a href="https://www.linkedin.com/company/rocket-jr/posts/?feedView=all" className="hover:text-red-500 transition-colors text-gray-300">@rocketjr</a>
               </div>
+=======
+              src="/rocket-logo-horizontal.svg"
+              alt="Logo da RocketJR"
+              width={800}
+              height={300}
+              className="mt-4"
+            />
+          </div>
+          <div className="flex flex-1 justify-end gap-10">
+            <div className="flex flex-col gap-1 text-sm text-left">
+              <span className="font-bold text-white">MENU</span>
+              <a href="#" className="hover:text-red-500 transition-colors text-gray-300">Início</a>
+              <a href="#" className="hover:text-red-500 transition-colors text-gray-300">Serviços</a>
+              <a href="#" className="hover:text-red-500 transition-colors text-gray-300">Quem Somos</a>
+              <a href="#" className="hover:text-red-500 transition-colors text-gray-300">Clientes</a>
+              <a href="#" className="hover:text-red-500 transition-colors text-gray-300">Contato</a>
+            </div>
+            <div className="flex flex-col gap-1 text-sm text-left">
+              <span className="font-bold text-white">REDES SOCIAIS</span>
+              <div className="flex gap-1 items-center">
+                <Instagram />
+                <a href="#" className="hover:text-red-500 transition-colors text-gray-300">@rocketjroficial</a>
+              </div>
+
+              <div className="flex gap-1 items-center">
+                <Instagram />
+                <a href="#" className="hover:text-red-500 transition-colors text-gray-300">@foguetinhos.ej</a>
+              </div>
+
+              <div className="flex gap-1 items-center">
+                <Linkedin />
+                <a href="#" className="hover:text-red-500 transition-colors text-gray-300">@rocketjr</a>
+              </div>
+
+>>>>>>> baecad9 (feat/style: implementa funcionalidade de voltar ao topo da página e criação do footer)
             </div>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
       <div className="flex md:hidden flex-col gap-1 text-sm text-left mt-10 px-2">
         <span className="font-bold text-white">REDES SOCIAS</span>
         <div className="flex gap-1 items-center">
@@ -86,19 +142,33 @@ export default function Footer() {
         <div className="flex">
           <Image
             src={logoCircular}
+=======
+      <div className="flex justify-between">
+        <div className="flex">
+          <Image
+            src="/logo-circular-rocket.svg"
+>>>>>>> baecad9 (feat/style: implementa funcionalidade de voltar ao topo da página e criação do footer)
             alt="Logo da RocketJR"
             width={100}
             height={300}
             className="mt-4"
           />
+<<<<<<< HEAD
           <Image
             src={mascote}
             alt="Mascote RocketJR"
+=======
+
+          <Image
+            src="/mascote-rocket-jr.svg"
+            alt="Logo da RocketJR"
+>>>>>>> baecad9 (feat/style: implementa funcionalidade de voltar ao topo da página e criação do footer)
             width={250}
             height={300}
             className="mt-4"
           />
         </div>
+<<<<<<< HEAD
         <div className="flex items-end gap-4 text-xs mb-5 text-white">
           <a href="https://www.rocketjr.com.br/politica-de-privacidade" className="hover:text-red-500 transition-colors text-white">Política de Privacidade</a>
           <a href="https://www.rocketjr.com.br/termos-de-servico" className="hover:text-red-500 transition-colors text-white">Termos de Serviço</a>
@@ -130,6 +200,14 @@ export default function Footer() {
           />
         </div>
       </div>
+=======
+        <div className="flex items-end gap-4">
+          <a href="">Política de Privacidade</a>
+          <a href="">Termos de Serviço</a>
+          <span className="mt-4">2026 ROCKETJR All Rights Reserved.</span>
+        </div>
+      </div>
+>>>>>>> baecad9 (feat/style: implementa funcionalidade de voltar ao topo da página e criação do footer)
     </footer>
   )
 }
