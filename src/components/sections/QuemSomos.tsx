@@ -9,8 +9,10 @@ function QuemSomos() {
   return (
     
 
-      <section className="min-h-screen flex flex-col justify-center items-center bg-[#000000] gap-5   bg-[url('/Foguete_Animado_Section_QuemSomos.svg'),url('/Logo_Rocket_Animada_Section_QuemSomos.svg')] 
-      bg-position-[left_top_210px,right_center] 
+      <section className="min-h-screen flex flex-col justify-center items-center bg-[#000000] gap-5   bg-[url('/Foguete_Animado_Section_QuemSomos.svg'),url('/Logo_Rocket_Animada_Section_QuemSomos.svg')]
+      bg-position-[left_top_26rem,right_bottom_26rem]
+      md:bg-position-[left_top_33rem,right_bottom_32rem] 
+      lg:bg-position-[left_top_20rem,right_bottom_14rem] 
       bg-no-repeat bg-contain z-0 animate-background-flow">
         
         
@@ -20,14 +22,14 @@ function QuemSomos() {
 
       
 
-        <Image className="mt-6 w-sm h-[14.8rem] 
+        <Image className="mt-6 w-xs h-56 md:w-sm md:h-[14.8rem] 
         lg:w-2xl lg:h-[27.6rem] "
         src={EquipeRocketFoto}
         alt="Foto da equipe RocketJR"
         />
 
 
-        <p className="text-center text-[14px] lg:text-base text-color-[#E7E7E7]">
+        <p className="mt-6 text-center text-[10px] md:text-sm lg:text-base text-color-[#E7E7E7]">
         A Rocket Júnior (RJR) É A Empresa Júnior do Curso De Sistemas De Informação Do Campos Arapiraca - Unidade Educacional De Penedo.Somos Um Time De Estudantes Apaixonados Por Tecnologia E Inovação,Que Aplicam Na Prática Os Conhecimentos Adquiridos Em Sala De Aula Para Desenvolver Soluções Digitais Para O Mercado. Nosso Principal Objetivo É Proporcionar Aos Nossos Membros Uma Experiência Empresarial Real, Preparando-Os Para Os Desafios Do Mercado De Trabalho E Impulsionando Suas Carreiras!
         </p>
 
