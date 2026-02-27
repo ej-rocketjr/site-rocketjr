@@ -8,30 +8,32 @@ import EquipeRocketFoto from "@/assets/Img_EquipeRocketJR_Section_QuemSomos.png"
 function QuemSomos() {
   return (
     
-      <section className="min-h-screen flex flex-col justify-center items-center bg-[#000000] gap-5 bg-[url('/Foguete_Animado_Section_QuemSomos.svg'),url('/Logo_Rocket_Animada_Section_QuemSomos.svg')] 
-      bg-center bg-no-repeat z-0">
+
+      <section className="min-h-screen flex flex-col justify-center items-center bg-[#000000] gap-5">
+        
+        
 
         <h1 className="text-3xl text-color-[#FFFFFF] font-bold text-center mb-4">Quem Somos</h1>
       
 
       
 
-        <Image className="mt-6 w-2xl h-[27.6 rem] "
+        <Image className="mt-6 w-sm h-[14.8rem] 
+        lg:w-2xl lg:h-[27.6rem] "
         src={EquipeRocketFoto}
         alt="Foto da equipe RocketJR"
         />
 
-     
 
-
-        <p className="mt-8 text-center text-xl text-red-600">ATENÇÃO TEXTO DE EXEMPLO (AINDA NÃO TEM O TEXTO OFICIAL DO SITE) <br /></p>
-        <p className="text-center text-xl text-color-[#E7E7E7]">
-        Somos uma empresa apaixonada por tecnologia e inovação.<br></br>Nossa missão é transformar ideias em soluções digitais que impulsionam negócios.
+        <p className="text-center lg:text-base text-color-[#E7E7E7]">
+        A Rocket Júnior (RJR) É A Empresa Júnior do Curso De Sistemas De Informação Do Campos Arapiraca - Unidade Educacional De Penedo.Somos Um Time De Estudantes Apaixonados Por Tecnologia E Inovação,Que Aplicam Na Prática Os Conhecimentos Adquiridos Em Sala De Aula Para Desenvolver Soluções Digitais Para O Mercado.Nosso Principal Objetivo É Proporcionar Aos Nossos Membros Uma Experiência Empresarial Real, Preparando-Os Para Os Desafios Do Mercado De Trabalho E Impulsionando Suas Carreiras!
         </p>
 
+        
       
-      
-      </section>  
+      </section> 
+
+ 
 
   );
 }
