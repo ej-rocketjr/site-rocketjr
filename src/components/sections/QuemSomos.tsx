@@ -9,10 +9,10 @@ function QuemSomos() {
   return (
     
 
-      <section className="min-h-screen flex flex-col justify-center items-center bg-[#000000] gap-5   bg-[url('/Foguete_Animado_Section_QuemSomos.svg'),url('/Logo_Rocket_Animada_Section_QuemSomos.svg')]
+      <section className="min-h-screen flex flex-col justify-center items-center bg-[#000000] gap-5 bg-[url('/Foguete_Animado_Section_QuemSomos.svg'),url('/Logo_Rocket_Animada_Section_QuemSomos.svg')]
       bg-position-[left_top_26rem,right_bottom_26rem]
       md:bg-position-[left_top_33rem,right_bottom_32rem] 
-      lg:bg-position-[left_top_20rem,right_bottom_14rem] 
+      lg:bg-position-[left_top_20rem,right_bottom_16rem] 
       bg-no-repeat bg-contain z-0 animate-background-flow">
         
         
