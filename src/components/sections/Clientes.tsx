@@ -32,7 +32,7 @@ export default function Clientes() {
 
         <h2 className="sm:ml-10 text-black dark:text-white text-center text-2xl sm:text-3xl  lg:text-5xl font-thin">Eduardo Palmeira</h2>
 
-        <Image className="mt-10 w-2xs h-xl lg:w-xs lg:h-2xl px-16  ml-8 sm:px-14 lg:px-8 sm:mr-8 lg:ml-30"
+        <Image className="mt-10 w-xs h-xs sm:w-sm sm:h-sm lg:w-lg lg:h-lg px-16  ml-8 sm:px-14 lg:px-8 sm:mr-8 lg:ml-30"
           id="imgViewer"
           src={imagens[indice]}
           alt="Imagem do celular em pé mostrando o site do cliente Eduardo Palmeira"
