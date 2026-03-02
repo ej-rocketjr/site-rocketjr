@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono,Poppins } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,6 +12,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 export const metadata: Metadata = {
   title: "RocketJR - Empresa Júnior de Sistemas de Informação",
   description: "A RocketJR é uma Empresa Júnior de Sistemas de Informação da UFAL especializada em desenvolvimento web, landing pages e soluções digitais personalizadas.",
@@ -25,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable}${poppins.variable} antialiased`}
       >
         {children}
       </body>
