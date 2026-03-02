@@ -2,13 +2,13 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import EduardoPalmeiraCelularEmPe from "@/assets/Eduardo_Palmeira_Section_Nossos_Clientes_Celular_em_Pe.svg"
+import EduardoPalmeira from "@/assets/Eduardo_Palmeira_Section_Nossos_Clientes.svg"
 
 
 export default function Clientes() {
 
   // Lista de imagens do slider
-    const imagens = [EduardoPalmeiraCelularEmPe];
+    const imagens = [EduardoPalmeira];
     const [indice, setIndice] = useState(0);
 
     function nextImage() {
