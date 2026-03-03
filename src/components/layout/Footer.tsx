@@ -17,10 +17,6 @@ import setaVermelha from "@/assets/seta-vermelha.svg";
 >>>>>>> baecad9 (feat/style: implementa funcionalidade de voltar ao topo da página e criação do footer)
 
 export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
 <<<<<<< HEAD
     <footer className="flex flex-col bg-zinc-900 px-4 pt-4 text-white text-center justify-center">
