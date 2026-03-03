@@ -115,10 +115,10 @@ export default function Servicos() {
             spaceBetween: 28,
           },
         }}
-        className="cards-swiper !pl-3 sm:!pl-6 md:!pl-10 lg:!pl-12"
+        className="cards-swiper pl-3! sm:pl-6! md:pl-10! lg:pl-12!"
       >
         {cards.map((card, index) => (
-          <SwiperSlide key={index} className="!h-auto">
+          <SwiperSlide key={index} className="h-auto!">
             <Card
               icon={card.icon}
               title={card.title}
