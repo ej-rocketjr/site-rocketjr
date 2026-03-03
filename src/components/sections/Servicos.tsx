@@ -62,9 +62,9 @@ const cards = [
 
 export default function Servicos() {
   return (
-    <section className="bg-black min-h-100 py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
+    <section className="bg-white dark:bg-black min-h-100 py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
-        <h2 className="mx-auto text-center text-white text-xl sm:text-2xl lg:text-3xl font-medium mb-8 sm:mb-10 lg:mb-12 max-w-150">
+        <h2 className="mx-auto text-center text-black dark:text-white text-xl sm:text-2xl lg:text-3xl font-medium mb-8 sm:mb-10 lg:mb-12 max-w-150">
           Transformamos suas ideias em soluções digitais inovadoras
         </h2>
       </div>
