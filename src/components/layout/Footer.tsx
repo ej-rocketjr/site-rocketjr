@@ -92,7 +92,7 @@ export default function Footer() {
           <div className="hidden md:flex flex-1 justify-end gap-10">
             <div className="flex flex-col gap-1 text-sm text-left">
               <span className="font-bold text-white">MENU</span>
-              <a href="#hero" className="hover:text-red-500 transition-colors text-gray-300">Início</a>
+              <a href="#" className="hover:text-red-500 transition-colors text-gray-300">Início</a>
               <a href="#" className="hover:text-red-500 transition-colors text-gray-300">Serviços</a>
               <a href="#" className="hover:text-red-500 transition-colors text-gray-300">Quem Somos</a>
               <a href="#" className="hover:text-red-500 transition-colors text-gray-300">Clientes</a>
