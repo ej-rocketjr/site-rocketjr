@@ -7,6 +7,8 @@ import iconIdeia from "@/assets/icon-ideia.svg";
 import iconFoguete from "@/assets/icon-foguete.svg";
 import iconEcommerce from "@/assets/icon-ecommerce.svg";
 import iconDigital from "@/assets/icon-digital.svg";
+import Image from "next/image";
+import rocketRaccon from "@/assets/mascote-rocket-jr.svg";
 
 import "swiper/css";
 
@@ -62,9 +64,9 @@ const cards = [
 
 export default function Servicos() {
   return (
-    <section className="bg-white dark:bg-black min-h-100 py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
+    <section className="bg-white dark:bg-black min-h-100 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
-        <h2 className="mx-auto text-center text-black dark:text-white text-xl sm:text-2xl lg:text-3xl font-medium mb-8 sm:mb-10 lg:mb-12 max-w-150">
+        <h2 className="mx-auto uppercase text-center text-black dark:text-white text-xl sm:text-2xl lg:text-3xl font-medium mb-8 sm:mb-10 lg:mb-12 max-w-190">
           Transformamos suas ideias em soluções digitais inovadoras
         </h2>
       </div>
@@ -130,6 +132,18 @@ export default function Servicos() {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      <div className="hidden lg:flex max-w-7xl mx-auto mt-12 sm:mt-16 lg:mt-20 items-center gap-8">
+        <article>
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+        </article>
+        <Image
+          src={rocketRaccon}
+          alt="Ideia"
+          width={2000}
+          height={60}
+        />
+      </div>
     </section>
   );
 }
