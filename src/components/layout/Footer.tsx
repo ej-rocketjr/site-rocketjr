@@ -3,6 +3,10 @@
 import Image from "next/image"
 import { Instagram } from 'lucide-react';
 import { Linkedin } from 'lucide-react';
+import logoCircular from "@/assets/logo-circular-rocket.svg";
+import mascote from "@/assets/mascote-rocket-jr.svg";
+import rocketLogoHorizontal from "@/assets/rocket-logo-horizontal.svg";
+import setaVermelha from "@/assets/seta-vermelha.svg";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -18,7 +22,7 @@ export default function Footer() {
             <button onClick={scrollToTop} className="flex flex-row justify-center items-center w-fit gap-2 p-3 rounded-4xl border border-red-600 cursor-pointer">
               <span className="text-xs">IR PARA O TOPO</span>
               <Image
-                src="/seta-vermelha.svg"
+                src={setaVermelha}
                 alt="Descrição da Imagem"
                 width={10}
                 height={300}
@@ -26,7 +30,7 @@ export default function Footer() {
             </button>
 
             <Image
-              src="/rocket-logo-horizontal.svg"
+              src={rocketLogoHorizontal}
               alt="Logo da RocketJR"
               width={800}
               height={300}
@@ -36,7 +40,7 @@ export default function Footer() {
           <div className="hidden md:flex flex-1 justify-end gap-10">
             <div className="flex flex-col gap-1 text-sm text-left">
               <span className="font-bold text-white">MENU</span>
-              <a href="#hero" className="hover:text-red-500 transition-colors text-gray-300">Início</a>
+              <a href="#" className="hover:text-red-500 transition-colors text-gray-300">Início</a>
               <a href="#" className="hover:text-red-500 transition-colors text-gray-300">Serviços</a>
               <a href="#" className="hover:text-red-500 transition-colors text-gray-300">Quem Somos</a>
               <a href="#" className="hover:text-red-500 transition-colors text-gray-300">Clientes</a>
@@ -80,14 +84,14 @@ export default function Footer() {
       <div className="hidden md:flex justify-between">
         <div className="flex">
           <Image
-            src="/logo-circular-rocket.svg"
+            src={logoCircular}
             alt="Logo da RocketJR"
             width={100}
             height={300}
             className="mt-4"
           />
           <Image
-            src="/mascote-rocket-jr.svg"
+            src={mascote}
             alt="Mascote RocketJR"
             width={250}
             height={300}
@@ -104,7 +108,7 @@ export default function Footer() {
       <div className="flex md:hidden relative mt-6">
         <div className="flex items-end gap-3 pb-4 z-10">
           <Image
-            src="/logo-circular-rocket.svg"
+            src={logoCircular}
             alt="Logo da RocketJR"
             width={60}
             height={60}
@@ -117,7 +121,7 @@ export default function Footer() {
         </div>
         <div className="absolute bottom-0 right-0">
           <Image
-            src="/mascote-rocket-jr.svg"
+            src={mascote}
             alt="Mascote RocketJR"
             width={180}
             height={250}
