@@ -7,6 +7,7 @@ import iconIdeia from "@/assets/icon-ideia.svg";
 import iconFoguete from "@/assets/icon-foguete.svg";
 import iconEcommerce from "@/assets/icon-ecommerce.svg";
 import iconDigital from "@/assets/icon-digital.svg";
+import iconDados from "@/assets/icon-dados.svg";
 import Image from "next/image";
 import rocketRaccon from "@/assets/mascote-rocket-jr.svg";
 
@@ -51,7 +52,7 @@ const cards = [
   },
 
   {
-    icon: iconDigital,
+    icon: iconDados,
     title: "Dados que Guiam Decisões Lucrativas",
     description:
       "Transformamos dados brutos em insights estratégicos, ajudando sua empresa a tomar decisões baseadas em números, não em achismos.",
@@ -59,7 +60,6 @@ const cards = [
     ctaHref: "#contato",
     cutSide: "right" as const,
   },
-
 ];
 
 export default function Servicos() {
@@ -135,14 +135,16 @@ export default function Servicos() {
 
       <div className="hidden lg:flex max-w-7xl mx-auto mt-12 sm:mt-16 lg:mt-20 items-center gap-8">
         <article>
-          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+          <span>Impulsionamos negócios por meio de soluções digitais estratégicas e
+            orientadas a resultado. Desenvolvemos sites, landing pages e
+            e-commerces com foco em performance e conversão. Cada projeto é
+            pensado para fortalecer sua marca e gerar vantagem competitiva.
+            Unimos tecnologia, estratégia e experiência do usuário em cada
+            entrega. Se a sua meta é crescer no digital, nós construímos o
+            caminho.
+            </span>
         </article>
-        <Image
-          src={rocketRaccon}
-          alt="Ideia"
-          width={2000}
-          height={60}
-        />
+        <Image src={rocketRaccon} alt="Ideia" width={2000} height={60} />
       </div>
     </section>
   );
