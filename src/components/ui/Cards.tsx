@@ -63,6 +63,8 @@ export default function Card({
           className="absolute inset-0 w-full h-full pointer-events-none"
           viewBox={`0 0 ${size.w} ${size.h}`}
           preserveAspectRatio="none"
+          aria-hidden="true"
+          focusable="false"
         >
           <defs>
             <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
@@ -108,6 +110,7 @@ export default function Card({
           </div>
           {description.length > 150 && (
             <button
+              type="button"
               onClick={() => setExpanded(!expanded)}
               className="text-red-500 text-xs font-semibold mt-2 hover:text-red-400 transition-colors flex items-center gap-1 self-start shrink-0"
             >

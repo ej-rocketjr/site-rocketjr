@@ -119,8 +119,8 @@ export default function Servicos() {
         }}
         className="cards-swiper pl-3! sm:pl-6! md:pl-10! lg:pl-12!"
       >
-        {cards.map((card, index) => (
-          <SwiperSlide key={index} className="h-auto!">
+        {cards.map((card) => (
+          <SwiperSlide key={card.title} className="h-auto!">
             <Card
               icon={card.icon}
               title={card.title}
