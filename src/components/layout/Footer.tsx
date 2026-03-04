@@ -9,10 +9,6 @@ import rocketLogoHorizontal from "@/assets/rocket-logo-horizontal.svg";
 import setaVermelha from "@/assets/seta-vermelha.svg";
 
 export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
     <footer className="flex flex-col bg-zinc-900 px-4 pt-4 text-white text-center justify-center">
       <div className="flex flex-col justify-center items-center mt-4">
