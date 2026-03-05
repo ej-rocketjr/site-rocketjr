@@ -66,10 +66,6 @@ function Servicos() {
   return (
     <section className="bg-white dark:bg-black min-h-100 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-        <h2 className="text-center text-white text-3xl font-bold mb-12">Quem Somos</h2>
-        {/* Adicione os logos/cards dos clientes aqui */}
-=======
         <h2 className="mx-auto uppercase text-center text-black dark:text-white text-xl sm:text-2xl lg:text-3xl font-medium mb-8 sm:mb-10 lg:mb-12 max-w-190">
           Transformamos suas ideias em soluções digitais inovadoras
         </h2>
@@ -149,7 +145,6 @@ function Servicos() {
             </span>
         </article>
         <Image src={rocketRaccon} alt="Ideia" width={2000} height={60} />
->>>>>>> aeff1338d4e95f9f2a105dee71d390922229b796
       </div>
     </section>
   );
