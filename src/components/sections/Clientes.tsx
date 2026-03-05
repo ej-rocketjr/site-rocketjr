@@ -23,8 +23,8 @@ export default function Clientes() {
   return (
 
     <section className="relative w-full overflow-x-hidden min-h-screen flex flex-col justify-center items-center bg-white dark:bg-[#000000] gap-5 sm:pb-2 lg:pb-50 py-20 px-6">
-      
-      
+
+
       <h1 className="text-center text-black dark:text-white text-3xl font-bold mb-12">Nossos Clientes</h1>
 
 
@@ -47,7 +47,7 @@ export default function Clientes() {
 
               onClick={prevImage}
               className="px-4 py-2 w-16 h-16  rounded-[50%] bg-[url('/Bottom_Anterior_Section_Nossos_Clientes.svg')] bg-no-repeat bg-center">
-              
+
             </button>
 
           </div>
@@ -59,7 +59,7 @@ export default function Clientes() {
           <button
               onClick={nextImage}
               className="px-4 py-2 w-16 h-16 rounded-[50%] bg-[url('/Bottom_Proximo_Section_Nossos_Clientes.svg')] bg-no-repeat bg-center">
-              
+
           </button>
 
       </div>

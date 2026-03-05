@@ -163,3 +163,5 @@ export default function Servicos() {
         </section>
     );
 }
+export default Servicos;
+
