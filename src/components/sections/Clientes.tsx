@@ -1,4 +1,4 @@
-/** 
+/**
  * Aqui faz os imports. Exemplo:
  * import Image from "next/image";
  * import LogoRocket from "@/assets/logo-rocket.svg"

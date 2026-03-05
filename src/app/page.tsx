@@ -7,6 +7,6 @@ export default function Home() {
     <main>
       <Hero />
       <Servicos />
-    </main> 
+    </main>
   );
 }
