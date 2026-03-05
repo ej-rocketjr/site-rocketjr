@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "biome lint"
+    "lint": "biome lint src"
   },
   "dependencies": {
     "lucide-react": "^0.577.0",

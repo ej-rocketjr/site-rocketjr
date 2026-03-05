@@ -18,9 +18,9 @@ export default function Footer() {
     <footer className="flex flex-col bg-zinc-900 px-4 pt-4 text-white text-center justify-center">
       <div className="flex flex-col justify-center items-center mt-4">
         <div className="flex flex-row items-start gap-8 w-full justify-between">
-          <div className="hidden md:flex flex-1"></div>
+          <div className="hidden md:flex flex-1" />
           <div className="flex flex-col justify-center items-center gap-10 md:gap-20 flex-1">
-            <button onClick={scrollToTop} className="flex flex-row justify-center items-center w-fit gap-2 p-3 rounded-4xl border border-red-600 cursor-pointer">
+            <button type="button" onClick={scrollToTop} className="flex flex-row justify-center items-center w-fit gap-2 p-3 rounded-4xl border border-red-600 cursor-pointer">
               <span className="text-xs">IR PARA O TOPO</span>
               <Image
                 src={setaVermelha}
@@ -41,11 +41,11 @@ export default function Footer() {
           <div className="hidden md:flex flex-1 justify-end gap-10">
             <div className="flex flex-col gap-1 text-sm text-left">
               <span className="font-bold text-white">MENU</span>
-              <a href="#" className="hover:text-red-500 transition-colors text-gray-300">Início</a>
-              <a href="#" className="hover:text-red-500 transition-colors text-gray-300">Serviços</a>
-              <a href="#" className="hover:text-red-500 transition-colors text-gray-300">Quem Somos</a>
-              <a href="#" className="hover:text-red-500 transition-colors text-gray-300">Clientes</a>
-              <a href="#" className="hover:text-red-500 transition-colors text-gray-300">Contato</a>
+              <a href="/" className="hover:text-red-500 transition-colors text-gray-300">Início</a>
+              <a href="/#servicos" className="hover:text-red-500 transition-colors text-gray-300">Serviços</a>
+              <a href="/quem-somos" className="hover:text-red-500 transition-colors text-gray-300">Quem Somos</a>
+              <a href="/#clientes" className="hover:text-red-500 transition-colors text-gray-300">Clientes</a>
+              <a href="/contato" className="hover:text-red-500 transition-colors text-gray-300">Contato</a>
             </div>
             <div className="flex flex-col gap-1 text-sm text-left">
               <span className="font-bold text-white">REDES SOCIAIS</span>
