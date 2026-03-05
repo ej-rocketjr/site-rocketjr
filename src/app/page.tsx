@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import Image from "next/image";
 import Hero from "@/components/sections/Hero";
+import Servicos from "@/components/sections/Servicos";
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
 =======
     <main>
       <Hero />
+      <Servicos />
     </main> 
 >>>>>>> 4b09484 (refactor: ajustar estrutura do hero)
   );
