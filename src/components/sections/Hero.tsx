@@ -1,42 +1,55 @@
 import Image from "next/image";
 import LogoRocketHero from "@/assets/logo-rocket-hero.svg"
+import LogoRocketHeroWhite from "@/assets/LogoRocket-white.svg"
 import Link from "next/link";
+import { Google_Sans, Darker_Grotesque, Archivo_Black } from "next/font/google";
+
+const googleSans = Google_Sans({ subsets: ["latin"] });
+const darkerGrotesque = Darker_Grotesque({ subsets: ["latin"] });
+const amsiproBold = Archivo_Black({ subsets: ["latin"], weight: "400" });
 
 export default function Hero() {
   return (
-    <section className="bg-white dark:bg-black min-h-[500px] flex flex-col items-center justify-center py-10 sm:py-20">
+    <section className={`bg-white dark:bg-black min-h-[500px] flex flex-col items-center justify-center py-10 sm:py-20 ${darkerGrotesque.className}`}>
       <div className="text-center py-20">
         <Image
-          className="mx-auto mb-12 sm:mb-20"
+          className="hidden dark:block mx-auto mb-12 sm:mb-20 px-4"
           src={LogoRocketHero}
           alt="Logo Rocket JR CTA"
           width={400}
           height={160}
         />
-        <h1 className="text-4xl md:text-6xl font-light font-sans text-black dark:text-white mb-6">
-          Chegou A Hora Da Inovação, Venha Voar Com A Gente
+        <Image
+          className="block dark:hidden mx-auto mb-12 sm:mb-20 px-4"
+          src={LogoRocketHeroWhite}
+          alt="Logo Rocket JR CTA"
+          width={400}
+          height={160}
+        />
+        <h1 className={`text-4xl leading-tight space-y-4 md:text-6xl font-medium text-black dark:text-white mb-6 ${googleSans.className} px-4 md:px-6`}>
+          Chegou a hora da inovação, venha voar com a gente
         </h1>
-        <p className="text-lg sm:text-lg md:text-2xl font-bold text-black dark:text-white mt-8">
+        <p className={`text-lg sm:text-4xl md:text-2xl font-normal text-black dark:text-white mt-8 ${amsiproBold.className}`}>
           Aqui Damos Asas As Suas Ideias
         </p>
       </div>
 
-      <div className="flex items-center justify-center">
+      <div className={`flex items-center justify-center ${darkerGrotesque.className}`}>
         <Link
           href="/contato"
         >
             <button
             type="button"
-            className="bg-gradient-to-r from-red-900 to-red-700 hover:from-red-700 hover:to-gray-900 text-white font-bold py-3 px-6 w-40 rounded-md
-            transition duration-300 ease-in-out transform hover:scale-105">Contato</button>
+            className="text-xl md:text-2xl  lg:text-3xl font-bold bg-gradient-to-r from-red-900 to-red-700 hover:from-red-700 hover:to-gray-900 text-white font-bold py-3 px-6 rounded-md whitespace-nowrap
+            transition duration-300 ease-in-out transform hover:scale-105 ">Contato</button>
         </Link>
         <Link
-          href="/cases"
+          href="#clientes"
         >
             <button
             type="button"
-            className="border-1 border-red-600 text-black dark:text-white font-bold py-3 px-6 w-40 rounded-md
-            transition duration-300 ease-in-out transform hover:scale-105 ml-4">Cases</button>
+            className="text-xl md:text-2xl  lg:text-3xl border-1 border-red-600 text-black dark:text-white font-bold py-3 px-6 rounded-md whitespace-nowrap
+            transition duration-300 ease-in-out transform hover:scale-105 ml-4">Nossos Cases</button>
         </Link>
       </div>
     </section>
