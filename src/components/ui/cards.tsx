@@ -1,137 +1,112 @@
 "use client";
 
-import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
+import Image, { StaticImageData } from "next/image";
 import { ArrowRight } from "lucide-react";
-import { useRef, useEffect, useState, useId } from "react";
 
-interface CardProps {
-  icon: string;
-  title: string;
-  description: string;
-  ctaText: string;
-  ctaHref?: string;
-  cutSide?: "left" | "right";
-}
+type CardsProps = {
+    imgCard: StaticImageData;
+    cardId: string;
+    title: string;
+    description: string;
+    ctaLink: string;
+    ctaText: string;
+    onToggleRead?: (cardId: string, expanded: boolean) => void;
+};
 
-export default function Card({
-  icon,
-  title,
-  description,
-  ctaText,
-  ctaHref = "#",
-  cutSide = "left",
-}: CardProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [size, setSize] = useState({ w: 400, h: 370 });
-  const [expanded, setExpanded] = useState(false);
-  const gradientId = useId();
-  const clipPathId = useId().replace(/:/g, "");
+export default function Cards({
+    imgCard,
+    cardId,
+    title,
+    description,
+    ctaLink,
+    ctaText,
+    onToggleRead,
+}: CardsProps) {
+    const [isExpanded, setIsExpanded] = useState(false);
+    const [hasOverflow, setHasOverflow] = useState(false);
+    const descriptionRef = useRef<HTMLParagraphElement>(null);
 
-  useEffect(() => {
-    const update = () => {
-      if (containerRef.current) {
-        setSize({
-          w: containerRef.current.offsetWidth,
-          h: containerRef.current.offsetHeight,
-        });
-      }
-    };
-    update();
-    window.addEventListener("resize", update);
-    return () => window.removeEventListener("resize", update);
-  }, []);
+    useEffect(() => {
+        function checkOverflow() {
+            const element = descriptionRef.current;
 
-  const r = 16;
-  const cut = 35;
-  const strokeWidth = 2;
-  const inset = strokeWidth / 2;
-  const innerW = Math.max(size.w - strokeWidth, 0);
-  const innerH = Math.max(size.h - strokeWidth, 0);
+            if (!element) {
+                return;
+            }
 
-  const borderPath =
-    cutSide === "left"
-      ? `M ${inset + cut},${inset} L ${inset + innerW - r},${inset} Q ${inset + innerW},${inset} ${inset + innerW},${inset + r} L ${inset + innerW},${inset + innerH - r} Q ${inset + innerW},${inset + innerH} ${inset + innerW - r},${inset + innerH} L ${inset + r},${inset + innerH} Q ${inset},${inset + innerH} ${inset},${inset + innerH - r} L ${inset},${inset + cut} Z`
-      : `M ${inset + r},${inset} L ${inset + innerW - cut},${inset} L ${inset + innerW},${inset + cut} L ${inset + innerW},${inset + innerH - r} Q ${inset + innerW},${inset + innerH} ${inset + innerW - r},${inset + innerH} L ${inset + r},${inset + innerH} Q ${inset},${inset + innerH} ${inset},${inset + innerH - r} L ${inset},${inset + r} Q ${inset},${inset} ${inset + r},${inset} Z`;
+            setHasOverflow(element.scrollHeight > element.clientHeight + 1);
+        }
 
-  return (
-    <div
-      ref={containerRef}
-      className="relative w-full h-[370px] group"
-    >
-      {size.w > 0 && (
-        <svg
-          className="absolute inset-0 w-full h-full pointer-events-none"
-          viewBox={`0 0 ${size.w} ${size.h}`}
-          preserveAspectRatio="none"
-          aria-hidden="true"
-          focusable="false"
-        >
-          <defs>
-            <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
-              <stop offset="100%" stopColor="#dc2626" stopOpacity="1" />
-              <stop offset="100%" stopColor="#dc2626" stopOpacity="1" />
-              <stop offset="100%" stopColor="#dc2626" stopOpacity="1" />
-            </linearGradient>
-            <clipPath id={clipPathId}>
-              <path d={borderPath} />
-            </clipPath>
-          </defs>
-          <path
-            d={borderPath}
-            fill="none"
-            stroke={`url(#${gradientId})`}
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            vectorEffect="non-scaling-stroke"
-          />
-        </svg>
-      )}
+        if (!isExpanded) {
+            checkOverflow();
+        }
 
-      <div
-        className="relative p-8 flex flex-col gap-4 h-full bg-white dark:bg-black"
-        style={{ clipPath: `url(#${clipPathId})` }}
-      >
-        <div className="w-14 h-14 rounded-xl flex items-center justify-center shrink-0">
-          <Image src={icon} alt={title} width={60} height={60} />
-        </div>
+        window.addEventListener("resize", checkOverflow);
 
-        <h3 className="text-black dark:text-white text-xl font-bold leading-tight">
-          {title}
-        </h3>
+        return () => {
+            window.removeEventListener("resize", checkOverflow);
+        };
+    }, [description, isExpanded]);
 
-        <div className="flex-1 flex flex-col min-h-0">
-          <div className={`${expanded ? "overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-red-600 scrollbar-track-transparent" : ""}`}>
-            <p
-              className={`text-gray-700 dark:text-gray-400 text-sm leading-relaxed transition-all duration-300 ${!expanded ? "line-clamp-3" : ""}`}
-            >
-              {description}
-            </p>
-          </div>
-          {description.length > 150 && (
-            <button
-              type="button"
-              onClick={() => setExpanded(!expanded)}
-              className="text-red-500 text-xs font-semibold mt-2 hover:text-red-400 transition-colors flex items-center gap-1 self-start shrink-0"
-            >
-              {expanded ? "Ler menos" : "Ler mais"}
-              <span
-                className={`transition-transform duration-300 ${expanded ? "rotate-180" : ""}`}
-              >
-                ↓
-              </span>
-            </button>
-          )}
-        </div>
+    function handleToggleRead() {
+        const nextExpanded = !isExpanded;
+        setIsExpanded(nextExpanded);
+        onToggleRead?.(cardId, nextExpanded);
+    }
 
-        <a
-          href={ctaHref}
-          className="flex items-center gap-2 text-black dark:text-white font-bold text-sm hover:text-red-500 transition-colors shrink-0"
-        >
-          {ctaText}
-          <ArrowRight className="w-4 h-4" />
-        </a>
-      </div>
-    </div>
-  );
+    return (
+        <main className="group relative z-0 h-[360px] w-full md:h-[380px] overflow-hidden rounded-2xl border border-red-700/50 bg-gradient-to-b from-zinc-950 to-black p-6 md:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition-colors duration-300 hover:border-red-500">
+            <div className="absolute -top-16 -right-12 h-36 w-36 rounded-full bg-red-700/10 blur-2xl" />
+
+            <div className="relative flex h-full flex-col">
+                <Image src={imgCard} alt={title} className="mb-7 h-10 w-10 object-contain" />
+
+                <h3 className="max-w-[20ch] text-2xl font-semibold leading-[1.08] text-zinc-100">
+                    {title}
+                </h3>
+
+                <p
+                    ref={descriptionRef}
+                    className={`mt-6 max-w-[34ch] text-base leading-7 text-zinc-300 ${isExpanded ? "read-more-scroll max-h-32 overflow-y-auto pr-1" : ""}`}
+                    style={
+                        !isExpanded
+                            ? {
+                                  display: "-webkit-box",
+                                  WebkitLineClamp: 3,
+                                  WebkitBoxOrient: "vertical",
+                                  overflow: "hidden",
+                              }
+                            : undefined
+                    }
+                >
+                    {description}
+                </p>
+
+                {hasOverflow ? (
+                    <button
+                        type="button"
+                        onClick={handleToggleRead}
+                        className="mt-3 w-fit text-sm font-medium text-red-400 transition-colors duration-200 hover:text-red-300"
+                    >
+                        {isExpanded ? "Ler menos" : "Ler mais"}
+                    </button>
+                ) : null}
+
+                <a
+                    href={ctaLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-auto inline-flex w-fit items-center gap-2 pt-6 text-base font-semibold text-zinc-100 transition-colors duration-200 hover:text-white"
+                >
+                    {ctaText}
+                    <ArrowRight
+                        size={17}
+                        aria-hidden="true"
+                        className="text-red-500 transition-transform duration-200 group-hover:translate-x-1"
+                    />
+                </a>
+            </div>
+        </main>
+    );
 }
