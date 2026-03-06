@@ -1,6 +1,6 @@
 import Image from "next/image";
 import LogoRocketHero from "@/assets/logo-rocket-hero.svg"
-import LogoRocketHeroWhite from "@/assets/LogoRocket-white.svg"
+import LogoRocketHeroWhite from "@/assets/LogoHeroWhite.svg"
 import Link from "next/link";
 import { Google_Sans, Darker_Grotesque, Archivo_Black } from "next/font/google";
 
