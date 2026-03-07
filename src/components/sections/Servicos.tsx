@@ -2,7 +2,7 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import Card from "../ui/cards";
+import Card from "@/components/ui/Cards";
 import iconIdeia from "@/assets/icon-ideia.svg";
 import iconFoguete from "@/assets/icon-foguete.svg";
 import iconEcommerce from "@/assets/icon-ecommerce.svg";
