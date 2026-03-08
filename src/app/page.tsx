@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Image from "next/image";
 import Hero from "@/components/sections/Hero";
 import Servicos from "@/components/sections/Servicos";
