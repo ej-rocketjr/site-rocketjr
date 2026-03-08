@@ -4,6 +4,9 @@
  * import LogoRocket from "@/assets/logo-rocket.svg"
  */
 
+
+
+
 function QuemSomos() {
   return (
     <section className="bg-white dark:bg-black min-h-100 px-4 sm:px-6">
@@ -15,4 +18,3 @@ function QuemSomos() {
   );
 }
 export default QuemSomos;
-
