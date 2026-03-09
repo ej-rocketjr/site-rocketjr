@@ -47,7 +47,7 @@ export default function Cards({
         return () => {
             window.removeEventListener("resize", checkOverflow);
         };
-    }, [description, isExpanded]);
+    }, [isExpanded]);
 
     function handleToggleRead() {
         const nextExpanded = !isExpanded;
