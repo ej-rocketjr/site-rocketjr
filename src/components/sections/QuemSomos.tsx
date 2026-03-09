@@ -5,6 +5,9 @@ import EquipeRocketFoto from "@/assets/Img_EquipeRocketJR_Section_QuemSomos.png"
 
 
 
+
+
+
 function QuemSomos() {
   return (
 
@@ -42,4 +45,3 @@ function QuemSomos() {
   );
 }
 export default QuemSomos;
-
