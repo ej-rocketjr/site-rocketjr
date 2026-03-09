@@ -10,7 +10,7 @@ import FotoGuerrilha2025 from "@/assets/foto-guerrilha-2025.jpeg";
 import FotoGuerrilha from "@/assets/foto-guerrilha.jpeg";
 import FotoLegado from "@/assets/foto-legado.jpeg";
 
-export default function Servicos() {
+export default function QuemSomos() {
   return (
 
     <section className="bg-white dark:bg-black flex flex-col items-center justify-center">
