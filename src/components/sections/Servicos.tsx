@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
-import Cards from "../ui/cards";
+import Cards from "../ui/Cards";
 import iconIdeia from "@/assets/icon-ideia.svg";
 import iconFoguete from "@/assets/icon-foguete.svg";
 import iconEcommerce from "@/assets/icon-ecommerce.svg";
