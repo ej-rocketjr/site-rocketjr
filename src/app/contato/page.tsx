@@ -3,7 +3,6 @@
 // ============================================================
 import { useState } from "react";
 import Image from "next/image";
-import Navbar from "@/components/layout/Header";
 import HeroPages from "@/components/sections/HeroPages";
 import mascote from "@/assets/mascote-anela-vermelho.svg";
 
@@ -16,7 +15,6 @@ import mascote from "@/assets/mascote-anela-vermelho.svg";
 //   - Responsivo para Mobile, Tablet e Desktop
 //
 // O que NÃO está aqui (já existe no repositório):
-//   - Navbar
 //   - Hero (logo + heading)
 // ============================================================
 
@@ -272,7 +270,6 @@ export default function App() {
   return (
   
         <section id="contato" className="w-full bg-black">
-          <Navbar />
           <HeroPages/>
           <h3 className="text-center text-[22px] md:text-[28px] lg:text-[32px] font-bold text-white mt-6 md:mt-10" style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}>
            Soluções inovadoras e tecnologicas
