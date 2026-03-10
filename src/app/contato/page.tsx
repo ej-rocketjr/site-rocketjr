@@ -271,9 +271,9 @@ export default function App() {
   
         <section id="contato" className="w-full bg-black">
           <HeroPages/>
-          <h3 className="text-center text-[22px] md:text-[28px] lg:text-[32px] font-bold text-white mt-6 md:mt-10" style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}>
+          <h1 className="text-center text-[22px] md:text-[28px] lg:text-[32px] font-bold text-white mt-6 md:mt-10" style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}>
            Soluções inovadoras e tecnologicas
-          </h3>
+          </h1>
       <div className="flex flex-col md:flex-row md:items-end md:justify-between w-full px-4 md:px-6 lg:px-8 py-8 md:py-12 lg:py-16 gap-6 md:gap-8 lg:gap-12 max-w-[1400px] mx-auto">
         
         {/* ── Mascote ── */}

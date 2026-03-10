@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  scroll-behavior: smooth;
 }
 
 @theme inline {
@@ -27,6 +28,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.read-more-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #dc2626 transparent;
+}
 
 .read-more-scroll {
   scrollbar-width: thin;
