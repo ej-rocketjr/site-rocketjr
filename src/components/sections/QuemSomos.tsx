@@ -5,8 +5,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import EquipeRocketFoto from "@/assets/Img_EquipeRocketJR_Section_QuemSomos.png";
 
-const rocketSlides = Array.from({ length: 10 }, () => "/Logo_Rocket_Animada_Section_QuemSomos.svg");
-const fogueteSlides = Array.from({ length: 10 }, () => "/Foguete_Animado_Section_QuemSomos.svg");
+const rocketSlides = Array.from({ length: 10 }, (_, i) => ({
+  id: `rocket-${i}`,
+  src: "/Logo_Rocket_Animada_Section_QuemSomos.svg",
+}));
+const fogueteSlides = Array.from({ length: 10 }, (_, i) => ({
+  id: `foguete-${i}`,
+  src: "/Foguete_Animado_Section_QuemSomos.svg",
+}));
 
 function QuemSomos() {
   return (
@@ -38,11 +44,10 @@ function QuemSomos() {
               1024: { spaceBetween: 32 },
             }}
           >
-            {rocketSlides.map((logo, index) => (
-              <SwiperSlide key={`rocket-${index}`} className="!w-auto">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
+            {rocketSlides.map((logo) => (
+              <SwiperSlide key={logo.id} className="!w-auto">
                 <img
-                  src={logo}
+                  src={logo.src}
                   alt=""
                   className="h-16 w-auto object-contain sm:h-20 lg:h-24"
                 />
@@ -51,7 +56,6 @@ function QuemSomos() {
           </Swiper>
         </div>
 
-        {/* Linha 2 — Foguetes (para a esquerda) */}
         <div className="pointer-events-none absolute inset-x-0 top-[65%] z-0 -translate-y-1/2" aria-hidden="true">
           <Swiper
             modules={[Autoplay]}
@@ -71,11 +75,11 @@ function QuemSomos() {
               1024: { spaceBetween: 32 },
             }}
           >
-            {fogueteSlides.map((logo, index) => (
-              <SwiperSlide key={`foguete-${index}`} className="!w-auto">
+            {fogueteSlides.map((logo) => (
+              <SwiperSlide key={logo.id} className="!w-auto">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={logo}
+                  src={logo.src}
                   alt=""
                   className="h-16 w-auto object-contain sm:h-20 lg:h-24"
                 />
