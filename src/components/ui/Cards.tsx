@@ -56,19 +56,19 @@ export default function Cards({
     }
 
     return (
-        <main className="group relative z-0 h-[360px] w-full md:h-[380px] overflow-hidden rounded-2xl border border-red-700/50 bg-gradient-to-b from-zinc-950 to-black p-6 md:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition-colors duration-300 hover:border-red-500">
-            <div className="absolute -top-16 -right-12 h-36 w-36 rounded-full bg-red-700/10 blur-2xl" />
+        <main className="group relative z-0 h-[360px] w-full md:h-[380px] rounded-2xl border-2 border-red-500 bg-white dark:border-red-700/50 dark:bg-gradient-to-b dark:from-zinc-950 dark:to-black p-6 md:p-7 shadow-[0_4px_20px_rgba(239,68,68,0.15)] transition-all duration-300 hover:shadow-[0_20px_50px_rgba(239,68,68,0.3)] hover:scale-[1.02] hover:border-red-600 dark:hover:border-red-500 hover:-translate-y-1 overflow-hidden">
+            <div className="absolute -top-16 -right-12 h-36 w-36 rounded-full bg-red-500/10 dark:bg-red-700/10 blur-2xl transition-all duration-300 group-hover:bg-red-500/20 dark:group-hover:bg-red-700/20 group-hover:scale-125" />
 
             <div className="relative flex h-full flex-col">
-                <Image src={imgCard} alt={title} className="mb-7 h-10 w-10 object-contain" />
+                <Image src={imgCard} alt={title} className="mb-7 h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-110" />
 
-                <h3 className="max-w-[20ch] text-2xl font-semibold leading-[1.08] text-zinc-100">
+                <h3 className="max-w-[20ch] text-2xl font-semibold leading-[1.08] text-black dark:text-zinc-100 transition-colors duration-300 group-hover:text-red-600 dark:group-hover:text-red-400">
                     {title}
                 </h3>
 
                 <p
                     ref={descriptionRef}
-                    className={`mt-6 max-w-[34ch] text-base leading-7 text-zinc-300 ${isExpanded ? "read-more-scroll max-h-32 overflow-y-auto pr-1" : ""}`}
+                    className={`mt-6 max-w-[34ch] text-base leading-7 text-gray-700 dark:text-zinc-300 ${isExpanded ? "read-more-scroll max-h-32 overflow-y-auto pr-1" : ""}`}
                     style={
                         !isExpanded
                             ? {
@@ -87,7 +87,7 @@ export default function Cards({
                     <button
                         type="button"
                         onClick={handleToggleRead}
-                        className="mt-3 w-fit text-sm font-medium text-red-400 transition-colors duration-200 hover:text-red-300"
+                        className="mt-3 w-fit text-sm font-medium text-red-600 dark:text-red-400 transition-colors duration-200 hover:text-red-700 dark:hover:text-red-300"
                     >
                         {isExpanded ? "Ler menos" : "Ler mais"}
                     </button>
@@ -97,7 +97,7 @@ export default function Cards({
                     href={ctaLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-auto inline-flex w-fit items-center gap-2 pt-6 text-base font-semibold text-zinc-100 transition-colors duration-200 hover:text-white"
+                    className="mt-auto inline-flex w-fit items-center gap-2 pt-6 text-base font-semibold text-black dark:text-zinc-100 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white"
                 >
                     {ctaText}
                     <ArrowRight

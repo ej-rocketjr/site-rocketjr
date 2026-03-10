@@ -93,7 +93,7 @@ export default function Servicos() {
     }
 
     return (
-        <section className="bg-white dark:bg-black min-h-100 px-4 sm:px-6">
+        <section className="bg-white dark:bg-black min-h-100 px-4 sm:px-8 md:px-10 py-8">
             <div className="max-w-7xl mx-auto">
                 <h2 className="mx-auto uppercase text-center text-black dark:text-white text-xl sm:text-2xl lg:text-3xl font-medium mb-8 sm:mb-10 lg:mb-12 max-w-190">
                     Transformamos suas ideias em soluções digitais inovadoras
@@ -113,6 +113,7 @@ export default function Servicos() {
                             640: { slidesPerView: 2 },
                             1024: { slidesPerView: 3 },
                         }}
+                        className="!py-6"
                     >
                         {services.map((service) => (
                             <SwiperSlide key={service.title} className="relative z-0 h-full flex">
@@ -129,7 +130,7 @@ export default function Servicos() {
                         ))}
                     </Swiper>
                 ) : (
-                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 py-6">
                         {services.slice(0, 3).map((service) => (
                             <Cards
                                 key={service.title}
