@@ -36,24 +36,29 @@ const clientes = [
     descricao: 'Desenvolvemos um site catálogo para exposição estratégica de produtos, facilitando a visualização de armações e modelos disponíveis. A navegação foi pensada para ser simples, intuitiva e responsiva. A solução amplia a vitrine digital da marca e fortalece sua presença no mercado local.',
     imagem: oticaLorgil,
     alt: 'Logo Ótica Lorgil',
-  },{
+  }, {
     id: 'linktree-raquel',
     nome: 'Linktree Raquel Paulina',
     descricao: 'Desenvolvemos uma página estratégica para organizar canais de atendimento e fortalecer a presença digital profissional. O design prioriza sobriedade, clareza e credibilidade. A solução facilita o contato direto e melhora a experiência do usuário nas redes sociais.',
     imagem: linktreeRaquel,
     alt: 'Logo Linktree Raquel Paulina',
-  },{
+    width: 260,
+    height: 110,
+
+  }, {
     id: 'linktree-eduardo',
     nome: 'Linktree Eduardo Palmeira',
     descricao: 'Criamos uma página personalizada para centralizar contatos, imóveis e canais digitais em um único ambiente profissional. O layout foi desenvolvido para reforçar identidade visual e facilitar o direcionamento de potenciais clientes. Uma solução prática para otimizar conversões nas redes sociais.',
     imagem: linktreeEduardo,
     alt: 'Logo Linktree Eduardo Palmeira',
+    width: 260,
+    height: 110,
   }
 ];
 
 export default function Clientes() {
   return (
-    <section className="bg-white dark:bg-black min-h-100 px-4 sm:px-6" id="clientes">
+    <section className="bg-white dark:bg-black min-h-100 px-4 sm:px-6 bg-orange-500" id="clientes">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-center text-black dark:text-white text-3xl font-extrabold mb-12">
           Nossos Clientes
@@ -73,7 +78,7 @@ export default function Clientes() {
             spaceBetween={32}
             slidesPerView={1}
             loop={true}
-            className="mb-12"
+            className=""
           >
             {clientes.map((cliente) => (
               <SwiperSlide key={cliente.id}>
@@ -83,12 +88,17 @@ export default function Clientes() {
                     <h2 className="text-black dark:text-white text-5xl font-thin">
                       {cliente.nome}
                     </h2>
-                  <p className="text-gray-600 dark:text-gray-300 text-lg text-justify mt-4">
+                    <p className="text-gray-600 dark:text-gray-300 text-lg text-justify mt-4">
                       {cliente.descricao}
                     </p>
                   </div>
                   <div className="flex-shrink-0 hidden md:block">
-                    <Image src={cliente.imagem} alt={cliente.alt} width={500} height={800} />
+                    <Image
+                      src={cliente.imagem}
+                      alt={cliente.alt}
+                      width={cliente.width ?? 500}
+                      height={cliente.height ?? 800}
+                    />
                   </div>
                   {/* Mobile */}
                   <div className="flex flex-col gap-4 md:hidden">
@@ -98,8 +108,14 @@ export default function Clientes() {
                     <p className="text-gray-600 dark:text-gray-300 text-justify">
                       {cliente.descricao}
                     </p>
-                    <div className="block md:hidden">
-                      <Image src={cliente.imagem} alt={cliente.alt} width={290} height={310} />
+                    <div className="mx-auto md:hidden">
+                      <Image
+                        src={cliente.imagem}
+                        alt={cliente.alt}
+                        width={300}
+                        height={620}
+                        className="mx-auto h-[420px] w-[300px] object-contain"
+                      />
                     </div>
                   </div>
                 </div>
