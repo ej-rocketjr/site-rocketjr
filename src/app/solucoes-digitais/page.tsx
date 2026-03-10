@@ -1,4 +1,21 @@
+import type { Metadata } from "next";
 import MrRaccoon from "../../assets/MrRaccoon.png";
+
+export const metadata: Metadata = {
+  title: "Soluções Digitais",
+  description:
+    "Desenvolvemos soluções digitais sob medida para acelerar resultados e gerar valor real para o seu negócio.",
+  alternates: {
+    canonical: "/solucoes-digitais",
+  },
+  openGraph: {
+    title: "Soluções Digitais | RocketJR",
+    description:
+      "Do conceito ao produto final, criamos soluções digitais de alto impacto.",
+    url: "/solucoes-digitais",
+    type: "website",
+  },
+};
 
 export default function SolucoesDigitais() {
   return (
@@ -27,7 +44,7 @@ export default function SolucoesDigitais() {
         </div>
       </main>
       <div className="absolute z-20 bottom-0 left-1/2 -translate-x-1/2 w-[60vw] max-w-[250px] lg:left-auto lg:right-10 lg:translate-x-0 lg:w-[25vw] lg:max-w-[350px]">
-          <img src={MrRaccoon.src} alt="MrRaccoon" className="w-full h-auto block" />
+          <img src={MrRaccoon.src} alt="Raccoon - Mascote da RocketJR" className="w-full h-auto block" />
       </div>
       <div className="pointer-events-none absolute z-0 rounded-full border-[#585A5C33] opacity-[0.30]  left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] h-[90vw] border-[40px] lg:top-[100%] lg:-translate-y-[50%] lg:w-[1200px] lg:h-[1200px] lg:border-[180px]" />
     </div>
