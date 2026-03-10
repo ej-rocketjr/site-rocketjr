@@ -4,14 +4,15 @@ import Image from "next/image";
 import LogoRocketWhite from "@/assets/LogoRocket-white.svg";
 import LogoRocket from "@/assets/logo-rocket.svg";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState, useRef, useEffect } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { Darker_Grotesque } from "next/font/google";
 
 const darkerGrotesque = Darker_Grotesque({ subsets: ["latin"] });
 
 export default function Navbar() {
   const pathname = usePathname();
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
 
@@ -35,19 +36,61 @@ export default function Navbar() {
 
   const navItems = [
     { href: "/", label: "Início" },
-    { href: "#servicos", label: "Serviços" },
+    { href: "/#servicos", label: "Serviços", sectionId: "servicos" },
     { href: "/quem-somos", label: "Quem Somos" },
-    { href: "#clientes", label: "Clientes" },
+    { href: "/#clientes", label: "Clientes", sectionId: "clientes" },
     { href: "/contato", label: "Contato" },
   ];
+
+  const scrollToSection = useCallback((sectionId: string) => {
+    const target = document.getElementById(sectionId);
+
+    if (!target) {
+      return;
+    }
+
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    window.history.replaceState(null, "", `/#${sectionId}`);
+  }, []);
+
+  function handleSectionNavigation(sectionId: string) {
+    setIsOpen(false);
+
+    if (pathname !== "/") {
+      router.push(`/#${sectionId}`);
+      return;
+    }
+
+    scrollToSection(sectionId);
+  }
+
+  useEffect(() => {
+    if (pathname !== "/") {
+      return;
+    }
+
+    const sectionId = window.location.hash.replace("#", "");
+
+    if (!sectionId) {
+      return;
+    }
+
+    const timeout = window.setTimeout(() => {
+      scrollToSection(sectionId);
+    }, 50);
+
+    return () => {
+      window.clearTimeout(timeout);
+    };
+  }, [pathname, scrollToSection]);
 
   return (
     <header ref={headerRef} className={`w-full bg-white dark:bg-black overflow-hidden ${darkerGrotesque.className}`}>
       <div className="flex items-center justify-between py-4 px-8 gap-8">
 
         {/* Logo - Esquerda */}
-        <div className="flex-shrink-0" onClick={() => setIsOpen(false)}>
-          <Link href="/">
+        <div className="flex-shrink-0">
+          <Link href="/" onClick={() => setIsOpen(false)}>
             <Image
               src={LogoRocketWhite}
               alt="Logo Rocket JR"
@@ -72,15 +115,24 @@ export default function Navbar() {
           <ul className="flex gap-6 lg:gap-8 text-black dark:text-white font-medium text-lg lg:text-2xl">
             {navItems.map((item) => (
               <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className={` font-medium text-3xl transition-colors duration-200 ${
-                    isActive(item.href) ? 'text-red-600' : 'hover:text-red-600'
-                  }`}
-                  aria-current={isActive(item.href) ? 'page' : undefined}
-                >
-                  {item.label}
-                </Link>
+                {item.sectionId ? (
+                  <button
+                    type="button"
+                    onClick={() => handleSectionNavigation(item.sectionId)}
+                    className="font-medium text-3xl transition-colors duration-200 hover:text-red-600"
+                  >
+                    {item.label}
+                  </button>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className={`font-medium text-3xl transition-colors duration-200 ${isActive(item.href) ? "text-red-600" : "hover:text-red-600"
+                      }`}
+                    aria-current={isActive(item.href) ? "page" : undefined}
+                  >
+                    {item.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
@@ -118,15 +170,24 @@ export default function Navbar() {
           <ul className="flex flex-col gap-4 px-8 py-6 text-black dark:text-white font-medium text-lg">
             {navItems.map((item) => (
               <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className={`text-xl transition-colors duration-200 ${
-                    isActive(item.href) ? 'text-red-600' : 'hover:text-red-600'
-                  }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </Link>
+                {item.sectionId ? (
+                  <button
+                    type="button"
+                    onClick={() => handleSectionNavigation(item.sectionId)}
+                    className="text-xl transition-colors duration-200 hover:text-red-600"
+                  >
+                    {item.label}
+                  </button>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className={`text-xl transition-colors duration-200 ${isActive(item.href) ? "text-red-600" : "hover:text-red-600"
+                      }`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>

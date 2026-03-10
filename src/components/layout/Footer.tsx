@@ -79,15 +79,15 @@ export default function Footer() {
         <span className="font-bold text-white">REDES SOCIAS</span>
         <div className="flex gap-1 items-center">
           <Instagram size={16} />
-          <a href="https://www.instagram.com/rocketjroficial" className="hover:text-red-500 transition-colors text-gray-300">@rocketjroficial</a>
+          <a href="https://www.instagram.com/rocketjroficial" className="hover:text-red-500 transition-colors text-black dark:text-white">@rocketjroficial</a>
         </div>
         <div className="flex gap-1 items-center">
           <Instagram size={16} />
-          <a href="https://www.instagram.com/foguetinhos.ej" className="hover:text-red-500 transition-colors text-gray-300">@foguetinhos.ej</a>
+          <a href="https://www.instagram.com/foguetinhos.ej" className="hover:text-red-500 transition-colors text-black dark:text-white">@foguetinhos.ej</a>
         </div>
         <div className="flex gap-1 items-center">
           <Linkedin size={16} />
-          <a href="https://www.linkedin.com/company/rocket-jr/posts/?feedView=all" className="hover:text-red-500 transition-colors text-gray-300">@rocketjr</a>
+          <a href="https://www.linkedin.com/company/rocket-jr/posts/?feedView=all" className="hover:text-red-500 transition-colors text-black dark:text-white">@rocketjr</a>
         </div>
       </div>
 

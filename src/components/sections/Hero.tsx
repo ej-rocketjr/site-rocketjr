@@ -1,27 +1,36 @@
 import Image from "next/image";
-import LogoRocketHero from "@/assets/logo-rocket-hero.svg"
+import LogoRocketHeroDark from "@/assets/logo-rocket-hero.svg";
+import LogoRocketHeroLight from "@/assets/Logo-rocket-reta-white.svg";
 import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="bg-white dark:bg-black min-h-[500px] flex flex-col items-center justify-center py-10 sm:py-20">
-      <div className="text-center py-20">
+    <section className="bg-white dark:bg-black px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+      <div className="mx-auto flex min-h-[60vh] w-full max-w-7xl flex-col items-center justify-center text-center">
         <Image
-          className="mx-auto mb-12 sm:mb-20"
-          src={LogoRocketHero}
-          alt="Logo Rocket JR CTA"
+          src={LogoRocketHeroDark}
+          alt="Logo Rocket JR CTA - tema escuro"
           width={400}
           height={160}
+          className="mx-auto mt-4 mb-12 sm:mb-20 w-full max-w-56 md:max-w-72 lg:max-w-80 h-auto hidden dark:block"
         />
+
+        <Image
+          src={LogoRocketHeroLight}
+          alt="Logo Rocket JR CTA - tema claro"
+          width={400}
+          height={160}
+          className="mx-auto mt-4 mb-12 sm:mb-20 w-full max-w-56 md:max-w-72 lg:max-w-80 h-auto block dark:hidden"
+        />
+        
         <h1 className="text-4xl md:text-6xl font-light font-sans text-black dark:text-white mb-6">
           Chegou A Hora Da Inovação, Venha Voar Com A Gente
         </h1>
-        <p className="text-lg sm:text-lg md:text-2xl font-bold text-black dark:text-white mt-8">
+        <p className="mt-6 max-w-3xl text-lg sm:text-xl md:text-2xl font-bold text-black dark:text-white">
           Aqui Damos Asas As Suas Ideias
         </p>
-      </div>
 
-      <div className="flex items-center justify-center">
+      <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
         <Link
           href="/contato"
         >
@@ -36,8 +45,9 @@ export default function Hero() {
             <button
             type="button"
             className="border-1 border-red-600 text-black dark:text-white font-bold py-3 px-6 w-40 rounded-md
-            transition duration-300 ease-in-out transform hover:scale-105 ml-4">Cases</button>
+            transition duration-300 ease-in-out transform hover:scale-105">Cases</button>
         </Link>
+      </div>
       </div>
     </section>
   );
