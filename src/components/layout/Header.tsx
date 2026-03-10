@@ -1,53 +1,83 @@
 'use client';
 
 import Image from "next/image";
+import LogoRocketWhite from "@/assets/LogoRocket-white.svg";
 import LogoRocket from "@/assets/logo-rocket.svg";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import { Darker_Grotesque } from "next/font/google";
+
+const darkerGrotesque = Darker_Grotesque({ subsets: ["latin"] });
 
 export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
 
   const isActive = (href: string) => pathname === href;
 
   const navItems = [
     { href: "/", label: "Início" },
-    { href: "/#servicos", label: "Serviços" },
+    { href: "#servicos", label: "Serviços" },
     { href: "/quem-somos", label: "Quem Somos" },
-    { href: "/#clientes", label: "Clientes" },
+    { href: "#clientes", label: "Clientes" },
     { href: "/contato", label: "Contato" },
   ];
 
   return (
-    <header className="w-full bg-white dark:bg-black overflow-hidden">
-      <div className="flex items-center justify-between py-16 px-8 gap-8">
+    <header ref={headerRef} className={`w-full bg-white dark:bg-black overflow-hidden ${darkerGrotesque.className}`}>
+      <div className="flex items-center justify-between py-4 px-8 gap-8">
 
         {/* Logo - Esquerda */}
-        <div className="flex-shrink-0">
+        <div className="flex-shrink-0" onClick={() => setIsOpen(false)}>
           <Link href="/">
+            <Image
+              src={LogoRocketWhite}
+              alt="Logo Rocket JR"
+              width={120}
+              height={45}
+              className="block dark:hidden sm:w-40 sm:h-15 w-30 h-10"
+              priority
+            />
             <Image
               src={LogoRocket}
               alt="Logo Rocket JR"
               width={120}
               height={45}
-              className="sm:w-40 sm:h-15 w-24 h-9"
+              className="hidden dark:block sm:w-40 sm:h-15 w-30 h-10"
               priority
             />
           </Link>
         </div>
 
         {/* Navbar - Centro */}
-        <nav className="hidden lg:flex lg:flex-1 justify-center">
+        <nav className="hidden lg:flex lg:flex-1 justify-center" aria-label="Navegação Principal">
           <ul className="flex gap-6 lg:gap-8 text-black dark:text-white font-medium text-lg lg:text-2xl">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className={`transition-colors duration-200 ${
+                  className={` font-medium text-3xl transition-colors duration-200 ${
                     isActive(item.href) ? 'text-red-600' : 'hover:text-red-600'
                   }`}
+                  aria-current={isActive(item.href) ? 'page' : undefined}
                 >
                   {item.label}
                 </Link>
@@ -60,7 +90,7 @@ export default function Navbar() {
         <div className="flex-shrink-0">
           <Link
             href="https://forms.gle/seu-formulario-aqui"
-            className="text-lg sm:text-2xl text-red-600 font-bold transition-colors duration-200 hover:text-black dark:hover:text-white whitespace-nowrap"
+            className="text-xl font-bold sm:text-2xl text-red-600 sm:font-extrabold transition-colors duration-200 hover:text-black dark:hover:text-white whitespace-nowrap"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -74,6 +104,7 @@ export default function Navbar() {
           className="lg:hidden flex flex-col gap-1.5 cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Menu"
+          aria-expanded={isOpen}
         >
           <span className={`w-6 h-0.5 bg-black dark:bg-white transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`} />
           <span className={`w-6 h-0.5 bg-black dark:bg-white transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`} />
@@ -83,13 +114,13 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800">
+        <div className="lg:hidden bg-white dark:bg-black">
           <ul className="flex flex-col gap-4 px-8 py-6 text-black dark:text-white font-medium text-lg">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className={`transition-colors duration-200 ${
+                  className={`text-xl transition-colors duration-200 ${
                     isActive(item.href) ? 'text-red-600' : 'hover:text-red-600'
                   }`}
                   onClick={() => setIsOpen(false)}
