@@ -8,9 +8,17 @@ export default function Clientes() {
   return (
     <section className="bg-white dark:bg-black min-h-100 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-center text-white text-3xl font-bold mb-12">Nossos Clientes</h2>
+
+        <h1 className="text-center text-white text-3xl font-bold mb-12">Nossos Clientes</h1>
+
         {/* Adicione os logos/cards dos clientes aqui */}
+
+        <h2>Eduardo Palmeira</h2>
+        <p>Desenvolvemos um site institucional com foco em autoridade e captação de leads no mercado imobiliário. Estruturamos páginas de serviços, imóveis e diferenciais de forma estratégica, priorizando clareza, credibilidade e conversão. A solução fortalece o posicionamento profissional e amplia as oportunidades de negócio no digital.</p>
+
       </div>
+
     </section>
+
   );
 }

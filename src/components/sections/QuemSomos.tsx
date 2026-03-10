@@ -1,18 +1,47 @@
-/** 
- * Aqui faz os imports. Exemplo:
- * import Image from "next/image";
- * import LogoRocket from "@/assets/logo-rocket.svg"
- */
+import Image from "next/image";
+import EquipeRocketFoto from "@/assets/Img_EquipeRocketJR_Section_QuemSomos.png"
+
+
+
+
+
+
+
 
 function QuemSomos() {
   return (
-    <section className="bg-white dark:bg-black min-h-100 px-4 sm:px-6">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-center text-white text-3xl font-bold mb-12">Quem Somos</h2>
-        {/* Adicione os logos/cards dos clientes aqui */}
-      </div>
-    </section>
+
+
+      <section className="relative min-h-screen w-full overflow-x-hidden flex flex-col justify-center items-center bg-white dark:bg-[#000000] gap-5 bg-[url('/Foguete_Animado_Section_QuemSomos.svg'),url('/Logo_Rocket_Animada_Section_QuemSomos.svg')]
+      bg-position-[left_top_26rem,right_bottom_26rem]
+      sm:bg-position-[left_bottom_33rem,right_top_32rem]
+      lg:bg-position-[left_top_20rem,right_bottom_16rem]
+      bg-no-repeat bg-contain z-0 animate-background-flow">
+
+
+
+        <h1 className="text-3xl text-black  dark:text-white font-bold text-center mb-4">Quem Somos</h1>
+
+
+
+
+        <Image className="mt-6 w-xs h-56 md:w-sm md:h-[14.8rem]
+        lg:w-2xl lg:h-[27.6rem] "
+        src={EquipeRocketFoto}
+        alt="Foto da equipe RocketJR"
+        />
+
+
+        <p className="mt-6 text-center text-black dark:text-white text-[10px] md:text-sm lg:text-base text-color-[#E7E7E7]">
+        A Rocket Júnior (RJR) É A Empresa Júnior do Curso De Sistemas De Informação Do Campos Arapiraca - Unidade Educacional De Penedo.Somos Um Time De Estudantes Apaixonados Por Tecnologia E Inovação,Que Aplicam Na Prática Os Conhecimentos Adquiridos Em Sala De Aula Para Desenvolver Soluções Digitais Para O Mercado. Nosso Principal Objetivo É Proporcionar Aos Nossos Membros Uma Experiência Empresarial Real, Preparando-Os Para Os Desafios Do Mercado De Trabalho E Impulsionando Suas Carreiras!
+        </p>
+
+
+
+      </section>
+
+
+
   );
 }
 export default QuemSomos;
-
