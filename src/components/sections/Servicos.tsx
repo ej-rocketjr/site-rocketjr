@@ -20,7 +20,7 @@ const services = [
         title: "Soluções Digitais que Geram Resultado",
         description: "Transformamos ideias em soluções digitais estratégicas, pensadas para resolver problemas reais, escalar operações e acelerar o crescimento do seu negócio com tecnologia sob medida.",
         cta: "Transforme sua ideia",
-        ctaLink: "https://www.rocketsej.com/consultoria-estrategica",
+        ctaLink: "/solucoes-digitais",
     },
     {
         imgCard: iconFoguete,
@@ -28,7 +28,7 @@ const services = [
         description:
             "Ajudamos sua empresa a escolher e implementar as melhores tecnologias, reduzindo riscos, aumentando eficiência e criando vantagem competitiva em um mercado cada vez mais digital.",
         cta: "Fale com um especialista",
-        ctaLink: "https://www.rocketsej.com/landing-pages",
+        ctaLink: "/decisoes-tecnologicas",
     },
     {
         imgCard: iconEcommerce,
@@ -36,7 +36,7 @@ const services = [
         description:
             "Criamos e otimizamos lojas virtuais focadas em conversão, performance e experiência do usuário, transformando visitas em vendas recorrentes.",
         cta: "Quero vender mais ",
-        ctaLink: "https://www.rocketsej.com/ecommerce",
+        ctaLink: "/e-commerce",
     },
     {
         imgCard: iconDigital,
@@ -44,7 +44,7 @@ const services = [
         description:
             "Modernizamos processos, integramos sistemas e automatizamos operações para tornar sua empresa mais ágil, eficiente e preparada para escalar.",
         cta: "Inicie a transformação ",
-        ctaLink: "https://www.rocketsej.com/sites",
+        ctaLink: "/transformacao-digital",
     },
     {
         imgCard: iconDados,
@@ -52,7 +52,7 @@ const services = [
         description:
             "Transformamos dados brutos em insights estratégicos, ajudando sua empresa a tomar decisões baseadas em números, não em achismos.",
         cta: "Ver insights",
-        ctaLink: "https://www.rocketsej.com/analise-de-dados",
+        ctaLink: "/dados",
     },
 ];
 
