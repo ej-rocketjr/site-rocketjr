@@ -73,9 +73,9 @@ export default function Clientes() {
   return (
     <section className="bg-white dark:bg-black px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24" id="clientes">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-center text-black dark:text-white text-3xl sm:text-4xl font-extrabold mb-10 sm:mb-12">
+        <h2 className="text-center text-black dark:text-white text-3xl sm:text-4xl font-extrabold mb-10 sm:mb-12">
           Nossos Clientes
-        </h1>
+        </h2>
 
         <div className="relative px-2 sm:px-8 lg:px-12">
           <button type="button" className="swiper-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 -translate-x-6 ml-4">
