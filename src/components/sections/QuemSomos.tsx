@@ -10,7 +10,7 @@ const fogueteSlides = Array.from({ length: 10 }, () => "/Foguete_Animado_Section
 
 function QuemSomos() {
   return (
-    <section className="relative w-full overflow-hidden bg-white py-14 sm:py-20 lg:py-24 dark:bg-black">
+    <section className="relative w-full overflow-hidden bg-white py-1 sm:py-20 lg:py-24 dark:bg-black">
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-6 px-4 sm:px-6 lg:gap-8 lg:px-8">
           <h2 className="text-center text-3xl font-bold text-black sm:text-4xl dark:text-white">
           Quem Somos
