@@ -1,25 +1,104 @@
 'use client';
 import Image from "next/image";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 import EquipeRocketFoto from "@/assets/Img_EquipeRocketJR_Section_QuemSomos.png";
+
+const rocketSlides = Array.from({ length: 10 }, () => "/Logo_Rocket_Animada_Section_QuemSomos.svg");
+const fogueteSlides = Array.from({ length: 10 }, () => "/Foguete_Animado_Section_QuemSomos.svg");
 
 function QuemSomos() {
   return (
-    <section className="relative w-full overflow-x-hidden bg-white dark:bg-[#000000] px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 bg-[url('/Foguete_Animado_Section_QuemSomos.svg'),url('/Logo_Rocket_Animada_Section_QuemSomos.svg')]
-      bg-position-[left_top_26rem,right_bottom_26rem]
-      sm:bg-position-[left_bottom_33rem,right_top_32rem]
-      lg:bg-position-[left_top_20rem,right_bottom_16rem]
-      bg-no-repeat bg-contain z-0 animate-background-flow">
-      <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-6 lg:gap-8">
-        <h1 className="text-3xl sm:text-4xl text-black dark:text-white font-bold text-center">Quem Somos</h1>
+    <section className="relative w-full overflow-hidden bg-white py-14 sm:py-20 lg:py-24 dark:bg-black">
+      <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-6 px-4 sm:px-6 lg:gap-8 lg:px-8">
+        <h1 className="text-center text-3xl font-bold text-black sm:text-4xl dark:text-white">
+          Quem Somos
+        </h1>
+      </div>
 
-        <Image className="mt-2 w-xs h-56 md:w-sm md:h-[14.8rem]
-        lg:w-2xl lg:h-[27.6rem] "
-          src={EquipeRocketFoto}
-          alt="Foto da equipe RocketJR"
-        />
+      {/* Bloco central: foto + carrossel de fundo em largura total */}
+      <div className="relative mt-6 sm:mt-8 lg:mt-10">
+        {/* Linha 1 — Logos Rocket (para a direita) */}
+        <div className="pointer-events-none absolute inset-x-0 top-[35%] z-0 -translate-y-1/2" aria-hidden="true">
+          <Swiper
+            modules={[Autoplay]}
+            slidesPerView="auto"
+            spaceBetween={16}
+            allowTouchMove={false}
+            loop
+            speed={6000}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false,
+            }}
+            className="!overflow-visible"
+            breakpoints={{
+              640: { spaceBetween: 24 },
+              1024: { spaceBetween: 32 },
+            }}
+          >
+            {rocketSlides.map((logo, index) => (
+              <SwiperSlide key={`rocket-${index}`} className="!w-auto">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={logo}
+                  alt=""
+                  className="h-16 w-auto object-contain sm:h-20 lg:h-24"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
 
-        <p className="mt-2 max-w-5xl text-center text-black dark:text-white text-[10px] md:text-sm lg:text-base text-color-[#E7E7E7] leading-relaxed">
-          A Rocket Júnior (RJR) É A Empresa Júnior do Curso De Sistemas De Informação Do Campos Arapiraca - Unidade Educacional De Penedo.Somos Um Time De Estudantes Apaixonados Por Tecnologia E Inovação,Que Aplicam Na Prática Os Conhecimentos Adquiridos Em Sala De Aula Para Desenvolver Soluções Digitais Para O Mercado. Nosso Principal Objetivo É Proporcionar Aos Nossos Membros Uma Experiência Empresarial Real, Preparando-Os Para Os Desafios Do Mercado De Trabalho E Impulsionando Suas Carreiras!
+        {/* Linha 2 — Foguetes (para a esquerda) */}
+        <div className="pointer-events-none absolute inset-x-0 top-[65%] z-0 -translate-y-1/2" aria-hidden="true">
+          <Swiper
+            modules={[Autoplay]}
+            slidesPerView="auto"
+            spaceBetween={16}
+            allowTouchMove={false}
+            loop
+            speed={7000}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false,
+              reverseDirection: true,
+            }}
+            className="!overflow-visible"
+            breakpoints={{
+              640: { spaceBetween: 24 },
+              1024: { spaceBetween: 32 },
+            }}
+          >
+            {fogueteSlides.map((logo, index) => (
+              <SwiperSlide key={`foguete-${index}`} className="!w-auto">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={logo}
+                  alt=""
+                  className="h-16 w-auto object-contain sm:h-20 lg:h-24"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        {/* Foto centralizada por cima do carrossel */}
+        <div className="relative z-10 mx-auto w-full max-w-[330px] px-4 sm:max-w-[520px] sm:px-6 lg:max-w-[760px] lg:px-8">
+          <Image
+            className="h-auto w-full rounded-xl object-cover"
+            src={EquipeRocketFoto}
+            alt="Foto da equipe RocketJR"
+            sizes="(max-width: 640px) 330px, (max-width: 1024px) 520px, 760px"
+            priority
+          />
+        </div>
+      </div>
+
+      <div className="mx-auto mt-6 flex w-full max-w-7xl flex-col items-center px-4 sm:mt-8 sm:px-6 lg:px-8">
+        <p className="max-w-5xl text-center text-xs leading-relaxed text-black sm:text-sm lg:text-base dark:text-white">
+          A Rocket Júnior (RJR) é a Empresa Júnior do curso de Sistemas de Informação do Campus Arapiraca - Unidade Educacional de Penedo. Somos um time de estudantes apaixonados por tecnologia e inovação, que aplicam na prática os conhecimentos adquiridos em sala de aula para desenvolver soluções digitais para o mercado. Nosso principal objetivo é proporcionar aos nossos membros uma experiência empresarial real, preparando-os para os desafios do mercado de trabalho e impulsionando suas carreiras.
         </p>
       </div>
     </section>
