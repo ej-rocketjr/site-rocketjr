@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import LogoRocket from "@/assets/logo-rocket-quem-somos.svg";
 import LogoRocketHero from "@/assets/logo-rocket-hero.svg";
@@ -9,6 +10,22 @@ import FotoMembrosRocket from "@/assets/foto-membros-rocket.svg";
 import FotoGuerrilha2025 from "@/assets/foto-guerrilha-2025.jpeg";
 import FotoGuerrilha from "@/assets/foto-guerrilha.jpeg";
 import FotoLegado from "@/assets/foto-legado.jpeg";
+
+export const metadata: Metadata = {
+  title: "Quem Somos",
+  description:
+    "Conheça a trajetória da RocketJR, Empresa Júnior de Sistemas de Informação da UFAL, e os projetos que marcaram nossa história.",
+  alternates: {
+    canonical: "/quem-somos",
+  },
+  openGraph: {
+    title: "Quem Somos | RocketJR",
+    description:
+      "História, equipe e trajetória da RocketJR em soluções digitais e inovação.",
+    url: "/quem-somos",
+    type: "website",
+  },
+};
 
 export default function QuemSomos() {
   return (
