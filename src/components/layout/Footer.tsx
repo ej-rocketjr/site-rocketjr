@@ -2,6 +2,7 @@
 "use client";
 
 import Image from "next/image"
+import Link from "next/link";
 import { Instagram } from 'lucide-react';
 import { Linkedin } from 'lucide-react';
 import logoCircular from "@/assets/logo-circular-rocket.svg";
@@ -50,11 +51,11 @@ export default function Footer() {
           <div className="hidden md:flex flex-1 justify-end gap-10">
             <div className="flex flex-col gap-1 text-sm text-left ">
               <span className="font-bold text-black dark:text-white">MENU</span>
-              <a href="/" className="hover:text-red-500 transition-colors text-black dark:text-white">Início</a>
-              <a href="/#servicos" className="hover:text-red-500 transition-colors text-black dark:text-white">Serviços</a>
-              <a href="/quem-somos" className="hover:text-red-500 transition-colors text-black dark:text-white">Quem Somos</a>
-              <a href="/#clientes" className="hover:text-red-500 transition-colors text-black dark:text-white">Clientes</a>
-              <a href="/contato" className="hover:text-red-500 transition-colors text-black dark:text-white">Contato</a>
+              <Link href="/" className="hover:text-red-500 transition-colors text-black dark:text-white">Início</Link>
+              <Link href="/#servicos" className="hover:text-red-500 transition-colors text-black dark:text-white">Serviços</Link>
+              <Link href="/quem-somos" className="hover:text-red-500 transition-colors text-black dark:text-white">Quem Somos</Link>
+              <Link href="/#clientes" className="hover:text-red-500 transition-colors text-black dark:text-white">Clientes</Link>
+              <Link href="/contato" className="hover:text-red-500 transition-colors text-black dark:text-white">Contato</Link>
             </div>
             <div className="flex flex-col gap-1 text-sm text-left text-black dark:text-white">
               <span className="font-bold text-black dark:text-white">REDES SOCIAIS</span>
