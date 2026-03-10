@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image, { StaticImageData } from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import { ArrowRight } from "lucide-react";
 
 type CardsProps = {
@@ -47,7 +47,7 @@ export default function Cards({
         return () => {
             window.removeEventListener("resize", checkOverflow);
         };
-    }, [description, isExpanded]);
+    }, [isExpanded]);
 
     function handleToggleRead() {
         const nextExpanded = !isExpanded;
@@ -56,19 +56,19 @@ export default function Cards({
     }
 
     return (
-        <main className="group relative z-0 h-[360px] w-full md:h-[380px] overflow-hidden rounded-2xl border border-red-700/50 bg-gradient-to-b from-zinc-950 to-black p-6 md:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition-colors duration-300 hover:border-red-500">
+        <main className="group relative z-0 h-[360px] w-full md:h-[380px] overflow-hidden rounded-2xl border border-red-700/50 bg-none dark:bg-black to-black p-6 md:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition-colors duration-300 hover:border-red-500">
             <div className="absolute -top-16 -right-12 h-36 w-36 rounded-full bg-red-700/10 blur-2xl" />
 
             <div className="relative flex h-full flex-col">
                 <Image src={imgCard} alt={title} className="mb-7 h-10 w-10 object-contain" />
 
-                <h3 className="max-w-[20ch] text-2xl font-semibold leading-[1.08] text-zinc-100">
+                <h3 className="max-w-[20ch] text-2xl font-semibold leading-[1.08] text-black dark:text-white">
                     {title}
                 </h3>
 
                 <p
                     ref={descriptionRef}
-                    className={`mt-6 max-w-[34ch] text-base leading-7 text-zinc-300 ${isExpanded ? "read-more-scroll max-h-32 overflow-y-auto pr-1" : ""}`}
+                    className={`mt-6 max-w-[34ch] text-base leading-7 text-black dark:text-white ${isExpanded ? "read-more-scroll max-h-32 overflow-y-auto pr-1" : ""}`}
                     style={
                         !isExpanded
                             ? {
@@ -97,7 +97,7 @@ export default function Cards({
                     href={ctaLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-auto inline-flex w-fit items-center gap-2 pt-6 text-base font-semibold text-zinc-100 transition-colors duration-200 hover:text-white"
+                    className="mt-auto inline-flex w-fit items-center gap-2 pt-6 text-base font-semibold text-black dark:text-white transition-colors duration-200 hover:text-red-500 dark:hover:text-red-500"
                 >
                     {ctaText}
                     <ArrowRight

@@ -93,14 +93,14 @@ export default function Servicos() {
     }
 
     return (
-        <section id="servicos" className="bg-white dark:bg-black min-h-100 px-4 sm:px-6">
+        <section id="servicos" className="bg-white dark:bg-black px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
             <div className="max-w-7xl mx-auto">
-                <h2 className="mx-auto uppercase text-center text-black dark:text-white text-xl sm:text-2xl lg:text-3xl font-medium mb-8 sm:mb-10 lg:mb-12 max-w-190">
+                <h2 className="mx-auto uppercase text-center text-black dark:text-white text-xl sm:text-2xl lg:text-3xl font-medium max-w-5xl">
                     Transformamos suas ideias em soluções digitais inovadoras
                 </h2>
             </div>
 
-            <div className="max-w-7xl mx-auto mt-12">
+            <div className="max-w-7xl mx-auto mt-10 sm:mt-12 lg:mt-14">
                 {isClient ? (
                     <Swiper
                         modules={[Autoplay]}
@@ -146,8 +146,8 @@ export default function Servicos() {
                 )}
             </div>
 
-            <div className="hidden lg:flex max-w-7xl mx-auto mt-12 sm:mt-16 lg:mt-20 items-center gap-8">
-                <article>
+            <div className="hidden lg:flex max-w-7xl mx-auto mt-14 lg:mt-16 items-center gap-10">
+                <article className="max-w-4xl text-base leading-7 text-black dark:text-white/90">
                     <span>
                         Impulsionamos negócios por meio de soluções digitais estratégicas e
                         orientadas a resultado. Desenvolvemos sites, landing pages e
@@ -158,7 +158,7 @@ export default function Servicos() {
                         caminho.
                     </span>
                 </article>
-                <Image src={rocketRaccon} alt="Ideia" width={2000} height={60} />
+                <Image src={rocketRaccon} alt="Ideia" width={420} height={360} className="h-auto w-full max-w-sm" />
             </div>
         </section>
     );
