@@ -6,7 +6,7 @@
 
 export default function Clientes() {
   return (
-    <section className="bg-white dark:bg-black min-h-100 px-4 sm:px-6">
+    <section className="bg-white dark:bg-black min-h-100 px-4 sm:px-6" id="clientes">
       <div className="max-w-7xl mx-auto">
 
         <h1 className="text-center text-white text-3xl font-bold mb-12">Nossos Clientes</h1>

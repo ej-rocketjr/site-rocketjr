@@ -14,9 +14,9 @@ export default function Navbar() {
 
   const navItems = [
     { href: "/", label: "Início" },
-    { href: "/servicos", label: "Serviços" },
+    { href: "/#servicos", label: "Serviços" },
     { href: "/quem-somos", label: "Quem Somos" },
-    { href: "#", label: "Clientes" },
+    { href: "/#clientes", label: "Clientes" },
     { href: "/contato", label: "Contato" },
   ];
 
