@@ -53,7 +53,7 @@ const clientes = [
 
 export default function Clientes() {
   return (
-    <section className="bg-white dark:bg-black min-h-100 px-4 sm:px-6">
+    <section className="bg-white dark:bg-black min-h-100 px-4 sm:px-6 bg-orange-500" id="clientes">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-center text-black dark:text-white text-3xl font-extrabold mb-12">
           Nossos Clientes

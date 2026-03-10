@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image, { type StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { ArrowRight } from "lucide-react";
 
 type CardsProps = {
@@ -47,7 +47,7 @@ export default function Cards({
         return () => {
             window.removeEventListener("resize", checkOverflow);
         };
-    }, [isExpanded]);
+    }, [description, isExpanded]);
 
     function handleToggleRead() {
         const nextExpanded = !isExpanded;

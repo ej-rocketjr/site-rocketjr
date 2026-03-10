@@ -23,13 +23,13 @@ export default function SolucoesDigitais() {
             </div>
         </section>
         <div className="flex justify-center lg:pl-20 mt-8 lg:mt-10 w-full relative z-30">
-            <button className="bg-gradient-to-r from-[#530101] via-[#750404] to-[#fd0404] text-white px-6 py-3 lg:px-10 lg:py-4 rounded-md font-bold uppercase tracking-widest text-xs lg:text-sm transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95">Quero vender mais</button>
+            <button type="button" className="bg-gradient-to-r from-[#530101] via-[#750404] to-[#fd0404] text-white px-6 py-3 lg:px-10 lg:py-4 rounded-md font-bold uppercase tracking-widest text-xs lg:text-sm transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95">Quero vender mais</button>
         </div>
       </main>
       <div className="absolute z-20 bottom-0 left-1/2 -translate-x-1/2 w-[60vw] max-w-[250px] lg:left-auto lg:right-10 lg:translate-x-0 lg:w-[25vw] lg:max-w-[350px]">
           <img src={MrRaccoon.src} alt="MrRaccoon" className="w-full h-auto block" />
       </div>
-      <div className="pointer-events-none absolute z-0 rounded-full border-[#585A5C33] opacity-[0.30]  left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] h-[90vw] border-[40px] lg:top-[100%] lg:-translate-y-[50%] lg:w-[1200px] lg:h-[1200px] lg:border-[180px]"></div>
+      <div className="pointer-events-none absolute z-0 rounded-full border-[#585A5C33] opacity-[0.30]  left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] h-[90vw] border-[40px] lg:top-[100%] lg:-translate-y-[50%] lg:w-[1200px] lg:h-[1200px] lg:border-[180px]" />
     </div>
   );
 }
