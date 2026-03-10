@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
-import Cards from "../ui/cards";
+import Cards from "../ui/Cards";
 import iconIdeia from "@/assets/icon-ideia.svg";
 import iconFoguete from "@/assets/icon-foguete.svg";
 import iconEcommerce from "@/assets/icon-ecommerce.svg";
@@ -93,7 +93,7 @@ export default function Servicos() {
     }
 
     return (
-        <section className="bg-white dark:bg-black min-h-100 px-4 sm:px-6">
+        <section id="servicos" className="bg-white dark:bg-black min-h-100 px-4 sm:px-6">
             <div className="max-w-7xl mx-auto">
                 <h2 className="mx-auto uppercase text-center text-black dark:text-white text-xl sm:text-2xl lg:text-3xl font-medium mb-8 sm:mb-10 lg:mb-12 max-w-190">
                     Transformamos suas ideias em soluções digitais inovadoras
