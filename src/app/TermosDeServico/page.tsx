@@ -196,8 +196,7 @@ export default function TermosDeServico() {
         <p className="mb-0">&nbsp;</p>
         <p className="mb-0">Última atualização: 04 de fevereiro de 2026</p>
         <p>
-          Em caso de dúvidas, entre em contato conosco pelos canais oficiais disponibilizados no site.
-        </p>
+          Em caso de dúvidas, entre em contato conosco pelos canais oficiais disponibilizados no site.  </p>
       </div>
     </div>
   );
