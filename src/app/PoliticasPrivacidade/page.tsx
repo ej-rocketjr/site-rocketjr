@@ -20,7 +20,7 @@ import { useEffect, useState } from "react";
  *  - Detecta automaticamente a preferência do sistema (dark/light).
  *  - Dark mode: fundo preto com texto branco.
  *  - Light mode: fundo branco com texto preto.
- *  - Atualiza em tempo real se o usuário mudar a preferência do sistema.
+ *  - Atualiza em tempo real se o usuário mudar a preferência do sistema.\\\\
  */
 export default function PoliticasPrivacidade() {
   // Detecta a preferência inicial do sistema
