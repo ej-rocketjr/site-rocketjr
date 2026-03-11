@@ -11,7 +11,7 @@ import iconEcommerce from "@/assets/icons/icon-ecommerce.svg";
 import iconDigital from "@/assets/icons/icon-digital.svg";
 import iconDados from "@/assets/icons/icon-dados.svg";
 import Image from "next/image";
-import rocketRaccon from "@/assets/mascote-rocket-jr.svg";
+import RaccoonMascoteRocket from "@/assets/icons/raccoon-mascote-rocket-jr.svg";
 import "swiper/css";
 
 const services = [
@@ -158,7 +158,7 @@ export default function Servicos() {
                         caminho.
                     </span>
                 </article>
-                <Image src={rocketRaccon} alt="Ideia" width={420} height={360} className="h-auto w-full max-w-sm" />
+                <Image src={RaccoonMascoteRocket} alt="Raccoon Mascote da RocketJR" width={420} height={360} className="h-auto w-full max-w-sm" />
             </div>
         </section>
     );
