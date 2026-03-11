@@ -1,8 +1,8 @@
 'use client';
 
 import Image from "next/image";
-import LogoRocketWhite from "@/assets/LogoRocket-white.svg";
-import LogoRocket from "@/assets/logo-rocket.svg";
+import LogoRocketLight from "@/assets/logos/logo-rocket-light.svg";
+import LogoRocketDark from "@/assets/logos/logo-rocket-dark.svg";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState, useRef, useEffect, useCallback } from "react";
@@ -92,7 +92,7 @@ export default function Navbar() {
         <div className="flex-shrink-0">
           <Link href="/" onClick={() => setIsOpen(false)}>
             <Image
-              src={LogoRocketWhite}
+              src={LogoRocketLight}
               alt="Logo Rocket JR"
               width={120}
               height={45}
@@ -100,7 +100,7 @@ export default function Navbar() {
               priority
             />
             <Image
-              src={LogoRocket}
+              src={LogoRocketDark}
               alt="Logo Rocket JR"
               width={120}
               height={45}

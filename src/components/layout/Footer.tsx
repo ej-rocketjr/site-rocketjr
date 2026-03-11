@@ -5,11 +5,11 @@ import Image from "next/image"
 import Link from "next/link";
 import { Instagram } from 'lucide-react';
 import { Linkedin } from 'lucide-react';
-import logoCircular from "@/assets/logo-circular-rocket.svg";
-import mascote from "@/assets/mascote-rocket-jr.svg";
-import rocketLogoHorizontalBlack from "@/assets/rocket-logo-horizontal-thema-black.svg";
-import rocketLogoHorizontalWhite from "@/assets/rocket-logo-horizontal-thema-white.svg";
-import setaVermelha from "@/assets/seta-vermelha.svg";
+import logoCircularRocket from "@/assets/logos/logo-circular-rocket.svg";
+import RaccoonMascoteRocket from "@/assets/icons/raccoon-mascote-rocket-jr.svg";
+import rocketLogoHorizontalDark from "@/assets/logos/rocket-logo-horizontal-dark.svg";
+import rocketLogoHorizontalLight from "@/assets/logos/rocket-logo-horizontal-light.svg";
+import setaVermelha from "@/assets/icons/seta-vermelha.svg";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -33,7 +33,7 @@ export default function Footer() {
             </button>
 
             <Image
-              src={rocketLogoHorizontalBlack}
+              src={rocketLogoHorizontalDark}
               alt="Logo da RocketJR - tema escuro"
               width={800}
               height={300}
@@ -41,7 +41,9 @@ export default function Footer() {
             />
 
             <Image
-              src={rocketLogoHorizontalWhite}
+              src={rocketLogoHorizontalLight
+              
+              }
               alt="Logo da RocketJR - tema claro"
               width={800}
               height={300}
@@ -95,15 +97,15 @@ export default function Footer() {
       <div className="hidden md:flex justify-between">
         <div className="flex">
           <Image
-            src={logoCircular}
+            src={logoCircularRocket}
             alt="Logo da RocketJR"
             width={100}
             height={300}
             className="mt-4"
           />
           <Image
-            src={mascote}
-            alt="Mascote RocketJR"
+            src={RaccoonMascoteRocket}
+            alt="Raccoon Mascote da RocketJR"
             width={250}
             height={300}
             className="mt-4"
@@ -119,7 +121,7 @@ export default function Footer() {
       <div className="flex md:hidden relative mt-6">
         <div className="flex items-end gap-3 pb-4 z-10">
           <Image
-            src={logoCircular}
+            src={logoCircularRocket}
             alt="Logo da RocketJR"
             width={60}
             height={60}
@@ -132,8 +134,8 @@ export default function Footer() {
         </div>
         <div className="absolute bottom-0 right-0">
           <Image
-            src={mascote}
-            alt="Mascote RocketJR"
+            src={RaccoonMascoteRocket}
+            alt="Raccoon Mascote da RocketJR"
             width={180}
             height={250}
             className="object-contain"
