@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import LogoRocket from "@/assets/logo-rocket-quem-somos.svg";
 import LogoRocketHero from "@/assets/logo-rocket-hero.svg";
-import FotoAlmej2025 from "@/assets/foto-almej-2025.svg";
-import FotoBandeiraRocket from "@/assets/foto-bandeira-rocket.svg";
-import FotoMascotesEJ from "@/assets/foto-mascote-ej.svg";
-import FotoMembrosCorredor from "@/assets/foto-membros-corredor.svg";
-import FotoMembrosRocket from "@/assets/foto-membros-rocket.svg";
-import FotoGuerrilha2025 from "@/assets/foto-guerrilha-2025.jpeg";
-import FotoGuerrilha from "@/assets/foto-guerrilha.jpeg";
-import FotoLegado from "@/assets/foto-legado.jpeg";
+import FotoAlmej2025 from "@/assets/images/foto-almej-2025.svg";
+import FotoBandeiraRocket from "@/assets/images/foto-bandeira-rocket.svg";
+import FotoMascotesEJ from "@/assets/images/foto-mascote-ej.svg";
+import FotoMembrosCorredor from "@/assets/images/foto-membros-corredor.svg";
+import FotoMembrosRocket from "@/assets/images/foto-membros-rocket.svg";
+import FotoGuerrilha2025 from "@/assets/images/foto-guerrilha-2025.jpeg";
+import FotoGuerrilha from "@/assets/images/foto-guerrilha.jpeg";
+import FotoLegado from "@/assets/images/foto-legado.jpeg";
 
 export const metadata: Metadata = {
   title: "Quem Somos",
