@@ -1,8 +1,8 @@
 'use client';
 
 import Image from "next/image";
-import LogoRocketLight from "@/assets/icons/logo-rocket-light.svg";
-import LogoRocketDark from "@/assets/icons/logo-rocket-dark.svg";
+import LogoRocketLight from "@/assets/logos/logo-rocket-light.svg";
+import LogoRocketDark from "@/assets/logos/logo-rocket-dark.svg";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState, useRef, useEffect, useCallback } from "react";
