@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import LogoRocket from "@/assets/logo-rocket-quem-somos.svg";
-import LogoRocketHero from "@/assets/logo-rocket-hero.svg";
-import FotoAlmej2025 from "@/assets/foto-almej-2025.svg";
-import FotoBandeiraRocket from "@/assets/foto-bandeira-rocket.svg";
-import FotoMascotesEJ from "@/assets/foto-mascote-ej.svg";
-import FotoMembrosCorredor from "@/assets/foto-membros-corredor.svg";
-import FotoMembrosRocket from "@/assets/foto-membros-rocket.svg";
-import FotoGuerrilha2025 from "@/assets/foto-guerrilha-2025.jpeg";
-import FotoGuerrilha from "@/assets/foto-guerrilha.jpeg";
-import FotoLegado from "@/assets/foto-legado.jpeg";
+import LogoRocketHeroDark from "@/assets/logos/logo-rocket-hero-dark.svg";
+import LogoRocketHeroLight from "@/assets/logos/Logo-rocket-hero-light.svg";
+import FotoAlmej2025 from "@/assets/images/foto-almej-2025.svg";
+import FotoBandeiraRocket from "@/assets/images/foto-bandeira-rocket.svg";
+import FotoMascotesEJ from "@/assets/images/foto-mascote-ej.svg";
+import FotoMembrosCorredor from "@/assets/images/foto-membros-corredor.svg";
+import FotoMembrosRocket from "@/assets/images/foto-membros-rocket.svg";
+import FotoGuerrilha2025 from "@/assets/images/foto-guerrilha-2025.jpeg";
+import FotoGuerrilha from "@/assets/images/foto-guerrilha.jpeg";
+import FotoLegado from "@/assets/images/foto-legado.jpeg";
 
 export const metadata: Metadata = {
   title: "Quem Somos",
@@ -33,23 +33,21 @@ export default function QuemSomos() {
     <section className="bg-white dark:bg-black flex flex-col items-center justify-center">
     
       <section className="flex flex-col items-center justify-center">
-        
-        <div className="w-full py-15 hidden sm:flex items-center justify-center">
+        <div className="w-full py-8 sm:py-12 flex items-center justify-center">
           <Image
-          src={LogoRocket} 
-          alt="Logo Rocket" 
-          width={350}
-          height={80}
+            src={LogoRocketHeroDark}
+            alt="Logo Rocket - tema escuro"
+            width={400}
+            height={160}
+            className="mx-auto w-full max-w-56 md:max-w-72 lg:max-w-80 h-auto hidden dark:block"
           />
-        </div>
 
-        <div className="w-full py-8 flex sm:hidden items-center justify-center">
           <Image
-          src={LogoRocketHero} 
-          alt="Logo Rocket" 
-          width={300}
-          height={80}
-          className="w-[60%]"
+            src={LogoRocketHeroLight}
+            alt="Logo Rocket - tema claro"
+            width={400}
+            height={160}
+            className="mx-auto w-full max-w-56 md:max-w-72 lg:max-w-80 h-auto block dark:hidden"
           />
         </div>
 
