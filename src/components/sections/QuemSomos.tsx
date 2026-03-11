@@ -3,15 +3,17 @@ import Image from "next/image";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import EquipeRocketFoto from "@/assets/Img_EquipeRocketJR_Section_QuemSomos.png";
+import EquipeRocketFoto from "@/assets/images/foto-almej-2025.svg";
+import LogoRocketAnimada from "@/assets/icons/Logo_Rocket_Animada_Section_QuemSomos.svg";
+import FogueteAnimado from "@/assets/icons/Foguete_Animado_Section_QuemSomos.svg";
 
 const rocketSlides = Array.from({ length: 10 }, (_, i) => ({
   id: `rocket-${i}`,
-  src: "/Logo_Rocket_Animada_Section_QuemSomos.svg",
+  src: LogoRocketAnimada.src,
 }));
 const fogueteSlides = Array.from({ length: 10 }, (_, i) => ({
   id: `foguete-${i}`,
-  src: "/Foguete_Animado_Section_QuemSomos.svg",
+  src: FogueteAnimado.src,
 }));
 
 function QuemSomos() {
