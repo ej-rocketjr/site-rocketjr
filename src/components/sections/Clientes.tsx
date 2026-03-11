@@ -2,8 +2,8 @@
 import { useEffect } from 'react';
 import { Inter } from 'next/font/google';
 import Image from 'next/image';
-import setaDireta from '../../assets/seta-direita.svg';
-import setaEsquerda from '../../assets/seta-esquerda.svg';
+import setaDireta from '@/assets/icons/seta-direita.svg';
+import setaEsquerda from '@/assets/icons/seta-esquerda.svg';
 import eduardoPalmeira from '@/assets/images/Eduardo_Palmeira_Section_Nossos_Clientes.svg';
 import clinicaSallute from '@/assets/images/Clinica-Sallute_nossos-clientes.svg';
 import oticaLorgil from '@/assets/images/Site-Otica-Lorgil_nossos_clientes.svg';
