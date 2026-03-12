@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import MrRaccoon from "../../assets/MrRaccoon.png";
 
 export const metadata: Metadata = {
-  title: "Dados",
+  title: "Análise de Dados",
   description:
     "Transformamos dados em insights estratégicos para decisões mais inteligentes e lucrativas.",
   alternates: {
     canonical: "/dados",
   },
   openGraph: {
-    title: "Análise de Dados | RocketJR",
+    title: "Análise de Dados - RocketJR | Soluções Digitais e Desenvolvimento Web",
     description:
       "Dados certos para orientar decisões de negócio com mais segurança.",
     url: "/dados",

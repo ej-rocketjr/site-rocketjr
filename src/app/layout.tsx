@@ -21,7 +21,10 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
 });
 export const metadata: Metadata = {
-  title: "RocketJR | Soluções Digitais e Desenvolvimento Web",
+  title: {
+    default: "RocketJR | Soluções Digitais e Desenvolvimento Web",
+    template: "%s - RocketJR | Soluções Digitais e Desenvolvimento Web",
+  },
   description:
     "A RocketJR é a Empresa Júnior de Sistemas de Informação da UFAL que desenvolve sites, e-commerces e soluções digitais para empresas.",
   keywords: [

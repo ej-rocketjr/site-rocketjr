@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     canonical: "/quem-somos",
   },
   openGraph: {
-    title: "Quem Somos | RocketJR",
+    title: "Quem Somos - RocketJR | Soluções Digitais e Desenvolvimento Web",
     description:
       "História, equipe e trajetória da RocketJR em soluções digitais e inovação.",
     url: "/quem-somos",
