@@ -12,13 +12,13 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <div className="p-8 bg-gray-900 min-h-screen text-white">
-      <h1 className="text-2xl font-bold mb-6">Lista de Pedidos/Contatos</h1>
+    <div className="p-8 bg-neural-900 min-h-screen text-white">
+      <h1 className="flex text-2xl font-bold mb-6 justify-center items-center">Lista de Pedidos/Contatos</h1>
       
       <div className="overflow-x-auto shadow-xl rounded-lg">
-        <table className="min-w-full bg-gray-800 border border-gray-700">
+        <table className="min-w-full bg-zinc-900 border border-zinc-800">
           <thead>
-            <tr className="bg-gray-700">
+            <tr className="bg-zinc-900">
               <th className="p-4 text-left">Nome</th>
               <th className="p-4 text-left">E-mail</th>
               <th className="p-4 text-left">Telefone</th>
@@ -28,12 +28,11 @@ export default function Dashboard() {
           </thead>
           <tbody>
             {contatos.map((contato: any) => (
-              <tr key={contato.id} className="border-t border-gray-700 hover:bg-gray-700">
+              <tr key={contato.id} className="border-t border-zinc-800 hover:bg-zinc-800">
                 <td className="p-4">{contato.name}</td>
                 <td className="p-4">{contato.email}</td>
                 <td className="p-4">{contato.telephone}</td>
-                <td className="p-4 text-sm font-mono text-blue-300">
-                  {/* Transformando o objeto JSON em string para visualização rápida */}
+                <td className="p-4 text-sm font-mono text-red-300">
                   {JSON.stringify(contato.subject)}
                 </td>
                 <td className="p-4 italic">"{contato.message}"</td>
