@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import EquipeRocketFoto from "@/assets/images/foto-almej-2025.svg";
+import EquipeRocketFoto from "@/assets/images/foto-almej-2025.webp";
 import LogoRocketAnimada from "@/assets/logos/Logo_Rocket_Animada_Section_QuemSomos.svg";
 import FogueteAnimado from "@/assets/logos/Foguete_Animado_Section_QuemSomos.svg";
 

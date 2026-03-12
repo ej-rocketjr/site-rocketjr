@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import LogoRocketHeroDark from "@/assets/logos/logo-rocket-hero-dark.svg";
 import LogoRocketHeroLight from "@/assets/logos/Logo-rocket-hero-light.svg";
-import FotoAlmej2025 from "@/assets/images/foto-almej-2025.svg";
-import FotoBandeiraRocket from "@/assets/images/foto-bandeira-rocket.svg";
-import FotoMascotesEJ from "@/assets/images/foto-mascote-ej.svg";
-import FotoMembrosCorredor from "@/assets/images/foto-membros-corredor.svg";
-import FotoMembrosRocket from "@/assets/images/foto-membros-rocket.svg";
-import FotoGuerrilha2025 from "@/assets/images/foto-guerrilha-2025.jpeg";
-import FotoGuerrilha from "@/assets/images/foto-guerrilha.jpeg";
-import FotoLegado from "@/assets/images/foto-legado.jpeg";
+import FotoAlmej2025 from "@/assets/images/foto-almej-2025.webp";
+import FotoBandeiraRocket from "@/assets/images/foto-bandeira-rocket.webp";
+import FotoMascotesEJ from "@/assets/images/foto-mascote-ej.webp";
+import FotoMembrosCorredor from "@/assets/images/foto-membros-corredor.webp";
+import FotoMembrosRocket from "@/assets/images/foto-membros-rocket.webp";
+import FotoGuerrilha2025 from "@/assets/images/foto-guerrilha-2025.webp";
+import FotoGuerrilha from "@/assets/images/foto-guerrilha.webp";
+import FotoLegado from "@/assets/images/foto-legado.webp";
 
 export const metadata: Metadata = {
   title: "Quem Somos",
