@@ -9,11 +9,9 @@ import FogueteAnimado from "@/assets/logos/Foguete_Animado_Section_QuemSomos.svg
 
 const rocketSlides = Array.from({ length: 10 }, (_, i) => ({
   id: `rocket-${i}`,
-  src: LogoRocketAnimada.src,
 }));
 const fogueteSlides = Array.from({ length: 10 }, (_, i) => ({
   id: `foguete-${i}`,
-  src: FogueteAnimado.src,
 }));
 
 function QuemSomos() {
@@ -39,6 +37,7 @@ function QuemSomos() {
             autoplay={{
               delay: 0,
               disableOnInteraction: false,
+              reverseDirection: true,
             }}
             className="!overflow-visible"
             breakpoints={{
@@ -48,9 +47,12 @@ function QuemSomos() {
           >
             {rocketSlides.map((logo) => (
               <SwiperSlide key={logo.id} className="!w-auto">
-                <img
-                  src={logo.src}
+                <Image
+                  src={LogoRocketAnimada}
                   alt=""
+                  width={160}
+                  height={96}
+                  loading="lazy"
                   className="h-16 w-auto object-contain sm:h-20 lg:h-24"
                 />
               </SwiperSlide>
@@ -69,7 +71,6 @@ function QuemSomos() {
             autoplay={{
               delay: 0,
               disableOnInteraction: false,
-              reverseDirection: true,
             }}
             className="!overflow-visible"
             breakpoints={{
@@ -79,10 +80,12 @@ function QuemSomos() {
           >
             {fogueteSlides.map((logo) => (
               <SwiperSlide key={logo.id} className="!w-auto">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={logo.src}
+                <Image
+                  src={FogueteAnimado}
                   alt=""
+                  width={160}
+                  height={96}
+                  loading="lazy"
                   className="h-16 w-auto object-contain sm:h-20 lg:h-24"
                 />
               </SwiperSlide>
