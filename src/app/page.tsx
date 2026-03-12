@@ -3,16 +3,17 @@ import Hero from "@/components/sections/Hero";
 import Servicos from "@/components/sections/Servicos";
 import Clientes from "@/components/sections/Clientes";
 import QuemSomos from "@/components/sections/QuemSomos";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Início",
+  title: "Início - RocketJR | Soluções Digitais e Desenvolvimento Web",
   description:
     "Conheça a RocketJR: Empresa Júnior de Sistemas de Informação da UFAL especializada em desenvolvimento web, e-commerce e soluções digitais.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "RocketJR | Soluções Digitais e Desenvolvimento Web",
+    title: "Início - RocketJR | Soluções Digitais e Desenvolvimento Web",
     description:
       "Conheça os serviços da RocketJR em desenvolvimento web, e-commerce, transformação digital e análise de dados.",
     url: "/",
@@ -25,8 +26,14 @@ export default function Home() {
     <main>
       <Hero />
       <Servicos />
-      <Clientes />
-      <QuemSomos />
+
+      <ScrollReveal delayMs={120}>
+        <Clientes />
+      </ScrollReveal>
+
+      <ScrollReveal delayMs={160}>
+        <QuemSomos />
+      </ScrollReveal>
     </main>
   );
 }

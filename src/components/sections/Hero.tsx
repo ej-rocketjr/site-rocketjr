@@ -1,6 +1,6 @@
 import Image from "next/image";
-import LogoRocketHeroDark from "@/assets/logo-rocket-hero.svg";
-import LogoRocketHeroLight from "@/assets/Logo-rocket-reta-white.svg";
+import LogoRocketHeroDark from "@/assets/logos/logo-rocket-hero-dark.svg";
+import LogoRocketHeroLight from "@/assets/logos/Logo-rocket-hero-light.svg";
 import Link from "next/link";
 
 export default function Hero() {
