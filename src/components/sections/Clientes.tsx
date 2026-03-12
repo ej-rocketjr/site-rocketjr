@@ -23,6 +23,7 @@ const clientes = [
       'Desenvolvemos um site institucional com foco em autoridade e captação de leads no mercado imobiliário. Estruturamos páginas de serviços, imóveis e diferenciais de forma estratégica, priorizando clareza, credibilidade e conversão. A solução fortalece o posicionamento profissional e amplia as oportunidades de negócio no digital.',
     imagem: eduardoPalmeira,
     alt: 'Logo Eduardo Palmeira',
+    link: 'https://eduardopalmeiracorretor.com.br/',
     loading: 'priority',
   },
   {
@@ -31,6 +32,7 @@ const clientes = [
     descricao: 'Criamos uma presença digital profissional, transmitindo confiança, organização e cuidado. O projeto foi estruturado para apresentar especialidades, equipe e formas de contato de maneira objetiva e acessível. O resultado é um canal institucional que fortalece a credibilidade da marca e consolida sua autoridade no mercado da saúde.',
     imagem: clinicaSallute,
     alt: 'Logo Clinica Sallute',
+    link: 'https://clinicasallute.com.br/',
     loading: 'priority',
   },
   {
@@ -39,6 +41,7 @@ const clientes = [
     descricao: 'Desenvolvemos um site catálogo para exposição estratégica de produtos, facilitando a visualização de armações e modelos disponíveis. A navegação foi pensada para ser simples, intuitiva e responsiva. A solução amplia a vitrine digital da marca e fortalece sua presença no mercado local.',
     imagem: oticaLorgil,
     alt: 'Logo Ótica Lorgil',
+    link: 'https://oticalorgil.com.br/',
     loading: 'priority',
   }, {
     id: 'linktree-raquel',
@@ -46,6 +49,7 @@ const clientes = [
     descricao: 'Desenvolvemos uma página estratégica para organizar canais de atendimento e fortalecer a presença digital profissional. O design prioriza sobriedade, clareza e credibilidade. A solução facilita o contato direto e melhora a experiência do usuário nas redes sociais.',
     imagem: linktreeRaquel,
     alt: 'Logo Linktree Raquel Paulina',
+    link: 'https://raquelpaulinaadvogada.com.br/',
     width: 260,
     height: 110,
     loading: 'priority',
@@ -56,6 +60,7 @@ const clientes = [
     descricao: 'Criamos uma página personalizada para centralizar contatos, imóveis e canais digitais em um único ambiente profissional. O layout foi desenvolvido para reforçar identidade visual e facilitar o direcionamento de potenciais clientes. Uma solução prática para otimizar conversões nas redes sociais.',
     imagem: linktreeEduardo,
     alt: 'Logo Linktree Eduardo Palmeira',
+    link: 'https://links.eduardopalmeiracorretor.com.br/',
     width: 260,
     height: 110,
     loading: 'eager',
@@ -106,15 +111,23 @@ export default function Clientes() {
                     </p>
                   </div>
                   <div className="hidden h-[360px] w-[420px] flex-shrink-0 items-center justify-center md:flex">
-                    <Image
-                      src={cliente.imagem}
-                      alt={cliente.alt}
-                      width={cliente.width ?? 500}
-                      height={cliente.height ?? 800}
-                      loading="eager"
-                      unoptimized
-                      className="h-full w-auto max-w-full object-contain"
-                    />
+                    <a
+                      href={cliente.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Acessar site de ${cliente.nome}`}
+                      className="flex h-full w-full items-center justify-center"
+                    >
+                      <Image
+                        src={cliente.imagem}
+                        alt={cliente.alt}
+                        width={cliente.width ?? 500}
+                        height={cliente.height ?? 800}
+                        loading="eager"
+                        unoptimized
+                        className="h-full w-auto max-w-full object-contain cursor-pointer"
+                      />
+                    </a>
                   </div>
                   {/* Mobile */}
                   <div className="flex min-h-[720px] flex-col gap-4 md:hidden">
@@ -125,15 +138,23 @@ export default function Clientes() {
                       {cliente.descricao}
                     </p>
                     <div className="mx-auto flex h-[260px] w-[300px] items-center justify-center md:hidden">
-                      <Image
-                        src={cliente.imagem}
-                        alt={cliente.alt}
-                        width={300}
-                        height={620}
-                        loading="eager"
-                        unoptimized
-                        className="mx-auto h-full w-auto max-w-full object-contain"
-                      />
+                      <a
+                        href={cliente.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Acessar site de ${cliente.nome}`}
+                        className="flex h-full w-full items-center justify-center"
+                      >
+                        <Image
+                          src={cliente.imagem}
+                          alt={cliente.alt}
+                          width={cliente.width ?? 300}
+                          height={cliente.height ?? 620}
+                          loading="eager"
+                          unoptimized
+                          className="mx-auto h-full w-auto max-w-full object-contain cursor-pointer"
+                        />
+                      </a>
                     </div>
                   </div>
                 </div>
