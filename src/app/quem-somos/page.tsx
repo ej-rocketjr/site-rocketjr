@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 import LogoRocketHeroDark from "@/assets/logos/logo-rocket-hero-dark.svg";
 import LogoRocketHeroLight from "@/assets/logos/Logo-rocket-hero-light.svg";
 import FotoAlmej2025 from "@/assets/images/foto-almej-2025.webp";
@@ -176,69 +177,77 @@ export default function QuemSomos() {
      
           <div className="md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0 border-l-2 border-dashed border-[#D9D9D9]"/>
 
-          <div className="mb-16 relative">
-            <div className="flex flex-row items-center">
-              <div className="w-1/2 pr-[8%] text-right">
-                <h3 className="text-6 md:text-xl font-bold dark:text-[#E7E7E7]">Aplicação Do Formulário PNDL 2024</h3>
-                <div className="text-sm font-medium text-[#990000] mt-1">Out - Nov 2024</div>
-                <p className="mt-3 text-xs font-light md:font-medium md:text-base dark:text-[#E7E7E7]">Pesquisa e ligações para as escolas do Brasil para levantamento de dados e identificação de necessidades.</p>
-              </div>
-              <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center z-10">
-                <div className="w-10 h-10 md:w-18 md:h-18 rounded-full border-2 border-[#FF0000] border-dashed flex items-center justify-center">
-                  <div className="w-4 h-4 md:w-6 md:h-6 rounded-full bg-[#FF0000]"/>
+          <ScrollReveal>
+            <div className="mb-16 relative">
+              <div className="flex flex-row items-center">
+                <div className="w-1/2 pr-[8%] text-right">
+                  <h3 className="text-6 md:text-xl font-bold dark:text-[#E7E7E7]">Aplicação Do Formulário PNDL 2024</h3>
+                  <div className="text-sm font-medium text-[#990000] mt-1">Out - Nov 2024</div>
+                  <p className="mt-3 text-xs font-light md:font-medium md:text-base dark:text-[#E7E7E7]">Pesquisa e ligações para as escolas do Brasil para levantamento de dados e identificação de necessidades.</p>
+                </div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center z-10">
+                  <div className="w-10 h-10 md:w-18 md:h-18 rounded-full border-2 border-[#FF0000] border-dashed flex items-center justify-center">
+                    <div className="w-4 h-4 md:w-6 md:h-6 rounded-full bg-[#FF0000]"/>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
 
 
-          <div className="mb-16 relative">
-            <div className="flex flex-row justify-end items-center">
-              <div className="w-1/2 pl-[8%] text-left">
-                <h3 className="text-6 md:text-xl font-bold dark:text-[#E7E7E7]">SisWeek 2024</h3>
-                <div className="text-sm font-medium text-[#990000] mt-1">Abr 2024</div>
-                <p className="mt-3 text-xs font-light md:font-medium md:text-base dark:text-[#E7E7E7]">Participação na Semana de Sistemas de Informação com apresentação de projetos e desenvolvimento de aplicação web.</p>
-              </div>
-              <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center z-10">
-                <div className="w-10 h-10 md:w-18 md:h-18 rounded-full border-2 dark:border-[#FFFFFF] border-dashed flex items-center justify-center">
-                  <div className="w-4 h-4 md:w-6 md:h-6 rounded-full  bg-black dark:bg-[#FFFFFF]"/>
+          <ScrollReveal delayMs={70}>
+            <div className="mb-16 relative">
+              <div className="flex flex-row justify-end items-center">
+                <div className="w-1/2 pl-[8%] text-left">
+                  <h3 className="text-6 md:text-xl font-bold dark:text-[#E7E7E7]">SisWeek 2024</h3>
+                  <div className="text-sm font-medium text-[#990000] mt-1">Abr 2024</div>
+                  <p className="mt-3 text-xs font-light md:font-medium md:text-base dark:text-[#E7E7E7]">Participação na Semana de Sistemas de Informação com apresentação de projetos e desenvolvimento de aplicação web.</p>
+                </div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center z-10">
+                  <div className="w-10 h-10 md:w-18 md:h-18 rounded-full border-2 dark:border-[#FFFFFF] border-dashed flex items-center justify-center">
+                    <div className="w-4 h-4 md:w-6 md:h-6 rounded-full  bg-black dark:bg-[#FFFFFF]"/>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
 
-          <div className="mb-16 relative">
-            <div className="flex flex-row items-center">
-              <div className="w-1/2 pr-[8%] text-right">
-                <h3 className="text-6 md:text-xl font-bold dark:text-[#E7E7E7]">Fundação da Rocket Jr</h3>
-                <div className="text-sm font-medium text-[#990000] mt-1">Jan 2024</div>
-                <p className="mt-3 text-xs font-light md:font-medium md:text-base dark:text-[#E7E7E7]">Criação oficial da empresa júnior do curso de Sistemas de Informação, com definição de missão, visão e valores.</p>
-              </div>
-              <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center z-10">
-                <div className="w-10 h-10 md:w-18 md:h-18 rounded-full border-2 border-[#FF0000] border-dashed flex items-center justify-center">
-                  <div className="w-4 h-4 md:w-6 md:h-6 rounded-full bg-[#FF0000]"/>
+          <ScrollReveal delayMs={110}>
+            <div className="mb-16 relative">
+              <div className="flex flex-row items-center">
+                <div className="w-1/2 pr-[8%] text-right">
+                  <h3 className="text-6 md:text-xl font-bold dark:text-[#E7E7E7]">Fundação da Rocket Jr</h3>
+                  <div className="text-sm font-medium text-[#990000] mt-1">Jan 2024</div>
+                  <p className="mt-3 text-xs font-light md:font-medium md:text-base dark:text-[#E7E7E7]">Criação oficial da empresa júnior do curso de Sistemas de Informação, com definição de missão, visão e valores.</p>
+                </div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center z-10">
+                  <div className="w-10 h-10 md:w-18 md:h-18 rounded-full border-2 border-[#FF0000] border-dashed flex items-center justify-center">
+                    <div className="w-4 h-4 md:w-6 md:h-6 rounded-full bg-[#FF0000]"/>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
 
-          <div className="mb-16 relative">
-            <div className="flex flex-row justify-end items-center pb-40">
-              <div className="w-1/2 pl-[8%] text-left">
-                <h3 className="text-6 md:text-xl font-bold dark:text-[#E7E7E7]">Primeiro Projeto Comercial</h3>
-                <div className="text-sm font-medium text-[#990000] mt-1">Mar 2024</div>
-                <p className="mt-3 text-xs font-light md:font-medium md:text-base dark:text-[#E7E7E7]">Desenvolvimento do primeiro projeto comercial, consolidando a entrada da Rocket Jr no mercado de tecnologia.</p>
-              </div>
-              <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center z-10">
-                <div className="w-10 h-10 md:w-18 md:h-18 rounded-full border-2 dark:border-[#FFFFFF] border-dashed flex items-center justify-center">
-                  <div className="w-4 h-4 md:w-6 md:h-6 rounded-full bg-black dark:bg-[#FFFFFF]"/>
+          <ScrollReveal delayMs={150}>
+            <div className="mb-16 relative">
+              <div className="flex flex-row justify-end items-center pb-40">
+                <div className="w-1/2 pl-[8%] text-left">
+                  <h3 className="text-6 md:text-xl font-bold dark:text-[#E7E7E7]">Primeiro Projeto Comercial</h3>
+                  <div className="text-sm font-medium text-[#990000] mt-1">Mar 2024</div>
+                  <p className="mt-3 text-xs font-light md:font-medium md:text-base dark:text-[#E7E7E7]">Desenvolvimento do primeiro projeto comercial, consolidando a entrada da Rocket Jr no mercado de tecnologia.</p>
+                </div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center z-10">
+                  <div className="w-10 h-10 md:w-18 md:h-18 rounded-full border-2 dark:border-[#FFFFFF] border-dashed flex items-center justify-center">
+                    <div className="w-4 h-4 md:w-6 md:h-6 rounded-full bg-black dark:bg-[#FFFFFF]"/>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           
         </div>
