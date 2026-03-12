@@ -39,6 +39,7 @@ export default function QuemSomos() {
             alt="Logo Rocket - tema escuro"
             width={400}
             height={160}
+            priority
             className="mx-auto w-full max-w-56 md:max-w-72 lg:max-w-80 h-auto hidden dark:block"
           />
 
@@ -47,6 +48,7 @@ export default function QuemSomos() {
             alt="Logo Rocket - tema claro"
             width={400}
             height={160}
+            priority
             className="mx-auto w-full max-w-56 md:max-w-72 lg:max-w-80 h-auto block dark:hidden"
           />
         </div>
@@ -70,24 +72,20 @@ export default function QuemSomos() {
                 alt="Almej 2025"
                 width={435}
                 height={279}
+                priority
+                sizes="(max-width: 768px) 45vw, (max-width: 1024px) 30vw, 435px"
               />
             </div>
 
-            <div className="hidden  md:flex justify-center items-center p-2">
+            <div className="flex justify-center items-center p-2">
               <Image
                 src={FotoMembrosCorredor}
                 alt="Foto dos membros no corredor"
                 width={240}
                 height={320}
-              />
-            </div>
-
-             <div className="flex md:hidden justify-center items-center p-2">
-              <Image
-                src={FotoMembrosCorredor}
-                alt="Foto dos membros no corredor"
-                width={155}
-                height={116}
+                loading="lazy"
+                sizes="(max-width: 768px) 36vw, 240px"
+                className="w-[155px] h-auto md:w-[240px]"
               />
             </div>
 
@@ -97,6 +95,8 @@ export default function QuemSomos() {
                 alt="Legado Rocket"
                 width={450}
                 height={279}
+                priority
+                sizes="(max-width: 768px) 90vw, (max-width: 1024px) 55vw, 450px"
                 className="rounded-md"
               />
             </div>
@@ -107,26 +107,22 @@ export default function QuemSomos() {
                 alt="Guerrilha"
                 width={240}
                 height={320}
+                loading="lazy"
+                sizes="(max-width: 768px) 45vw, 240px"
                 className="rounded-md"
               />
             </div>
 
 
-            <div className="hidden md:flex justify-center items-center p-2">
+            <div className="flex justify-center items-center p-2">
               <Image
                 src={FotoBandeiraRocket}
                 alt="Bandeira da Rocket"
                 width={190}
                 height={297}
-              />
-            </div>
-
-             <div className="flex md:hidden flex-col justify-center items-center p-2">
-              <Image
-                src={FotoBandeiraRocket}
-                alt="Bandeira da Rocket"
-                width={144}
-                height={92}
+                loading="lazy"
+                sizes="(max-width: 768px) 34vw, 190px"
+                className="w-[144px] h-auto md:w-[190px]"
               />
             </div>
 
@@ -136,6 +132,8 @@ export default function QuemSomos() {
                 alt="Mascotes EJ"
                 width={458}
                 height={229}
+                loading="lazy"
+                sizes="(max-width: 768px) 45vw, (max-width: 1024px) 30vw, 458px"
               />
             </div>
 
@@ -145,6 +143,8 @@ export default function QuemSomos() {
                 alt="Membros Rocket JR"
                 width={350}
                 height={334}
+                loading="lazy"
+                sizes="(max-width: 1024px) 55vw, 350px"
               />
             </div>
 
@@ -154,6 +154,8 @@ export default function QuemSomos() {
                 alt="Guerrilha 2025"
                 width={262}
                 height={168}
+                loading="lazy"
+                sizes="262px"
                 className="rounded-md"
               />
             </div>
