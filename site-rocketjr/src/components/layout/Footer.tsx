@@ -112,8 +112,8 @@ export default function Footer() {
           />
         </div>
         <div className="flex items-end gap-4 text-xs mb-5 ">
-          <a href="https://www.rocketjr.com.br/politica-de-privacidade" className="hover:text-red-500 transition-colors text-black dark:text-white">Política de Privacidade</a>
-          <a href="https://www.rocketjr.com.br/termos-de-servico" className="hover:text-red-500 transition-colors text-black dark:text-white">Termos de Serviço</a>
+          <a href="/politica-de-privacidade" className="hover:text-red-500 transition-colors text-black dark:text-white">Política de Privacidade</a>
+          <a href="/termos-de-servico" className="hover:text-red-500 transition-colors text-black dark:text-white">Termos de Serviço</a>
           <span className="mt-4">2026 ROCKETJR All Rights Reserved.</span>
         </div>
       </div>
