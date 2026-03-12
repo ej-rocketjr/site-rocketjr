@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     canonical: "/contato",
   },
   openGraph: {
-    title: "Contato | RocketJR",
+    title: "Contato - RocketJR | Soluções Digitais e Desenvolvimento Web",
     description: "Fale com a RocketJR e tire seu projeto digital do papel.",
     url: "/contato",
     type: "website",

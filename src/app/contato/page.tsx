@@ -4,7 +4,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import HeroPages from "@/components/sections/HeroPages";
-import mascote from "@/assets/mascote-anela-vermelho.svg";
+import RaccoonMascoteRocket from "@/assets/icons/raccoon-mascote-anela-vermelho-rocket-jr.svg";
 
 
 // ============================================================
@@ -75,7 +75,7 @@ function IconSiteInstitucional() {
 function IconAnaliseDados() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-      <title>Icone Analise de Dados</title>
+      <title>Icone Análise de Dados</title>
       <path opacity="0.5" d="M1.24609 7.47862C1.24609 4.54061 1.24609 3.0716 2.15854 2.15854C3.07222 1.24609 4.54061 1.24609 7.47862 1.24609C10.4166 1.24609 11.8856 1.24609 12.7981 2.15854C13.7112 3.07222 13.7112 4.54061 13.7112 7.47862C13.7112 10.4166 13.7112 11.8856 12.7981 12.7981C11.8863 13.7112 10.4166 13.7112 7.47862 13.7112C4.54061 13.7112 3.0716 13.7112 2.15854 12.7981C1.24609 11.8863 1.24609 10.4166 1.24609 7.47862Z" fill="#C8060B"/>
       <path d="M13.7108 3.11585C13.7108 3.61174 13.5138 4.08732 13.1632 4.43797C12.8125 4.78862 12.337 4.98561 11.8411 4.98561C11.3452 4.98561 10.8696 4.78862 10.5189 4.43797C10.1683 4.08732 9.9713 3.61174 9.9713 3.11585C9.9713 2.61996 10.1683 2.14438 10.5189 1.79373C10.8696 1.44309 11.3452 1.24609 11.8411 1.24609C12.337 1.24609 12.8125 1.44309 13.1632 1.79373C13.5138 2.14438 13.7108 2.61996 13.7108 3.11585ZM9.03643 6.69956C8.91245 6.69956 8.79356 6.65031 8.7059 6.56265C8.61823 6.47498 8.56899 6.35609 8.56899 6.23212C8.56899 6.10814 8.61823 5.98925 8.7059 5.90159C8.79356 5.81393 8.91245 5.76468 9.03643 5.76468H10.5946C10.7185 5.76468 10.8374 5.81393 10.9251 5.90159C11.0127 5.98925 11.062 6.10814 11.062 6.23212V7.79025C11.062 7.91422 11.0127 8.03312 10.9251 8.12078C10.8374 8.20844 10.7185 8.25769 10.5946 8.25769C10.4706 8.25769 10.3517 8.20844 10.264 8.12078C10.1764 8.03312 10.1271 7.91422 10.1271 7.79025V7.3602L8.87251 8.61481C8.66799 8.81919 8.39068 8.934 8.10155 8.934C7.81241 8.934 7.5351 8.81919 7.33058 8.61481L6.3421 7.62633C6.32763 7.61182 6.31044 7.60031 6.29151 7.59246C6.27258 7.5846 6.25228 7.58056 6.23179 7.58056C6.21129 7.58056 6.191 7.5846 6.17207 7.59246C6.15314 7.60031 6.13595 7.61182 6.12147 7.62633L4.69235 9.05545C4.60374 9.13802 4.48654 9.18297 4.36544 9.18084C4.24434 9.1787 4.1288 9.12964 4.04316 9.044C3.95752 8.95835 3.90846 8.84281 3.90632 8.72171C3.90419 8.60062 3.94914 8.48342 4.03171 8.3948L5.46082 6.96569C5.66535 6.76131 5.94265 6.6465 6.23179 6.6465C6.52092 6.6465 6.79823 6.76131 7.00275 6.96569L7.99123 7.95416C8.0057 7.96867 8.0229 7.98019 8.04183 7.98804C8.06076 7.9959 8.08105 7.99994 8.10155 7.99994C8.12204 7.99994 8.14233 7.9959 8.16126 7.98804C8.18019 7.98019 8.19739 7.96867 8.21186 7.95416L9.46585 6.69956H9.03643Z" fill="white"/>
     </svg>
@@ -86,7 +86,7 @@ const subjectOptions = [
   { id: "landing-page",       label: "Landing Page",       icon: <IconLandingPage /> },
   { id: "e-commerces",        label: "E-Commerces",        icon: <IconECommerce /> },
   { id: "site-institucional", label: "Site Institucional", icon: <IconSiteInstitucional /> },
-  { id: "analise-dados",      label: "Analise De Dados",   icon: <IconAnaliseDados /> },
+  { id: "analise-dados",      label: "Análise De Dados",   icon: <IconAnaliseDados /> },
 ];
 
 // ============================================================
@@ -133,7 +133,7 @@ function RadioCheckbox({
           {icon}
         </div>
         <input id={id} type="checkbox" checked={checked} onChange={onChange} className="sr-only" />
-        <span className="capitalize text-[#d9d9d9]" style={{ fontFamily: "'Poppins', sans-serif", fontSize: "13px" }}>
+        <span className="capitalize text-black dark:text-[#d9d9d9]" style={{ fontFamily: "'Poppins', sans-serif", fontSize: "13px" }}>
           {label}
         </span>
       </div>
@@ -257,19 +257,17 @@ export default function App() {
     fontFamily: "'Bricolage Grotesque', sans-serif",
     fontSize:   "14px",
     background: "transparent",
-    color:      "rgba(237, 237, 237, 0.6)",
   };
   const labelBase: React.CSSProperties = {
     fontFamily:    "'Bricolage Grotesque', sans-serif",
     fontSize:      "15px",
     fontWeight:    700,
-    color:         "white",
     textTransform: "capitalize",
   };
 
   return (
   
-        <section id="contato" className="w-full bg-black">
+        <section id="contato" className="w-full bg-white dark:bg-black">
           <HeroPages/>
           <h1 className="text-center text-[22px] md:text-[28px] lg:text-[32px] font-bold text-white mt-6 md:mt-10" style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}>
            Soluções inovadoras e tecnologicas
@@ -285,8 +283,8 @@ export default function App() {
           {/* ⚠️ Coloque o arquivo em public/mascote.png
               ou altere  no topo deste arquivo */}
           <Image
-            src={mascote}
-            alt="Mascote Rocket Junior"
+            src={RaccoonMascoteRocket}
+            alt="Raccoon Mascote da RocketJR"
             width={520}
             height={520}
             className="relative block w-full"
@@ -340,7 +338,7 @@ export default function App() {
 
             {/* Nome */}
             <div className="flex flex-col gap-1">
-              <label htmlFor="nome" style={labelBase}>
+              <label htmlFor="nome" className="text-black dark:text-white" style={labelBase}>
                 Nome <span style={{ color: "#e30613" }}>*</span>
               </label>
               <input
@@ -349,7 +347,7 @@ export default function App() {
                 placeholder="Seu nome completo"
                 value={form.nome}
                 onChange={(e) => { setForm({ ...form, nome: e.target.value }); if (fieldErrors.nome) setFieldErrors({ ...fieldErrors, nome: "" }); }}
-                className="w-full h-[44px] px-3 rounded-[7px] outline-none transition-colors"
+                className="w-full h-[44px] px-3 rounded-[7px] outline-none transition-colors bg-white dark:bg-transparent text-black dark:text-white placeholder:text-gray-400"
                 style={{ ...inputBase, border: fieldErrors.nome ? "1px solid #ef4444" : "1px solid red" }}
               />
               {fieldErrors.nome && (
@@ -361,7 +359,7 @@ export default function App() {
 
             {/* Email */}
             <div className="flex flex-col gap-1">
-              <label htmlFor="email" style={labelBase}>
+              <label htmlFor="email" className="text-black dark:text-white" style={labelBase}>
                 Email <span style={{ color: "#e30613" }}>*</span>
               </label>
               <input
@@ -370,7 +368,7 @@ export default function App() {
                 placeholder="seu@email.com"
                 value={form.email}
                 onChange={(e) => { setForm({ ...form, email: e.target.value }); if (fieldErrors.email) setFieldErrors({ ...fieldErrors, email: "" }); }}
-                className="w-full h-[44px] px-3 rounded-[7px] outline-none transition-colors"
+                className="w-full h-[44px] px-3 rounded-[7px] outline-none transition-colors bg-white dark:bg-transparent text-black dark:text-white placeholder:text-gray-400"
                 style={{ ...inputBase, border: fieldErrors.email ? "1px solid #ef4444" : "1px solid red" }}
               />
               {fieldErrors.email && (
@@ -383,26 +381,26 @@ export default function App() {
             {/* Telefone + Empresa — Mobile: coluna | Tablet+: linha */}
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
               <div className="flex flex-col gap-1 flex-1">
-                <label htmlFor="telefone" style={labelBase}>Telefone</label>
+                <label htmlFor="telefone" className="text-black dark:text-white" style={labelBase}>Telefone</label>
                 <input
                   id="telefone"
                   type="tel"
                   placeholder="(00) 00000-0000"
                   value={form.telefone}
                   onChange={(e) => setForm({ ...form, telefone: e.target.value })}
-                  className="w-full h-[44px] px-3 rounded-[7px] outline-none"
+                  className="w-full h-[44px] px-3 rounded-[7px] outline-none bg-white dark:bg-transparent text-black dark:text-white placeholder:text-gray-400"
                   style={{ ...inputBase, border: "1px solid red" }}
                 />
               </div>
               <div className="flex flex-col gap-1 flex-1">
-                <label htmlFor="empresa" style={labelBase}>Nome Da Empresa</label>
+                <label htmlFor="empresa" className="text-black dark:text-white" style={labelBase}>Nome Da Empresa</label>
                 <input
                   id="empresa"
                   type="text"
                   placeholder="Sua empresa"
                   value={form.empresa}
                   onChange={(e) => setForm({ ...form, empresa: e.target.value })}
-                  className="w-full h-[44px] px-3 rounded-[7px] outline-none"
+                  className="w-full h-[44px] px-3 rounded-[7px] outline-none bg-white dark:bg-transparent text-black dark:text-white placeholder:text-gray-400"
                   style={{ ...inputBase, border: "1px solid red" }}
                 />
               </div>
@@ -410,7 +408,7 @@ export default function App() {
 
             {/* Checkboxes — Mobile: 1 coluna | Tablet+: 2 colunas */}
             <div className="flex flex-col gap-2 md:gap-3">
-              <p style={labelBase}>Assunto</p>
+              <p className="text-black dark:text-white" style={labelBase}>Assunto</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
                 {subjectOptions.map((opt) => (
                   <RadioCheckbox
@@ -427,7 +425,7 @@ export default function App() {
 
             {/* Mensagem */}
             <div className="flex flex-col gap-1">
-              <label htmlFor="assunto" style={labelBase}>
+              <label htmlFor="assunto" className="text-black dark:text-white" style={labelBase}>
                 Mensagem <span style={{ color: "#e30613" }}>*</span>
               </label>
               <textarea
@@ -435,7 +433,7 @@ export default function App() {
                 placeholder="Descreva seu projeto ou dúvida..."
                 value={form.assunto}
                 onChange={(e) => { setForm({ ...form, assunto: e.target.value }); if (fieldErrors.assunto) setFieldErrors({ ...fieldErrors, assunto: "" }); }}
-                className="w-full px-3 py-2 rounded-[7px] outline-none resize-none transition-colors"
+                className="w-full px-3 py-2 rounded-[7px] outline-none resize-none transition-colors bg-white dark:bg-transparent text-black dark:text-white placeholder:text-gray-400"
                 rows={4}
                 style={{ ...inputBase, border: fieldErrors.assunto ? "1px solid #ef4444" : "1px solid red" }}
               />
