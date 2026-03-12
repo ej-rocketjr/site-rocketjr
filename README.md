@@ -1,18 +1,18 @@
 # 🚀 Site Institucional – RocketJR
 
-Este projeto utiliza **Next.js (App Router)**, **React** e **Tailwind CSS** para desenvolver o site institucional da RocketJR.
+Este projeto utiliza **Next.js (App Router)**, **React 19**, **TypeScript** e **Tailwind CSS v4** para desenvolver o site institucional da RocketJR.
 
-O objetivo é construir uma aplicação moderna, performática e escalável, seguindo boas práticas de arquitetura, versionamento e organização de código.
+O objetivo é manter uma aplicação moderna, performática, escalável e bem organizada, com foco em SEO técnico e boa experiência em dispositivos móveis e desktop.
 
 ---
 
 ## 🔧 Requisitos
 
-Certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
+Certifique-se de ter as seguintes ferramentas instaladas:
 - **Node.js** 18+
 - **npm** 9+
 
-Verifique sua versão no terminal:
+Verifique no terminal:
 ```bash
 node -v
 npm -v
@@ -22,23 +22,21 @@ npm -v
 
 ## 📥 Como Clonar e Executar o Projeto
 
-Siga os passos abaixo para rodar o projeto localmente:
-
 ```bash
 # Clone o repositório
 git clone https://github.com/ej-rocketjr/site-rocketjr.git
 
-# Acesse a pasta do projeto
+# Acesse a pasta
 cd site-rocketjr
 
-# Instale as dependências
+# Instale dependências
 npm install
 
-# Inicie o servidor de desenvolvimento
+# Ambiente de desenvolvimento
 npm run dev
 ```
 
-A aplicação estará disponível em: `http://localhost:3000`
+A aplicação ficará disponível em: `http://localhost:3000`
 
 ---
 
@@ -48,23 +46,18 @@ Todos os comandos devem ser executados na raiz do projeto.
 
 | Comando | Quando usar |
 | --- | --- |
-| `npm install` | Após clonar o projeto ou quando novas dependências forem adicionadas. |
-| `npm run dev` | Durante o desenvolvimento para visualização em tempo real. |
-| `npm run build` | Para gerar a versão otimizada de produção e validar a compilação. |
-| `npm run lint` | Antes de abrir um Pull Request, para verificar erros no código. |
+| `npm run dev` | Desenvolvimento local com recarregamento automático. |
+| `npm run build` | Gera build de produção otimizada. |
+| `npm run start` | Sobe o build de produção localmente. |
+| `npm run lint` | Executa análise de código com **Biome**. |
 
 ---
 
-## 🔎 ESLint
+## 🔎 Lint e Qualidade de Código
 
-O ESLint é uma ferramenta que analisa o código para:
+O projeto usa **Biome** para validação estática de código.
 
-* Detectar erros potenciais
-* Garantir a padronização
-* Evitar más práticas
-* Manter a consistência entre os desenvolvedores
-
-Execute sempre antes de abrir um PR:
+Execute antes de abrir PR:
 
 ```bash
 npm run lint
@@ -74,32 +67,60 @@ npm run lint
 
 ## 📁 Estrutura do Projeto
 
-Este projeto utiliza o **App Router** do Next.js. A estrutura principal está organizada da seguinte forma:
+Este projeto utiliza o **App Router** do Next.js. Estrutura atual:
 
 ```text
 /
-├── public/                # Arquivos públicos (logos, ícones, imagens estáticas)
+├── public/                              # Arquivos públicos acessados por URL
 │
 ├── src/
-│ ├── app/                 # Rotas da aplicação (App Router)
-│ │ ├── layout.tsx         # Layout global
-│ │ ├── page.tsx           # Home
-│ │ ├── servicos/          # Página Serviços
-│ │ ├── quem-somos/        # Página Quem Somos
-│ │ └── contato/           # Página Contato
+│ ├── app/                               # Rotas da aplicação (App Router)
+│ │ ├── layout.tsx                       # Layout global (Header, Footer, metadata base)
+│ │ ├── page.tsx                         # Home
+│ │ ├── globals.css                      # Estilos globais
+│ │ ├── robots.ts                        # Configuração de robots
+│ │ ├── sitemap.ts                       # Geração de sitemap
+│ │ ├── contato/                         # Rota /contato
+│ │ │ ├── layout.tsx                     # Metadata específico de contato
+│ │ │ └── page.tsx
+│ │ ├── dados/                           # Rota /dados
+│ │ │ └── page.tsx
+│ │ ├── decisoes-tecnologicas/           # Rota /decisoes-tecnologicas
+│ │ │ └── page.tsx
+│ │ ├── e-commerce/                      # Rota /e-commerce
+│ │ │ └── page.tsx
+│ │ ├── quem-somos/                      # Rota /quem-somos
+│ │ │ └── page.tsx
+│ │ ├── solucoes-digitais/               # Rota /solucoes-digitais
+│ │ │ └── page.tsx
+│ │ └── transformacao-digital/           # Rota /transformacao-digital
+│ │   └── page.tsx
 │ │
-│ ├── components/          # Componentes reutilizáveis
-│ │ ├── layout/            # Header, Footer
-│ │ ├── sections/          # Seções específicas de páginas
-│ │ └── ui/                # Componentes menores reutilizáveis
+│ ├── assets/                            # Assets importados como módulo
+│ │ ├── icons/
+│ │ ├── images/
+│ │ └── logos/
 │ │
-│ ├── assets/              # Imagens importadas como módulo (opcional)
-│ │
-│ └── styles/              # Estilos globais adicionais (se necessário)
+│ └── components/                        # Componentes reutilizáveis
+│   ├── layout/
+│   │ ├── Header.tsx                     # Cabeçalho global
+│   │ └── Footer.tsx                     # Rodapé global
+│   ├── sections/
+│   │ ├── Hero.tsx                       # Hero da Home
+│   │ ├── Servicos.tsx                   # Seção de serviços
+│   │ ├── Clientes.tsx                   # Seção de clientes
+│   │ ├── QuemSomos.tsx                  # Seção de quem somos (Home)
+│   │ └── HeroPages.tsx                  # Hero reutilizável para páginas internas
+│   └── ui/
+│     ├── CardsCarrossel.tsx             # Card de serviço (carrossel)
+│     ├── ScrollReveal.tsx               # Efeito de entrada por scroll
+│     └── cursorBlur.tsx                 # Efeito visual de cursor
 │
-├── postcss.config.mjs
-├── package.json
-├── tsconfig.json
+├── next.config.ts                       # Configuração Next.js
+├── postcss.config.mjs                   # Configuração PostCSS
+├── eslint.config.mjs                    # Configuração de lint no repositório
+├── tsconfig.json                        # Configuração TypeScript
+├── package.json                         # Dependências e scripts
 └── README.md
 ```
 
@@ -109,129 +130,127 @@ Este projeto utiliza o **App Router** do Next.js. A estrutura principal está or
 
 ### Organização
 
-* **`layout/`** → Componentes estruturais (Header, Footer).
-* **`sections/`** → Seções completas de páginas (Ex: Hero, Sobre).
-* **`ui/`** → Componentes reutilizáveis menores (Ex: Botões, Cards, Inputs).
+* **`components/layout`** → Estrutura global (Header e Footer).
+* **`components/sections`** → Blocos completos de página.
+* **`components/ui`** → Componentes de apoio reutilizáveis.
 
-> 💡 **Nota:** Essa organização garante escalabilidade e previsibilidade arquitetural.
-
-### Criando um componente
-
-Crie um arquivo `.tsx` dentro de `src/components/`.
-
-```tsx
-export default function Button({ children }: { children: React.ReactNode }) {
-  return (
-    <button className="bg-red-600 text-white px-4 py-2 rounded-md">
-      {children}
-    </button>
-  );
-}
-```
-
-### Utilização
-
-Importe e utilize o componente nas suas páginas:
-
-```tsx
-import Button from "@/components/ui/Button";
-
-export default function Home() {
-  return <Button>Saiba Mais</Button>;
-}
-```
+> 💡 Essa separação facilita manutenção, reuso e escalabilidade.
 
 ---
 
-## 🖼️ Imagens e SEO
+## 🖼️ Imagens e Performance
 
-### 📂 Uso da pasta `public/`
+### Padrão adotado no projeto
 
-Use para: Logos, ícones e imagens acessadas diretamente via URL.
+* Importar imagens por módulo (`src/assets`).
+* Utilizar imagens raster otimizadas em formato **`.webp`** sempre que possível.
+* Renderizar com `next/image`.
+* Definir `alt`, `width` e `height`.
+* Definir `sizes` para comportamento responsivo.
+* Usar `priority` apenas em imagens críticas acima da dobra.
+* Usar `loading="lazy"` para imagens secundárias.
 
-**Exemplo:**
+### Formato das imagens
 
-```html
-<img src="/logo-rocketjr.png" alt="Logo RocketJR" />
-```
+Para melhorar compressão, tempo de carregamento e entrega em produção, as imagens do projeto foram padronizadas em **`.webp`** quando aplicável.
 
-### 📦 `next/image` (Recomendado)
+Esse formato é preferido para imagens fotográficas e visuais raster porque reduz o tamanho dos arquivos sem perda perceptível relevante na maior parte dos casos.
 
-Sempre que possível, utilize o componente nativo do Next.js para otimização automática:
+### Exemplo recomendado (sem uso de `<img>`)
 
 ```tsx
 import Image from "next/image";
-import minhaImagem from '@/assets/logo-rocketjr'; 
+import RaccoonMascoteRocket from "@/assets/icons/raccoon-mascote-rocket-jr.svg";
 
-export default function Logo() {
+export default function Mascote() {
   return (
     <Image
-        src={minhaImagem} 
-        alt="Descrição da imagem" 
-      width={200}
-      height={80}
+      src={RaccoonMascoteRocket}
+      alt="Raccoon Mascote da RocketJR"
+      width={350}
+      height={350}
+      loading="lazy"
+      sizes="(max-width: 1024px) 60vw, 25vw"
     />
   );
 }
 ```
 
-### 📌 Boas práticas de SEO
+---
 
-* Nomeie imagens de forma descritiva:
-* ❌ `img1.png`
-* ✅ `logo-rocketjr-vermelha.png`
+## 🔍 SEO Técnico
 
-* Utilize apenas um `<h1>` por página.
-* Mantenha a hierarquia semântica correta (`h1`, `h2`, `section`, `article`).
-* Evite imagens muito pesadas.
-* Pense em SEO desde o início do desenvolvimento.
+As páginas utilizam metadata por rota em `src/app` com:
+
+* `title`
+* `description`
+* `alternates.canonical`
+* `openGraph`
+
+Além disso, o projeto inclui:
+
+* `robots.ts`
+* `sitemap.ts`
 
 ---
 
-## 📏 Padrão de Commit (Obrigatório)
+## ✨ Animações de Scroll
 
-Utilizamos o padrão **Conventional Commits**.
+O componente `src/components/ui/ScrollReveal.tsx` é usado para revelar seções com animação de entrada ao entrar na viewport.
 
-**Formato:**
+Exemplo:
+
+```tsx
+import ScrollReveal from "@/components/ui/ScrollReveal";
+
+<ScrollReveal delayMs={80}>
+  <MinhaSection />
+</ScrollReveal>
+```
+
+---
+
+## 📏 Padrão de Commit
+
+Utilizamos **Conventional Commits**.
+
+Formato:
 `tipo: descrição breve`
 
-**Tipos principais:**
+Tipos comuns:
 
-* `feat`: Nova funcionalidade.
-* `fix`: Correção de erro/bug.
-* `refactor`: Refatoração sem alterar o comportamento.
-* `style`: Ajustes visuais ou de formatação no código.
-* `docs`: Alterações na documentação.
-* `chore`: Ajustes internos ou de dependências.
-* `test`: Adição ou alteração de testes.
+* `feat`
+* `fix`
+* `refactor`
+* `style`
+* `docs`
+* `chore`
+* `test`
 
-**Exemplos:**
+Exemplos:
 
-* `feat: adicionar header`
-* `fix: ajustar responsividade do header`
-* `refactor: otimizar estrutura do header`
+* `feat: adicionar animação de scroll na timeline`
+* `fix: corrigir metadata da home`
+* `docs: atualizar estrutura real no README`
 
-📚 **Referência:** [Padrões de Commits por iuricode](https://github.com/iuricode/padroes-de-commits)
+📚 Referência: [Padrões de Commits por iuricode](https://github.com/iuricode/padroes-de-commits)
 
 ---
 
-## 🔀 Padrão de Pull Request
+## 🔀 Checklist de Pull Request
 
-Antes de abrir um PR, valide seu código com o checklist abaixo:
-
-* [ ] Funcionalidade implementada conforme o esperado.
-* [ ] Layout responsivo testado.
-* [ ] Sem avisos ou erros no console do navegador.
-* [ ] Comando `npm run lint` executado sem erros.
-* [ ] Commits organizados seguindo o padrão.
-* [ ] Código revisado por você.
+* [ ] Funcionalidade implementada conforme esperado.
+* [ ] Responsividade validada em mobile e desktop.
+* [ ] Sem erros no console do navegador.
+* [ ] `npm run lint` executado com sucesso.
+* [ ] Commits organizados seguindo padrão.
+* [ ] Código revisado antes de abrir PR.
 
 ---
 
 ## 📚 Documentação Oficial
 
-Em caso de dúvidas técnicas, consulte a documentação oficial ou abra uma *Issue* no repositório:
-
 * 📘 [Next.js Docs](https://nextjs.org/docs)
 * ⚛️ [React Docs](https://react.dev)
 * 🎨 [Tailwind CSS Docs](https://tailwindcss.com/docs)
+* 🧪 [Biome Docs](https://biomejs.dev/)
