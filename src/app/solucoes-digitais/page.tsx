@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     canonical: "/solucoes-digitais",
   },
   openGraph: {
-    title: "Soluções Digitais | RocketJR",
+    title: "Soluções Digitais - RocketJR | Soluções Digitais e Desenvolvimento Web",
     description:
       "Do conceito ao produto final, criamos soluções digitais de alto impacto.",
     url: "/solucoes-digitais",
