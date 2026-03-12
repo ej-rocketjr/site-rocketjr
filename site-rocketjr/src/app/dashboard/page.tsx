@@ -1,8 +1,17 @@
 'use client'
 import { useEffect, useState } from 'react'
 
+type ContactForm = {
+  id: string
+  name: string
+  email: string
+  telephone: string
+  subject: unknown
+  message: string
+}
+
 export default function Dashboard() {
-  const [contatos, setContatos] = useState([]);
+  const [contatos, setContatos] = useState<ContactForm[]>([])
 
   // Busca os dados da API quando a página carrega
   useEffect(() => {
@@ -27,7 +36,7 @@ export default function Dashboard() {
             </tr>
           </thead>
           <tbody>
-            {contatos.map((contato: any) => (
+            {contatos.map((contato) => (
               <tr key={contato.id} className="border-t border-zinc-800 hover:bg-zinc-800">
                 <td className="p-4">{contato.name}</td>
                 <td className="p-4">{contato.email}</td>
