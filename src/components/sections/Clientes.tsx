@@ -99,9 +99,9 @@ export default function Clientes() {
   }, [shouldLoadCarousel]);
 
   return (
-    <section ref={sectionRef} className="bg-white dark:bg-black px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24" id="clientes">
+    <section ref={sectionRef} className="bg-white dark:bg-black px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10" id="clientes">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-center text-black dark:text-white text-3xl sm:text-4xl font-extrabold mb-10 sm:mb-12">
+        <h2 className="text-center text-black dark:text-white text-3xl sm:text-4xl font-extrabold mb-12 lg:mb-2">
           Nossos Clientes
         </h2>
 
