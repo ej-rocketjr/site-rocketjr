@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Inter } from 'next/font/google';
 import Image from 'next/image';
 import setaDireta from '@/assets/icons/seta-direita.svg';
@@ -68,103 +68,135 @@ const clientes = [
 ];
 
 export default function Clientes() {
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const [shouldLoadCarousel, setShouldLoadCarousel] = useState(false);
+
   useEffect(() => {
-    for (const cliente of clientes) {
-      const preloadImage = new window.Image();
-      preloadImage.src = cliente.imagem.src;
+    if (shouldLoadCarousel) {
+      return;
     }
-  }, []);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting) {
+          setShouldLoadCarousel(true);
+          observer.disconnect();
+        }
+      },
+      {
+        root: null,
+        rootMargin: '200px 0px',
+        threshold: 0.01,
+      }
+    );
+
+    const currentSection = sectionRef.current;
+    if (currentSection) {
+      observer.observe(currentSection);
+    }
+
+    return () => observer.disconnect();
+  }, [shouldLoadCarousel]);
 
   return (
-    <section className="bg-white dark:bg-black px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24" id="clientes">
+    <section ref={sectionRef} className="bg-white dark:bg-black px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24" id="clientes">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-center text-black dark:text-white text-3xl sm:text-4xl font-extrabold mb-10 sm:mb-12">
           Nossos Clientes
         </h2>
 
         <div className="relative px-2 sm:px-8 lg:px-12">
-          <button type="button" className="swiper-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 -translate-x-6 ml-4">
-            <Image src={setaEsquerda} alt="Anterior" width={32} height={32} />
-          </button>
+          {shouldLoadCarousel ? (
+            <>
+              <button type="button" className="swiper-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 -translate-x-6 ml-4">
+                <Image src={setaEsquerda} alt="Anterior" width={32} height={32} />
+              </button>
 
-          <Swiper
-            modules={[Navigation]}
-            navigation={{
-              prevEl: '.swiper-prev',
-              nextEl: '.swiper-next',
-            }}
-            spaceBetween={32}
-            slidesPerView={1}
-            loop={true}
-            className=""
-          >
-            {clientes.map((cliente) => (
-              <SwiperSlide key={cliente.id} className="h-full">
-                <div className="flex min-h-[720px] flex-col justify-between gap-8 px-2 sm:px-4 lg:px-8 md:min-h-[560px] md:flex-row md:items-center md:justify-between">
-                  {/* Desktop */}
-                  <div className="flex-1 hidden md:block">
-                    <h2 className="text-black dark:text-white text-5xl font-thin">
-                      {cliente.nome}
-                    </h2>
-                    <p className="mt-4 max-w-2xl text-justify text-lg text-gray-600 dark:text-gray-300">
-                      {cliente.descricao}
-                    </p>
-                  </div>
-                  <div className="hidden h-[360px] w-[420px] flex-shrink-0 items-center justify-center md:flex">
-                    <a
-                      href={cliente.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`Acessar site de ${cliente.nome}`}
-                      className="flex h-full w-full items-center justify-center"
-                    >
-                      <Image
-                        src={cliente.imagem}
-                        alt={cliente.alt}
-                        width={cliente.width ?? 500}
-                        height={cliente.height ?? 800}
-                        loading="eager"
-                        unoptimized
-                        className="h-full w-auto max-w-full object-contain cursor-pointer"
-                      />
-                    </a>
-                  </div>
-                  {/* Mobile */}
-                  <div className="flex min-h-[720px] flex-col gap-4 md:hidden">
-                    <h2 className="text-black dark:text-white text-3xl font-thin mb-2">
-                      {cliente.nome}
-                    </h2>
-                    <p className="text-gray-600 dark:text-gray-300 text-justify">
-                      {cliente.descricao}
-                    </p>
-                    <div className="mx-auto flex h-[260px] w-[300px] items-center justify-center md:hidden">
-                      <a
-                        href={cliente.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`Acessar site de ${cliente.nome}`}
-                        className="flex h-full w-full items-center justify-center"
-                      >
-                        <Image
-                          src={cliente.imagem}
-                          alt={cliente.alt}
-                          width={cliente.width ?? 300}
-                          height={cliente.height ?? 620}
-                          loading="eager"
-                          unoptimized
-                          className="mx-auto h-full w-auto max-w-full object-contain cursor-pointer"
-                        />
-                      </a>
+              <Swiper
+                modules={[Navigation]}
+                navigation={{
+                  prevEl: '.swiper-prev',
+                  nextEl: '.swiper-next',
+                }}
+                spaceBetween={32}
+                slidesPerView={1}
+                loop={true}
+                className=""
+              >
+                {clientes.map((cliente, index) => (
+                  <SwiperSlide key={cliente.id} className="h-full">
+                    <div className="flex min-h-[720px] flex-col justify-between gap-8 px-2 sm:px-4 lg:px-8 md:min-h-[560px] md:flex-row md:items-center md:justify-between">
+                      {/* Desktop */}
+                      <div className="flex-1 hidden md:block">
+                        <h2 className="text-black dark:text-white text-5xl font-thin">
+                          {cliente.nome}
+                        </h2>
+                        <p className="mt-4 max-w-2xl text-justify text-lg text-gray-600 dark:text-gray-300">
+                          {cliente.descricao}
+                        </p>
+                      </div>
+                      <div className="hidden h-[360px] w-[420px] flex-shrink-0 items-center justify-center md:flex">
+                        <a
+                          href={cliente.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`Acessar site de ${cliente.nome}`}
+                          className="flex h-full w-full items-center justify-center"
+                        >
+                          <Image
+                            src={cliente.imagem}
+                            alt={cliente.alt}
+                            width={cliente.width ?? 500}
+                            height={cliente.height ?? 800}
+                            priority={index === 0}
+                            loading={index === 0 ? undefined : 'lazy'}
+                            unoptimized
+                            className="h-full w-auto max-w-full object-contain cursor-pointer transition-transform duration-300 hover:scale-[1.03] hover:drop-shadow-[0_10px_22px_rgba(0,0,0,0.22)]"
+                          />
+                        </a>
+                      </div>
+                      {/* Mobile */}
+                      <div className="flex min-h-[720px] flex-col gap-4 md:hidden">
+                        <h2 className="text-black dark:text-white text-3xl font-thin mb-2">
+                          {cliente.nome}
+                        </h2>
+                        <p className="text-gray-600 dark:text-gray-300 text-justify">
+                          {cliente.descricao}
+                        </p>
+                        <div className="mx-auto flex h-[260px] w-[300px] items-center justify-center md:hidden">
+                          <a
+                            href={cliente.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Acessar site de ${cliente.nome}`}
+                            className="flex h-full w-full items-center justify-center"
+                          >
+                            <Image
+                              src={cliente.imagem}
+                              alt={cliente.alt}
+                              width={cliente.width ?? 300}
+                              height={cliente.height ?? 620}
+                              loading="lazy"
+                              unoptimized
+                              className="mx-auto h-full w-auto max-w-full object-contain cursor-pointer transition-transform duration-300 hover:scale-[1.03] active:scale-[0.99]"
+                            />
+                          </a>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
 
-          <button type="button" className="swiper-next absolute right-0 top-1/2 -translate-y-1/2 z-10 translate-x-6 mr-4">
-            <Image src={setaDireta} alt="Próximo" width={32} height={32} />
-          </button>
+              <button type="button" className="swiper-next absolute right-0 top-1/2 -translate-y-1/2 z-10 translate-x-6 mr-4">
+                <Image src={setaDireta} alt="Próximo" width={32} height={32} />
+              </button>
+            </>
+          ) : (
+            <div className="flex min-h-[360px] items-center justify-center">
+              <p className="text-sm text-gray-500 dark:text-gray-400">Carregando clientes...</p>
+            </div>
+          )}
         </div>
       </div>
     </section>
