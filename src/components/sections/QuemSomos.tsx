@@ -3,22 +3,20 @@ import Image from "next/image";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import EquipeRocketFoto from "@/assets/images/foto-almej-2025.svg";
+import EquipeRocketFoto from "@/assets/images/foto-almej-2025.webp";
 import LogoRocketAnimada from "@/assets/logos/Logo_Rocket_Animada_Section_QuemSomos.svg";
 import FogueteAnimado from "@/assets/logos/Foguete_Animado_Section_QuemSomos.svg";
 
 const rocketSlides = Array.from({ length: 10 }, (_, i) => ({
   id: `rocket-${i}`,
-  src: LogoRocketAnimada.src,
 }));
 const fogueteSlides = Array.from({ length: 10 }, (_, i) => ({
   id: `foguete-${i}`,
-  src: FogueteAnimado.src,
 }));
 
 function QuemSomos() {
   return (
-    <section className="relative w-full overflow-hidden bg-white py-1 sm:py-20 lg:py-24 dark:bg-black">
+    <section className="relative w-full overflow-hidden bg-white pt-1 sm:pt-5 lg:pt-10 pb-15 sm:pb-20 lg:pb-25 dark:bg-black">
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-6 px-4 sm:px-6 lg:gap-8 lg:px-8">
           <h2 className="text-center text-3xl font-bold text-black sm:text-4xl dark:text-white">
           Quem Somos
@@ -39,6 +37,7 @@ function QuemSomos() {
             autoplay={{
               delay: 0,
               disableOnInteraction: false,
+              reverseDirection: true,
             }}
             className="!overflow-visible"
             breakpoints={{
@@ -48,9 +47,12 @@ function QuemSomos() {
           >
             {rocketSlides.map((logo) => (
               <SwiperSlide key={logo.id} className="!w-auto">
-                <img
-                  src={logo.src}
+                <Image
+                  src={LogoRocketAnimada}
                   alt=""
+                  width={160}
+                  height={96}
+                  loading="lazy"
                   className="h-16 w-auto object-contain sm:h-20 lg:h-24"
                 />
               </SwiperSlide>
@@ -69,7 +71,6 @@ function QuemSomos() {
             autoplay={{
               delay: 0,
               disableOnInteraction: false,
-              reverseDirection: true,
             }}
             className="!overflow-visible"
             breakpoints={{
@@ -79,10 +80,12 @@ function QuemSomos() {
           >
             {fogueteSlides.map((logo) => (
               <SwiperSlide key={logo.id} className="!w-auto">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={logo.src}
+                <Image
+                  src={FogueteAnimado}
                   alt=""
+                  width={160}
+                  height={96}
+                  loading="lazy"
                   className="h-16 w-auto object-contain sm:h-20 lg:h-24"
                 />
               </SwiperSlide>

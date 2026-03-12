@@ -3,6 +3,7 @@ import Hero from "@/components/sections/Hero";
 import Servicos from "@/components/sections/Servicos";
 import Clientes from "@/components/sections/Clientes";
 import QuemSomos from "@/components/sections/QuemSomos";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Início - RocketJR | Soluções Digitais e Desenvolvimento Web",
@@ -25,8 +26,14 @@ export default function Home() {
     <main>
       <Hero />
       <Servicos />
-      <Clientes />
-      <QuemSomos />
+
+      <ScrollReveal delayMs={120}>
+        <Clientes />
+      </ScrollReveal>
+
+      <ScrollReveal delayMs={160}>
+        <QuemSomos />
+      </ScrollReveal>
     </main>
   );
 }
