@@ -15,9 +15,10 @@ services:
     container_name: postgres-db
     restart: always
     environment:
-      POSTGRES_USER: user_admin
-      POSTGRES_PASSWORD: mypassword
-      POSTGRES_DB: meu_projeto_db
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - DB_HOST=postgres
     ports:
       - "5432:5432"
     volumes:
