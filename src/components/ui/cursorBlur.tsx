@@ -7,6 +7,8 @@ interface Position {
     y: number;
 }
 
+const TRAIL_IDS = ["trail-0", "trail-1", "trail-2"];
+
 export default function BlurCursor() {
     const cursorRef = useRef<HTMLDivElement>(null);
     const [trailPositions, setTrailPositions] = useState<Position[]>([
@@ -69,7 +71,7 @@ export default function BlurCursor() {
             
             {trailPositions.map((pos, index) => (
                 <div
-                    key={index}
+                    key={TRAIL_IDS[index]}
                     className="pointer-events-none fixed left-0 top-0 z-[9998] hidden md:block rounded-full blur-xl will-change-transform transition-opacity duration-300"
                     style={{
                         transform: `translate(${pos.x - 32 + index * 4}px, ${pos.y - 32 + index * 4}px)`,

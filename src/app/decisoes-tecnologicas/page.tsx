@@ -1,4 +1,22 @@
-import MrRaccoon from "../../assets/MrRaccoon.png";
+import type { Metadata } from "next";
+import Image from "next/image";
+import RaccoonMascoteRocket from "@/assets/icons/raccoon-mascote-rocket-jr.svg";
+
+export const metadata: Metadata = {
+  title: "Decisões Tecnológicas",
+  description:
+    "Apoiamos sua empresa na escolha e implementação de tecnologias para reduzir riscos e aumentar eficiência.",
+  alternates: {
+    canonical: "/decisoes-tecnologicas",
+  },
+  openGraph: {
+    title: "Decisões Tecnológicas - RocketJR | Soluções Digitais e Desenvolvimento Web",
+    description:
+      "Tecnologia certa para decisões mais estratégicas e resultados consistentes.",
+    url: "/decisoes-tecnologicas",
+    type: "website",
+  },
+};
 
 export default function DecisoesTecnologicas() {
   return (
@@ -27,7 +45,15 @@ export default function DecisoesTecnologicas() {
         </div>
       </main>
       <div className="absolute z-20 bottom-0 left-1/2 -translate-x-1/2 w-[60vw] max-w-[250px] lg:left-auto lg:right-10 lg:translate-x-0 lg:w-[25vw] lg:max-w-[350px]">
-          <img src={MrRaccoon.src} alt="MrRaccoon" className="w-full h-auto block" />
+          <Image
+            src={RaccoonMascoteRocket}
+            alt="Raccoon Mascote da RocketJR"
+            width={350}
+            height={350}
+            loading="lazy"
+            sizes="(max-width: 1024px) 60vw, 25vw"
+            className="w-full h-auto block"
+          />
       </div>
       <div className="pointer-events-none absolute z-0 rounded-full border-[#585A5C33] opacity-[0.30]  left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] h-[90vw] border-[40px] lg:top-[100%] lg:-translate-y-[50%] lg:w-[1200px] lg:h-[1200px] lg:border-[180px]" />
     </div>
