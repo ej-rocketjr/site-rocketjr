@@ -15,7 +15,6 @@ export default function Hero() {
         <p className={`text-lg sm:text-4xl md:text-2xl font-normal text-black dark:text-white mt-8 ${amsiproBold.className}`}>
           Transformamos suas ideias em soluções digitais
         </p>
-      </div>
 
       <div className={`flex items-center justify-center ${darkerGrotesque.className}`}>
         <Link
@@ -34,6 +33,7 @@ export default function Hero() {
             className="text-xl md:text-2xl  lg:text-3xl border-1 border-red-600 text-black dark:text-white font-bold py-3 px-6 rounded-md whitespace-nowrap
             transition duration-300 ease-in-out transform hover:scale-105 ml-4">Nossos Cases</button>
         </Link>
+      </div>
       </div>
     </section>
   );
