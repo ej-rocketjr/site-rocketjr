@@ -60,6 +60,7 @@ function QuemSomos() {
           </Swiper>
         </div>
 
+
         <div className="pointer-events-none absolute inset-x-0 top-[65%] z-0 -translate-y-1/2" aria-hidden="true">
           <Swiper
             modules={[Autoplay]}
@@ -93,6 +94,7 @@ function QuemSomos() {
           </Swiper>
         </div>
 
+
         {/* Foto centralizada por cima do carrossel */}
         <div className="relative z-10 mx-auto w-full max-w-[330px] px-4 sm:max-w-[520px] sm:px-6 lg:max-w-[760px] lg:px-8">
           <Image
@@ -106,7 +108,7 @@ function QuemSomos() {
       </div>
 
       <div className="mx-auto mt-6 flex w-full max-w-7xl flex-col items-center px-4 sm:mt-8 sm:px-6 lg:px-8">
-        <p className="max-w-5xl text-center text-xs leading-relaxed text-black sm:text-sm lg:text-base dark:text-white">
+        <p className="max-w-5xl  text-center text-sm leading-relaxed text-gray-500 sm:text-base lg:text-lg dark:text-gray-300">
           A Rocket Júnior (RJR) é a Empresa Júnior do curso de Sistemas de Informação do Campus Arapiraca - Unidade Educacional de Penedo. Somos um time de estudantes apaixonados por tecnologia e inovação, que aplicam na prática os conhecimentos adquiridos em sala de aula para desenvolver soluções digitais para o mercado. Nosso principal objetivo é proporcionar aos nossos membros uma experiência empresarial real, preparando-os para os desafios do mercado de trabalho e impulsionando suas carreiras.
         </p>
       </div>
