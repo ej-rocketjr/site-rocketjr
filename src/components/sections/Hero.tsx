@@ -1,6 +1,3 @@
-import Image from "next/image";
-import LogoRocketHero from "@/assets/logo-rocket-hero.svg"
-import LogoRocketHeroWhite from "@/assets/LogoHeroWhite.svg"
 import Link from "next/link";
 import { Google_Sans, Darker_Grotesque, Archivo_Black } from "next/font/google";
 
@@ -12,25 +9,11 @@ export default function Hero() {
   return (
     <section className={`bg-white dark:bg-black min-h-[500px] flex flex-col items-center justify-center py-10 sm:py-20 ${darkerGrotesque.className}`}>
       <div className="text-center py-20">
-        <Image
-          className="hidden dark:block mx-auto mb-12 sm:mb-20 px-4"
-          src={LogoRocketHero}
-          alt="Logo Rocket JR CTA"
-          width={400}
-          height={160}
-        />
-        <Image
-          className="block dark:hidden mx-auto mb-12 sm:mb-20 px-4"
-          src={LogoRocketHeroWhite}
-          alt="Logo Rocket JR CTA"
-          width={400}
-          height={160}
-        />
         <h1 className={`text-4xl leading-tight space-y-4 md:text-6xl font-medium text-black dark:text-white mb-6 ${googleSans.className} px-4 md:px-6`}>
-          Chegou a hora da inovação, venha voar com a gente
+          Chegou a hora da inovação. Venha decolar conosco.
         </h1>
         <p className={`text-lg sm:text-4xl md:text-2xl font-normal text-black dark:text-white mt-8 ${amsiproBold.className}`}>
-          Aqui Damos Asas As Suas Ideias
+          Transformamos suas ideias em soluções digitais
         </p>
       </div>
 
