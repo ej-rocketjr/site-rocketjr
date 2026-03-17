@@ -148,13 +148,13 @@ export default function Servicos() {
 
             <div className="hidden lg:flex max-w-7xl mx-auto mt-14 lg:mt-16 justify-center items-start gap-6 xl:gap-8">
                 <article className="relative isolate max-w-2xl rounded-[2.6rem] border-[3px] border-zinc-950 bg-white px-10 py-8 text-zinc-950 shadow-[8px_10px_0px_rgba(24,24,27,0.9)] dark:border-red-700/50 dark:bg-zinc-900 dark:text-zinc-100 dark:shadow-[8px_10px_0px_rgba(255,255,255,0.2)]">
-                    <span className="absolute -top-4 left-8 rounded-full border-[3px] bg-zinc-950 px-4 py-1 text-xs font-black uppercase tracking-[0.14em] text-white dark:border-red-700/50 dark:border-red-700/50 dark:text-white">
+                    <span className="absolute -top-4 left-8 rounded-full border-[3px] bg-zinc-950 px-4 py-1 text-xs font-black uppercase tracking-[0.14em] text-white dark:border-red-700/50 dark:bg-red-500 dark:text-white">
                         Rocket Raccon:
                     </span>
                     <div className="absolute -right-7 bottom-12 h-12 w-12 rounded-full border-[3px] border-zinc-950 bg-white dark:border-red-700/50 dark:bg-zinc-900" />
                     <div className="absolute -right-14 bottom-6 h-7 w-7 rounded-full border-[3px] border-zinc-950 bg-white dark:border-red-700/50 dark:bg-zinc-900" />
                     <div className="absolute right-[-5.5rem] bottom-2 h-6 w-6 rounded-full border-[3px] border-zinc-950 bg-white dark:border-red-700/50 dark:bg-zinc-900" />
-                    <p className="text-[1.05rem] leading-8 tracking-[0.01em]">
+                    <p className="text-[1.05rem] font-semibold leading-8 tracking-[0.01em]">
                         Ei! Quer crescer no digital? Criamos sites, landing pages e e-commerces focados em gerar resultados para o seu negócio.
                     </p>
                 </article>
