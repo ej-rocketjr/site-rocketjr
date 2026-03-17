@@ -44,7 +44,9 @@ export default function Servicos() {
             </div>
         </section>
         <div className="flex justify-center lg:pl-20 mt-8 lg:mt-10 w-full relative z-30">
+          <a href="https://wa.me/558299767685?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Rocket%20Jr.%20e%20gostaria%20de%20saber%20mais%20sobre%20como%20iniciar%20a%20transforma%C3%A7%C3%A3o%20digital%20da%20minha%20empresa.">
             <button className="bg-gradient-to-r from-[#530101] via-[#750404] to-[#fd0404] text-white px-6 py-3 lg:px-10 lg:py-4 rounded-md font-bold uppercase tracking-widest text-xs lg:text-sm transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95">Iniciar transformação digital</button>
+          </a>
         </div>
       </main>
       <div className="absolute z-20 bottom-0 left-1/2 -translate-x-1/2 w-[60vw] max-w-[250px] lg:left-auto lg:right-10 lg:translate-x-0 lg:w-[25vw] lg:max-w-[350px]">
