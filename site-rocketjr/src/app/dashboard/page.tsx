@@ -1,7 +1,17 @@
 
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
+
+import { authOptions } from "@/lib/auth";
 import { pegarContatos } from "../server/action";
 
 export default async function Dashboard() {
+  const session = await getServerSession(authOptions);
+
+  if (!session) {
+    redirect("/login");
+  }
+
   // 2. Chame a função diretamente (executa no servidor)
   const result = await pegarContatos();
   

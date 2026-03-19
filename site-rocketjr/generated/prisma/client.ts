@@ -46,3 +46,8 @@ export { Prisma }
  * 
  */
 export type ContactForms = Prisma.ContactFormsModel
+/**
+ * Model AdminUser
+ * 
+ */
+export type AdminUser = Prisma.AdminUserModel

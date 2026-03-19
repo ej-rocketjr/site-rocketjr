@@ -51,7 +51,8 @@ export const AnyNull = runtime.AnyNull
 
 
 export const ModelName = {
-  ContactForms: 'ContactForms'
+  ContactForms: 'ContactForms',
+  AdminUser: 'AdminUser'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -78,6 +79,18 @@ export const ContactFormsScalarFieldEnum = {
 } as const
 
 export type ContactFormsScalarFieldEnum = (typeof ContactFormsScalarFieldEnum)[keyof typeof ContactFormsScalarFieldEnum]
+
+
+export const AdminUserScalarFieldEnum = {
+  id: 'id',
+  email: 'email',
+  passwordHash: 'passwordHash',
+  passwordSalt: 'passwordSalt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type AdminUserScalarFieldEnum = (typeof AdminUserScalarFieldEnum)[keyof typeof AdminUserScalarFieldEnum]
 
 
 export const SortOrder = {
