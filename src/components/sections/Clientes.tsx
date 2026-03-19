@@ -128,9 +128,9 @@ export default function Clientes() {
                     <div className="flex min-h-[720px] flex-col justify-between gap-8 px-2 sm:px-4 lg:px-8 md:min-h-[560px] md:flex-row md:items-center md:justify-between">
                       {/* Desktop */}
                       <div className="flex-1 hidden md:block">
-                        <h2 className="text-black dark:text-white text-5xl font-thin">
+                        <h3 className="text-black dark:text-white text-5xl font-thin">
                           {cliente.nome}
-                        </h2>
+                        </h3>
                         <p className="mt-4 max-w-2xl text-justify text-lg text-gray-600 dark:text-gray-300">
                           {cliente.descricao}
                         </p>
@@ -157,9 +157,9 @@ export default function Clientes() {
                       </div>
                       {/* Mobile */}
                       <div className="flex min-h-[720px] flex-col gap-4 md:hidden">
-                        <h2 className="text-black dark:text-white text-3xl font-thin mb-2">
+                        <h3 className="text-black dark:text-white text-3xl font-thin mb-2">
                           {cliente.nome}
-                        </h2>
+                        </h3>
                         <p className="text-gray-600 dark:text-gray-300 text-justify">
                           {cliente.descricao}
                         </p>
