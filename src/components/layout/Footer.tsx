@@ -26,7 +26,7 @@ export default function Footer() {
               <span className="text-xs text-black dark:text-white">IR PARA O TOPO</span>
               <Image
                 src={setaVermelha}
-                alt="Descrição da Imagem"
+                alt="Seta para voltar ao topo da página"
                 width={10}
                 height={300}
               />
@@ -42,7 +42,7 @@ export default function Footer() {
 
             <Image
               src={rocketLogoHorizontalLight
-              
+
               }
               alt="Logo da RocketJR - tema claro"
               width={800}
@@ -112,8 +112,8 @@ export default function Footer() {
           />
         </div>
         <div className="flex items-end gap-4 text-xs mb-5 ">
-          <a href="https://www.rocketjr.com.br/politica-de-privacidade" className="hover:text-red-500 transition-colors text-black dark:text-white">Política de Privacidade</a>
-          <a href="https://www.rocketjr.com.br/termos-de-servico" className="hover:text-red-500 transition-colors text-black dark:text-white">Termos de Serviço</a>
+          <Link href="/politica-de-privacidade" className="hover:text-red-500 transition-colors text-black dark:text-white">Política de Privacidade</Link>
+          <Link href="/termos-de-servico" className="hover:text-red-500 transition-colors text-black dark:text-white">Termos de Servico</Link>
           <span className="mt-4">2026 ROCKETJR All Rights Reserved.</span>
         </div>
       </div>
@@ -127,9 +127,9 @@ export default function Footer() {
             height={60}
           />
           <div className="flex flex-col text-left text-[11px] text-white leading-relaxed">
-            <span>2026 rocketjr all rights reserved</span>
-            <span>termos de serviço</span>
-            <span>política de privacidade</span>
+            <span>2026 ROCKETJR All Rights Reserved.</span>
+            <Link href="/termos-de-servico" className="hover:text-red-500 transition-colors text-white">Termos de Servico</Link>
+            <Link href="/politica-de-privacidade" className="hover:text-red-500 transition-colors text-white">Política de Privacidade</Link>
           </div>
         </div>
         <div className="absolute bottom-0 right-0">

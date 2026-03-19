@@ -49,7 +49,7 @@ function QuemSomos() {
               <SwiperSlide key={logo.id} className="!w-auto">
                 <Image
                   src={LogoRocketAnimada}
-                  alt=""
+                  alt="Logo animada da RocketJR no carrossel de fundo"
                   width={160}
                   height={96}
                   loading="lazy"
@@ -83,7 +83,7 @@ function QuemSomos() {
               <SwiperSlide key={logo.id} className="!w-auto">
                 <Image
                   src={FogueteAnimado}
-                  alt=""
+                  alt="Ilustração de foguete no carrossel de fundo"
                   width={160}
                   height={96}
                   loading="lazy"
