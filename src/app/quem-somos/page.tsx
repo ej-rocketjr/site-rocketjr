@@ -34,27 +34,8 @@ export default function QuemSomos() {
     <section className="bg-white dark:bg-black flex flex-col items-center justify-center">
     
       <section className="flex flex-col items-center justify-center">
-        <div className="w-full py-8 sm:py-12 flex items-center justify-center">
-          <Image
-            src={LogoRocketHeroDark}
-            alt="Logo Rocket - tema escuro"
-            width={400}
-            height={160}
-            priority
-            className="mx-auto w-full max-w-56 md:max-w-72 lg:max-w-80 h-auto hidden dark:block"
-          />
-
-          <Image
-            src={LogoRocketHeroLight}
-            alt="Logo Rocket - tema claro"
-            width={400}
-            height={160}
-            priority
-            className="mx-auto w-full max-w-56 md:max-w-72 lg:max-w-80 h-auto block dark:hidden"
-          />
-        </div>
-
-        <div className="w-10/12 md:w-11/12 py-20 flex items-center justify-center max-w-7xl">
+        
+        <div className="w-10/12 md:w-11/12 md:py-40 py-20 flex items-center justify-center max-w-7xl">
           <p className="text-justify md:text-center text-xs md:text-xl font-light md:font-medium">
             A Rocket Júnior (RJR) é a Empresa Júnior do curso de Sistemas de Informação do Campus Arapiraca – Unidade Educacional Penedo. Somos um time de estudantes apaixonados por tecnologia e inovação, que aplicam na prática os conhecimentos adquiridos em sala de aula para desenvolver soluções digitais para o mercado. Nosso principal objetivo é proporcionar aos nossos membros uma experiência empresarial real, preparando-os para os desafios do mercado de trabalho e impulsionando suas carreiras!
           </p>
@@ -181,9 +162,9 @@ export default function QuemSomos() {
             <div className="mb-16 relative">
               <div className="flex flex-row items-center">
                 <div className="w-1/2 pr-[8%] text-right">
-                  <h3 className="text-6 md:text-xl font-bold dark:text-[#E7E7E7]">Aplicação Do Formulário PNDL 2024</h3>
-                  <div className="text-sm font-medium text-[#990000] mt-1">Out - Nov 2024</div>
-                  <p className="mt-3 text-xs font-light md:font-medium md:text-base dark:text-[#E7E7E7]">Pesquisa e ligações para as escolas do Brasil para levantamento de dados e identificação de necessidades.</p>
+                  <h3 className="text-6 md:text-xl font-bold dark:text-[#E7E7E7]">Fundação da Rocket Jr</h3>
+                  <div className="text-sm font-medium text-[#990000] mt-1">Janeiro 2024</div>
+                  <p className="mt-3 text-xs font-light md:font-medium md:text-base dark:text-[#E7E7E7]">Criação oficial da empresa júnior do curso de Sistemas de Informação, com definição de missão, visão e valores.</p>
                 </div>
                 <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center z-10">
                   <div className="w-10 h-10 md:w-18 md:h-18 rounded-full border-2 border-[#FF0000] border-dashed flex items-center justify-center">
@@ -200,9 +181,9 @@ export default function QuemSomos() {
             <div className="mb-16 relative">
               <div className="flex flex-row justify-end items-center">
                 <div className="w-1/2 pl-[8%] text-left">
-                  <h3 className="text-6 md:text-xl font-bold dark:text-[#E7E7E7]">SisWeek 2024</h3>
-                  <div className="text-sm font-medium text-[#990000] mt-1">Abr 2024</div>
-                  <p className="mt-3 text-xs font-light md:font-medium md:text-base dark:text-[#E7E7E7]">Participação na Semana de Sistemas de Informação com apresentação de projetos e desenvolvimento de aplicação web.</p>
+                  <h3 className="text-6 md:text-xl font-bold dark:text-[#E7E7E7]">Federação da Rocket Jr</h3>
+                  <div className="text-sm font-medium text-[#990000] mt-1">Março 2025</div>
+                  <p className="mt-3 text-xs font-light md:font-medium md:text-base dark:text-[#E7E7E7]">Federação da empresa júnior do curso de sistemas de informação, com proposito de fazer parte do Movimento Empresa Júnior. Tendo oficialmente como Federação a FEJEA e Cofederação a Brasil Júnior.</p>
                 </div>
                 <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center z-10">
                   <div className="w-10 h-10 md:w-18 md:h-18 rounded-full border-2 dark:border-[#FFFFFF] border-dashed flex items-center justify-center">
@@ -218,9 +199,9 @@ export default function QuemSomos() {
             <div className="mb-16 relative">
               <div className="flex flex-row items-center">
                 <div className="w-1/2 pr-[8%] text-right">
-                  <h3 className="text-6 md:text-xl font-bold dark:text-[#E7E7E7]">Fundação da Rocket Jr</h3>
-                  <div className="text-sm font-medium text-[#990000] mt-1">Jan 2024</div>
-                  <p className="mt-3 text-xs font-light md:font-medium md:text-base dark:text-[#E7E7E7]">Criação oficial da empresa júnior do curso de Sistemas de Informação, com definição de missão, visão e valores.</p>
+                  <h3 className="text-6 md:text-xl font-bold dark:text-[#E7E7E7]">Prêmio de Impacto no Ecossistema</h3>
+                  <div className="text-sm font-medium text-[#990000] mt-1">Julho 2025</div>
+                  <p className="mt-3 text-xs font-light md:font-medium md:text-base dark:text-[#E7E7E7]">A rocket júnior recebeu seu primeiro prêmio no evento “Aceleraê” evento oderecido pela Federação (FEJEA). O prêmio foi dado a ejs referência em sua jornada e experiência com o cliente.</p>
                 </div>
                 <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center z-10">
                   <div className="w-10 h-10 md:w-18 md:h-18 rounded-full border-2 border-[#FF0000] border-dashed flex items-center justify-center">
@@ -236,9 +217,9 @@ export default function QuemSomos() {
             <div className="mb-16 relative">
               <div className="flex flex-row justify-end items-center pb-40">
                 <div className="w-1/2 pl-[8%] text-left">
-                  <h3 className="text-6 md:text-xl font-bold dark:text-[#E7E7E7]">Primeiro Projeto Comercial</h3>
-                  <div className="text-sm font-medium text-[#990000] mt-1">Mar 2024</div>
-                  <p className="mt-3 text-xs font-light md:font-medium md:text-base dark:text-[#E7E7E7]">Desenvolvimento do primeiro projeto comercial, consolidando a entrada da Rocket Jr no mercado de tecnologia.</p>
+                  <h3 className="text-6 md:text-xl font-bold dark:text-[#E7E7E7]">Prêmio Marcas do Protagonismo</h3>
+                  <div className="text-sm font-medium text-[#990000] mt-1">Novembro 2025</div>
+                  <p className="mt-3 text-xs font-light md:font-medium md:text-base dark:text-[#E7E7E7]">A rocket júnior recebeu seu segundo prêmio no evento “ALMEJ” evento oderecido pela Federação (FEJEA). O prêmio foi dado a ejs que conseguiram alcançar as todas as metas do ano de 2025.</p>
                 </div>
                 <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center z-10">
                   <div className="w-10 h-10 md:w-18 md:h-18 rounded-full border-2 dark:border-[#FFFFFF] border-dashed flex items-center justify-center">
