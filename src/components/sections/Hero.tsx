@@ -1,3 +1,6 @@
+import Image from "next/image";
+import LogoRocketHeroDark from "@/assets/logos/logo-rocket-hero-dark.svg";
+import LogoRocketHeroLight from "@/assets/logos/Logo-rocket-hero-light.svg";
 import Link from "next/link";
 import { Darker_Grotesque } from "next/font/google";
 
