@@ -1,3 +1,6 @@
+import Image from "next/image";
+import LogoRocketHeroDark from "@/assets/logos/logo-rocket-hero-dark.svg";
+import LogoRocketHeroLight from "@/assets/logos/Logo-rocket-hero-light.svg";
 import Link from "next/link";
 import { Darker_Grotesque, Archivo_Black } from "next/font/google";
 
@@ -13,22 +16,22 @@ export default function Hero() {
         </h1>
 
 
-      <div className={`flex items-center justify-center ${darkerGrotesque.className}`}>
+      <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
         <Link
           href="/contato"
         >
             <button
             type="button"
-            className="text-xl md:text-2xl  lg:text-3xl font-bold bg-gradient-to-r from-red-900 to-red-700 hover:from-red-700 hover:to-gray-900 text-white font-bold py-3 px-6 rounded-md whitespace-nowrap
-            transition duration-300 ease-in-out transform hover:scale-105 ">Contato</button>
+            className="bg-gradient-to-r from-red-900 to-red-700 hover:from-red-700 hover:to-gray-900 text-white font-bold py-3 px-6 w-40 rounded-md
+            transition duration-300 ease-in-out transform hover:scale-105">Contato</button>
         </Link>
         <Link
-          href="#clientes"
+          href="/cases"
         >
             <button
             type="button"
-            className="text-xl md:text-2xl  lg:text-3xl border-1 border-red-600 text-black dark:text-white font-bold py-3 px-6 rounded-md whitespace-nowrap
-            transition duration-300 ease-in-out transform hover:scale-105 ml-4">Nossos Cases</button>
+            className="border-1 border-red-600 text-black dark:text-white font-bold py-3 px-6 w-40 rounded-md
+            transition duration-300 ease-in-out transform hover:scale-105">Cases</button>
         </Link>
       </div>
       </div>
