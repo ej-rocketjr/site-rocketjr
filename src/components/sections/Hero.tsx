@@ -22,7 +22,7 @@ export default function Hero() {
           height={160}
           className="mx-auto mt-4 mb-12 sm:mb-20 w-full max-w-56 md:max-w-72 lg:max-w-80 h-auto block dark:hidden"
         />
-        
+
         <h1 className="text-4xl md:text-6xl font-light font-sans text-black dark:text-white mb-6">
           Chegou A Hora Da Inovação, Venha Voar Com A Gente
         </h1>
@@ -40,12 +40,12 @@ export default function Hero() {
             transition duration-300 ease-in-out transform hover:scale-105">Contato</button>
         </Link>
         <Link
-          href="/cases"
+          href="/#clientes"
         >
             <button
             type="button"
             className="border-1 border-red-600 text-black dark:text-white font-bold py-3 px-6 w-40 rounded-md
-            transition duration-300 ease-in-out transform hover:scale-105">Cases</button>
+            transition duration-300 ease-in-out transform hover:scale-105">Nossos Cases</button>
         </Link>
       </div>
       </div>
