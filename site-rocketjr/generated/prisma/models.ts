@@ -9,4 +9,5 @@
  * 🟢 You can import this file directly.
  */
 export type * from './models/ContactForms'
+export type * from './models/AdminUser'
 export type * from './commonInputTypes'
