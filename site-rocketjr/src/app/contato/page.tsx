@@ -1,10 +1,11 @@
 'use client'
 
 // ============================================================
-import { useState } from "react";
+import { useState, useActionState, useEffect } from "react";
 import Image from "next/image";
 import HeroPages from "@/components/sections/HeroPages";
 import RaccoonMascoteRocket from "@/assets/icons/raccoon-mascote-anela-vermelho-rocket-jr.svg";
+import { salvarContato } from "../server/action";
 
 
 // ============================================================
@@ -146,13 +147,19 @@ function RadioCheckbox({
 // ============================================================
 export default function App() {
 
+  const [selected, setSelected] = useState<string[]>([]);
+  const [state, formAction, isPending] = useActionState(salvarContato.bind(null, selected), { success: false, error: "" });
   const [form, setForm] = useState({
     nome: "", email: "", telefone: "", empresa: "", assunto: "",
   });
-  const [selected, setSelected] = useState<string[]>([]);
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-  const [errorMsg, setErrorMsg] = useState("");
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    if (state.success) {
+      setForm({ nome: "", email: "", telefone: "", empresa: "", assunto: "" });
+      setSelected([]);
+    }
+  }, [state.success]);
 
   const toggleSubject = (id: string) =>
     setSelected((prev) => prev.includes(id) ? prev.filter((s) => s !== id) : [...prev, id]);
@@ -165,56 +172,6 @@ export default function App() {
       errors.email = "Email inválido";
     if (!form.assunto.trim()) errors.assunto = "Mensagem é obrigatória";
     return errors;
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setErrorMsg("");
-
-    const errors = validate();
-    if (Object.keys(errors).length > 0) {
-      setFieldErrors(errors);
-      return;
-    }
-
-    setFieldErrors({});
-    setStatus("loading");
-
-    try {
-      const res = await fetch("http://localhost:3333/contact-forms", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: form.nome,
-          email: form.email,
-          telephone: form.telefone,
-          enterprise: form.empresa,
-          subject: selected,
-          message: form.assunto,
-        }),
-      });
-
-      if (!res.ok) {
-        const errorData = await res.json().catch(() => null);
-        throw new Error(errorData?.message ?? "Erro ao enviar formulário");
-      }
-
-      setStatus("success");
-      setForm({
-        nome: "",
-        email: "",
-        telefone: "",
-        empresa: "",
-        assunto: "",
-      });
-      setSelected([]);
-    } catch (err: unknown) {
-      console.error("Erro ao enviar formulário de contato:", err);
-      setErrorMsg(err instanceof Error ? err.message : "Erro inesperado. Tente novamente.");
-      setStatus("error");
-    }
   };
 
   const isFormValid =
@@ -272,7 +229,7 @@ export default function App() {
         <div className="w-full md:flex-1 md:max-w-[520px]">
 
           {/* Banner sucesso */}
-          {status === "success" && (
+          {state.success && (
             <div
               className="mb-4 p-3 md:p-4 rounded-[10px] flex items-center gap-3"
               style={{ background: "rgba(34,197,94,0.15)", border: "1px solid #22c55e" }}
@@ -289,7 +246,7 @@ export default function App() {
           )}
 
           {/* Banner erro */}
-          {status === "error" && errorMsg && (
+          {state.error && (
             <div
               className="mb-4 p-3 md:p-4 rounded-[10px] flex items-center gap-3"
               style={{ background: "rgba(239,68,68,0.12)", border: "1px solid #ef4444" }}
@@ -300,12 +257,12 @@ export default function App() {
                 <path d="M12 8v4M12 16h.01" stroke="#ef4444" strokeWidth="2" strokeLinecap="round" />
               </svg>
               <span style={{ color: "#ef4444", fontFamily: "'Bricolage Grotesque', sans-serif", fontSize: "14px", fontWeight: 600 }}>
-                {errorMsg}
+                {state.error}
               </span>
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="flex flex-col gap-3 md:gap-4" noValidate>
+          <form action={formAction} className="flex flex-col gap-3 md:gap-4" noValidate>
 
             {/* Nome */}
             <div className="flex flex-col gap-1">
@@ -314,6 +271,7 @@ export default function App() {
               </label>
               <input
                 id="nome"
+                name="nome"
                 type="text"
                 placeholder="Seu nome completo"
                 value={form.nome}
@@ -335,6 +293,7 @@ export default function App() {
               </label>
               <input
                 id="email"
+                name="email"
                 type="email"
                 placeholder="seu@email.com"
                 value={form.email}
@@ -355,6 +314,7 @@ export default function App() {
                 <label htmlFor="telefone" className="text-black dark:text-white" style={labelBase}>Telefone</label>
                 <input
                   id="telefone"
+                  name="telefone"
                   type="tel"
                   placeholder="(00) 00000-0000"
                   value={form.telefone}
@@ -367,6 +327,7 @@ export default function App() {
                 <label htmlFor="empresa" className="text-black dark:text-white" style={labelBase}>Nome Da Empresa</label>
                 <input
                   id="empresa"
+                  name="empresa"
                   type="text"
                   placeholder="Sua empresa"
                   value={form.empresa}
@@ -396,11 +357,12 @@ export default function App() {
 
             {/* Mensagem */}
             <div className="flex flex-col gap-1">
-              <label htmlFor="assunto" className="text-black dark:text-white" style={labelBase}>
+              <label htmlFor="mensagem" className="text-black dark:text-white" style={labelBase}>
                 Mensagem <span style={{ color: "#e30613" }}>*</span>
               </label>
               <textarea
-                id="assunto"
+                id="mensagem"
+                name="mensagem"
                 placeholder="Descreva seu projeto ou dúvida..."
                 value={form.assunto}
                 onChange={(e) => { setForm({ ...form, assunto: e.target.value }); if (fieldErrors.assunto) setFieldErrors({ ...fieldErrors, assunto: "" }); }}
@@ -419,10 +381,10 @@ export default function App() {
             <div className="flex justify-end mt-1">
               <button
                 type="submit"
-                disabled={status === "loading" || !isFormValid}
+                disabled={isPending || !isFormValid}
                 className="w-full sm:w-auto h-[43px] px-8 rounded-[10px] capitalize transition-all flex items-center gap-2"
                 style={{
-                  background: status === "loading" || !isFormValid
+                  background: isPending || !isFormValid
                     ? "linear-gradient(to right, #3a0000, #a00000)"
                     : "linear-gradient(to right, #520101, #f60707)",
                   fontFamily: "'Bricolage Grotesque', sans-serif",
@@ -432,10 +394,10 @@ export default function App() {
                   minWidth: "134px",
                   justifyContent: "center",
                   opacity: !isFormValid ? 0.55 : 1,
-                  cursor: (!isFormValid || status === "loading") ? "not-allowed" : "pointer",
+                  cursor: (!isFormValid || isPending) ? "not-allowed" : "pointer",
                 }}
               >
-                {status === "loading" ? (
+                {isPending ? (
                   <>
                     <svg className="animate-spin" width="18" height="18" viewBox="0 0 24 24" fill="none">
                       <title>Carregando</title>

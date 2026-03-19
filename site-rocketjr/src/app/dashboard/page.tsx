@@ -1,52 +1,48 @@
-'use client'
-import { useEffect, useState } from 'react'
 
-type ContactForm = {
-  id: string
-  name: string
-  email: string
-  telephone: string
-  subject: unknown
-  message: string
-}
+import { pegarContatos } from "../server/action";
 
-export default function Dashboard() {
-  const [contatos, setContatos] = useState<ContactForm[]>([])
+export default async function Dashboard() {
+  // 2. Chame a função diretamente (executa no servidor)
+  const result = await pegarContatos();
+  
+  if (!result.success) {
+    return <div className="p-8 text-red-500">{result.error}</div>;
+  }
 
-  // Busca os dados da API quando a página carrega
-  useEffect(() => {
-    fetch('http://localhost:3333/contact-forms')
-      .then(res => res.json())
-      .then(data => setContatos(data));
-  }, []);
+  const contatos = result.data || [];
 
   return (
-    <div className="p-8 bg-neural-900 min-h-screen text-white">
-      <h1 className="flex text-2xl font-bold mb-6 justify-center items-center">Lista de Pedidos/Contatos</h1>
+    <div className="p-8 bg-zinc-950 min-h-screen text-white">
+      <h1 className="text-2xl font-bold mb-6 text-center">Lista de Pedidos/Contatos</h1>
       
-      <div className="overflow-x-auto shadow-xl rounded-lg">
-        <table className="min-w-full bg-zinc-900 border border-zinc-800">
+      <div className="overflow-x-auto shadow-xl rounded-lg border border-zinc-800">
+        <table className="min-w-full bg-zinc-900">
           <thead>
-            <tr className="bg-zinc-900">
+            <tr className="bg-zinc-800 text-gray-300">
               <th className="p-4 text-left">Nome</th>
               <th className="p-4 text-left">E-mail</th>
               <th className="p-4 text-left">Telefone</th>
-              <th className="p-4 text-left">Dados Extras (JSONB)</th>
+              <th className="p-4 text-left">Assunto</th>
               <th className="p-4 text-left">Mensagem</th>
             </tr>
           </thead>
           <tbody>
             {contatos.map((contato) => (
-              <tr key={contato.id} className="border-t border-zinc-800 hover:bg-zinc-800">
+              <tr key={contato.id} className="border-t border-zinc-800 hover:bg-zinc-800/50 transition-colors">
                 <td className="p-4">{contato.name}</td>
-                <td className="p-4">{contato.email}</td>
-                <td className="p-4">{contato.telephone}</td>
-                <td className="p-4 text-sm font-mono text-red-300">
+                <td className="p-4 text-gray-400">{contato.email}</td>
+                <td className="p-4 text-gray-400">{contato.telephone}</td>
+                <td className="p-4 text-sm font-mono text-red-400">
                   {JSON.stringify(contato.subject)}
                 </td>
-                <td className="p-4 italic">"{contato.message}"</td>
+                <td className="p-4 italic text-gray-300">"{contato.message}"</td>
               </tr>
             ))}
+            {contatos.length === 0 && (
+              <tr>
+                <td colSpan={5} className="p-8 text-center text-gray-500">Nenhuma mensagem encontrada.</td>
+              </tr>
+            )}
           </tbody>
         </table>
       </div>
