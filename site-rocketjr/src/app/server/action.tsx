@@ -1,12 +1,17 @@
 'use server'; 
 
-import { PrismaClient } from '../../generated/prisma/client';
+import { PrismaClient } from '../../../generated/prisma/client';
 import { PrismaLibSql } from '@prisma/adapter-libsql';
 
-const adapter = new PrismaLibSql({ url: 'file:./dev.db' });
+
+const databaseUrl = process.env.DATABASE_URL;
+if (!databaseUrl) {
+  throw new Error("DATABASE_URL não definida");
+}
+const adapter = new PrismaLibSql({ url: databaseUrl });
 const prisma = new PrismaClient({ adapter });
 
-export async function salvarContato(selectedSubjects: string[], prevState: any, formData: FormData) {
+export async function salvarContato(selectedSubjects: string[], _prevState: unknown, formData: FormData) {
   const name = formData.get('nome') as string;
   const email = formData.get('email') as string;
   const message = formData.get('mensagem') as string;
@@ -21,11 +26,11 @@ export async function salvarContato(selectedSubjects: string[], prevState: any, 
 
     console.log("Mensagem salva com sucesso!");
     return { success: true };
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Erro ao salvar contato:", error);
     
     // Fallback para restrições de banco de dados
-    if (error.code === 'P2002') {
+    if (typeof error === 'object' && error !== null && 'code' in error && error.code === 'P2002') {
       return { success: false, error: "Este email ou telefone já foi cadastrado." };
     }
     
@@ -41,7 +46,7 @@ export async function pegarContatos() {
     console.log("Mensagens salvas com sucesso!");
     return { success: true, data: contatos};
 
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Erro ao retornar contatos:", error);
     return { success: false, error: "Ocorreu um erro ao retornar as mensagens. Tente novamente mais tarde." };
   }
