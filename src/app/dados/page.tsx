@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     canonical: "/dados",
   },
   openGraph: {
-    title: "Análise de Dados - RocketJR | Soluções Digitais e Desenvolvimento Web",
+    title: "Análise de Dados | RocketJR",
     description:
       "Dados certos para orientar decisões de negócio com mais segurança.",
     url: "/dados",
