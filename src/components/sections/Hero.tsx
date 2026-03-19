@@ -5,9 +5,9 @@ const darkerGrotesque = Darker_Grotesque({ subsets: ["latin"], weight: "800" });
 
 export default function Hero() {
   return (
-    <section className={`bg-white dark:bg-black min-h-[500px] flex flex-col items-center justify-center py-10 sm:py-20`}>
+    <section className="bg-white dark:bg-black min-h-[500px] flex flex-col items-center justify-center py-10 sm:py-20">
       <div className="text-center py-20">
-        <h1 className={`text-4xl leading-tight space-y-4 md:text-6xl font-medium text-black dark:text-white mb-12 px-4 md:px-6 `}>
+        <h1 className="text-4xl leading-tight space-y-4 md:text-6xl font-medium text-black dark:text-white mb-12 px-4 md:px-6 ">
           Chegou a hora da inovação, venha decolar conosco.
         </h1>
 
