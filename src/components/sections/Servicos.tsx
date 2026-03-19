@@ -165,13 +165,6 @@ export default function Servicos() {
                     height={360}
                     className="h-auto w-full max-w-sm -translate-y-1 drop-shadow-[0_16px_26px_rgba(0,0,0,0.22)]"
                 />
-                <Image
-                    src={RaccoonMascoteRocket}
-                    alt="Raccoon Mascote da RocketJR"
-                    width={420}
-                    height={360}
-                    className="h-auto w-full max-w-sm -translate-y-1 drop-shadow-[0_16px_26px_rgba(0,0,0,0.22)]"
-                />
             </div>
         </section>
     );
