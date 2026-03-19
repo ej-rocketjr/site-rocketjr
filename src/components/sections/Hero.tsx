@@ -26,12 +26,12 @@ export default function Hero() {
             transition duration-300 ease-in-out transform hover:scale-105">Contato</button>
         </Link>
         <Link
-          href="/cases"
+          href="/#clientes"
         >
             <button
             type="button"
             className="border-1 border-red-600 text-black dark:text-white font-bold py-3 px-6 w-40 rounded-md
-            transition duration-300 ease-in-out transform hover:scale-105">Cases</button>
+            transition duration-300 ease-in-out transform hover:scale-105">Nossos Cases</button>
         </Link>
       </div>
       </div>

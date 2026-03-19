@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     canonical: "/decisoes-tecnologicas",
   },
   openGraph: {
-    title: "Decisões Tecnológicas - RocketJR | Soluções Digitais e Desenvolvimento Web",
+    title: "Decisões Tecnológicas | RocketJR",
     description:
       "Tecnologia certa para decisões mais estratégicas e resultados consistentes.",
     url: "/decisoes-tecnologicas",
