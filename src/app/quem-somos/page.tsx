@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     canonical: "/quem-somos",
   },
   openGraph: {
-    title: "Quem Somos - RocketJR | Soluções Digitais e Desenvolvimento Web",
+    title: "Quem Somos | RocketJR",
     description:
       "História, equipe e trajetória da RocketJR em soluções digitais e inovação.",
     url: "/quem-somos",
@@ -32,10 +32,11 @@ export default function QuemSomos() {
   return (
 
     <section className="bg-white dark:bg-black flex flex-col items-center justify-center">
-    
+
       <section className="flex flex-col items-center justify-center">
         
         <div className="w-10/12 md:w-11/12 md:py-40 py-20 flex items-center justify-center max-w-7xl">
+
           <p className="text-justify md:text-center text-xs md:text-xl font-light md:font-medium">
             A Rocket Júnior (RJR) é a Empresa Júnior do curso de Sistemas de Informação do Campus Arapiraca – Unidade Educacional Penedo. Somos um time de estudantes apaixonados por tecnologia e inovação, que aplicam na prática os conhecimentos adquiridos em sala de aula para desenvolver soluções digitais para o mercado. Nosso principal objetivo é proporcionar aos nossos membros uma experiência empresarial real, preparando-os para os desafios do mercado de trabalho e impulsionando suas carreiras!
           </p>
@@ -43,11 +44,10 @@ export default function QuemSomos() {
 
       </section>
 
-     
       <section className="flex flex-col justify-center items-center py-15px w-full">
         <div className="max-w-7xl w-full px-4">
           <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-1 p-4 sm:p-1">
-            
+
             <div className="flex justify-center items-center p-2">
               <Image
                 src={FotoAlmej2025}
@@ -149,13 +149,13 @@ export default function QuemSomos() {
 
 
       <section className="mt-8 container mx-auto px-4 py-8">
-        
+
         <div className="flex py-10 flex-col">
-          <h1 className="text-3xl md:text-4xl font-bold text-center">Nossa Trajetória</h1>
+          <h2 className="text-3xl md:text-4xl font-bold text-center">Nossa Trajetória</h2>
         </div>
 
         <div className="relative">
-     
+
           <div className="md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0 border-l-2 border-dashed border-[#D9D9D9]"/>
 
           <ScrollReveal>
@@ -230,7 +230,7 @@ export default function QuemSomos() {
             </div>
           </ScrollReveal>
 
-          
+
         </div>
       </section>
     </section>
