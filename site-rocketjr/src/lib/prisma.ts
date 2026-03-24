@@ -1,23 +1,16 @@
-import { PrismaLibSql } from "@prisma/adapter-libsql";
 import { PrismaClient } from "../../generated/prisma/client";
+import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 
-const databaseUrl = process.env.DATABASE_URL;
-
-if (!databaseUrl) {
-  throw new Error("DATABASE_URL nao definida");
-}
+const dbUrl = process.env.DATABASE_URL ?? "file:./dev.db";
+const adapter = new PrismaBetterSqlite3({ url: dbUrl });
 
 const globalForPrisma = globalThis as unknown as {
   prisma?: PrismaClient;
 };
 
-const adapter = new PrismaLibSql({ url: databaseUrl });
-
 export const prisma =
   globalForPrisma.prisma ??
-  new PrismaClient({
-    adapter,
-  });
+  new PrismaClient({ adapter });
 
 if (process.env.NODE_ENV !== "production") {
   globalForPrisma.prisma = prisma;
