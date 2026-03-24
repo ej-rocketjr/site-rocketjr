@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image, { type StaticImageData } from "next/image";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 type CardsProps = {
     imgCard: StaticImageData;
@@ -56,7 +57,7 @@ export default function CardsCarrossel({
     }
 
     return (
-        <main className="group relative z-0 h-[360px] w-full md:h-[380px] overflow-hidden rounded-2xl border border-red-700/50 bg-none dark:bg-black to-black p-6 md:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition-colors duration-300 hover:border-red-500">
+        <article className="group relative z-0 h-[360px] w-full md:h-[380px] overflow-hidden rounded-2xl border border-red-700/50 bg-none dark:bg-black to-black p-6 md:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition-colors duration-300 hover:border-red-500">
             <div className="absolute -top-16 -right-12 h-36 w-36 rounded-full bg-red-700/10 blur-2xl" />
 
             <div className="relative flex h-full flex-col">
@@ -93,7 +94,7 @@ export default function CardsCarrossel({
                     </button>
                 ) : null}
 
-                <a
+                <Link
                     href={ctaLink}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -105,8 +106,8 @@ export default function CardsCarrossel({
                         aria-hidden="true"
                         className="text-red-500 transition-transform duration-200 group-hover:translate-x-1"
                     />
-                </a>
+                </Link>
             </div>
-        </main>
+        </article>
     );
 }
