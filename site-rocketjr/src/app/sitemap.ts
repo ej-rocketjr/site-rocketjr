@@ -13,12 +13,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/solucoes-digitais",
     "/decisoes-tecnologicas",
     "/contato",
+    "/termos-de-uso",
+    "/politica-de-privacidade",
   ];
 
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: now,
     changeFrequency: route === "/" ? "weekly" : "monthly",
-    priority: route === "/" ? 1 : 0.8,
+    priority:
+      route === "/" ? 1 : ["/termos-de-uso", "/politica-de-privacidade"].includes(route) ? 0.4 : 0.8,
   }));
 }

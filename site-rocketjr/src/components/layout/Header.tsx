@@ -141,12 +141,12 @@ export default function Navbar() {
         {/* PS Rocket Jr - Link */}
         <div className="flex-shrink-0">
           <Link
-            href="https://forms.gle/seu-formulario-aqui"
+            href="https://www.instagram.com/foguetinhos.ej/"
             className="text-xl font-bold sm:text-2xl text-red-600 sm:font-extrabold transition-colors duration-200 hover:text-black dark:hover:text-white whitespace-nowrap"
             target="_blank"
             rel="noopener noreferrer"
           >
-            PS Rocket Jr
+            Insta Bastidores
           </Link>
         </div>
 
@@ -167,7 +167,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="lg:hidden bg-white dark:bg-black">
-          <ul className="flex flex-col gap-4 px-8 py-6 text-black dark:text-white font-medium text-lg">
+          <ul className="flex flex-col gap-4 px-6 py-6 text-black dark:text-white font-medium text-lg">
             {navItems.map((item) => (
               <li key={item.href}>
                 {item.sectionId ? (
