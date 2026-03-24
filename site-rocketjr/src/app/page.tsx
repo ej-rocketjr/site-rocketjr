@@ -8,7 +8,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 export const metadata: Metadata = {
   title: "Início - RocketJR | Soluções Digitais e Desenvolvimento Web",
   description:
-    "Conheça a RocketJR: Empresa Júnior de Sistemas de Informação da UFAL especializada em desenvolvimento web, e-commerce e soluções digitais.",
+    "Conheça a RocketJR, Empresa Júnior de Sistemas de Informação da UFAL especializada em desenvolvimento web, e-commerce e soluções digitais.",
   alternates: {
     canonical: "/",
   },
