@@ -82,27 +82,27 @@ export default function Footer() {
               <div className="flex flex-col gap-4 text-left">
                 <ul className="space-y-1">
                   <li className="font-bold">Menu</li>
-                <li><Link href="/">Início</Link></li>
-                <li><Link href="/">Serviços</Link></li>
-                <li><Link href="/">Quem Somos</Link></li>
-                <li><Link href="/">Clientes</Link></li>
-                <li><Link href="/">Contato</Link></li>
+                <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/">Início</Link></li>
+                <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/#servicos">Serviços</Link></li>
+                <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/quem-somos">Quem Somos</Link></li>
+                <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/#clientes">Clientes</Link></li>
+                <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/contato">Contato</Link></li>
               </ul>
             </div>
 
               <div className="flex flex-col gap-4 text-left">
                 <ul className="space-y-1">
                   <li className="font-bold">Redes Sociais</li>
-                <li className="flex items-center gap-2"><Instagram size={16} /> <Link href="https://www.instagram.com/rocketjroficial" target="_blank">@rocketjroficial</Link></li>
-                <li className="flex items-center gap-2"><Instagram size={16} /> <Link href="https://www.instagram.com/foguetinhos.ej" target="_blank">@foguetinhos.ej</Link></li>
-                <li className="flex items-center gap-2"><Linkedin size={16} /> <Link href="https://www.linkedin.com/company/rocket-jr/" target="_blank">@rocketjr</Link></li>
+                <li className="flex items-center gap-2 hover:text-red-500 transition-colors text-black dark:text-white"><Instagram size={16} /> <Link href="https://www.instagram.com/rocketjroficial" target="_blank">@rocketjroficial</Link></li>
+                <li className="flex items-center gap-2 hover:text-red-500 transition-colors text-black dark:text-white"><Instagram size={16} /> <Link href="https://www.instagram.com/foguetinhos.ej" target="_blank">@foguetinhos.ej</Link></li>
+                <li className="flex items-center gap-2 hover:text-red-500 transition-colors text-black dark:text-white"><Linkedin size={16} /> <Link href="https://www.linkedin.com/company/rocket-jr/" target="_blank">@rocketjr</Link></li>
               </ul>
             </div>
           </div>
 
             <ul className="order-3 flex flex-col items-center justify-center flex-wrap gap-2 text-center text-sm lg:order-2 lg:flex-row lg:gap-4">
-            <li><Link href="/">Política de Privacidade</Link></li>
-            <li><Link href="/">Termos de Serviços</Link></li>
+            <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/politica-de-privacidade">Política de Privacidade</Link></li>
+            <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/termos-de-servico">Termos de Serviços</Link></li>
             <li>2026 ROCKETJR All Rights Reserved.</li>
           </ul>
 
