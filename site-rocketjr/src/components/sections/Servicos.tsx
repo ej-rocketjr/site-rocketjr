@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Cards from "../ui/CardsCarrossel";
 import iconIdeia from "@/assets/icons/icon-ideia.svg";
 import iconFoguete from "@/assets/icons/icon-foguete.svg";
@@ -17,40 +18,36 @@ import "swiper/css";
 const services = [
     {
         imgCard: iconIdeia,
-        title: "Soluções Digitais que Geram Resultado",
-        description: "Transformamos ideias em soluções digitais estratégicas, pensadas para resolver problemas reais, escalar operações e acelerar o crescimento do seu negócio com tecnologia sob medida.",
+        title: "Soluções Digitais Sob Medida",
+        description: "Criamos soluções digitais para resolver gargalos reais, escalar operações e acelerar o crescimento do seu negócio.",
         cta: "Transforme sua ideia",
         ctaLink: "/solucoes-digitais",
     },
     {
         imgCard: iconFoguete,
-        title: "Decisões Tecnológicas Mais Inteligentes",
-        description:
-            "Ajudamos sua empresa a escolher e implementar as melhores tecnologias, reduzindo riscos, aumentando eficiência e criando vantagem competitiva em um mercado cada vez mais digital.",
+        title: "Decisões Tecnológicas Inteligentes",
+        description: "Apoiamos sua empresa na seleção e implementação de tecnologias que trazem performance e vantagem competitiva.",
         cta: "Fale com um especialista",
         ctaLink: "/decisoes-tecnologicas",
     },
     {
         imgCard: iconEcommerce,
-        title: "E-commerces Prontos para Vender Mais",
-        description:
-            "Criamos e otimizamos lojas virtuais focadas em conversão, performance e experiência do usuário, transformando visitas em vendas recorrentes.",
+        title: "E-commerce para Vender Mais",
+        description: "Desenvolvemos e otimizamos e-commerces com foco em experiência, velocidade e aumento de vendas.",
         cta: "Quero vender mais ",
         ctaLink: "/e-commerce",
     },
     {
         imgCard: iconDigital,
         title: "Transformação Digital na Prática",
-        description:
-            "Modernizamos processos, integramos sistemas e automatizamos operações para tornar sua empresa mais ágil, eficiente e preparada para escalar.",
+        description: "Integramos sistemas e automatizamos processos para tornar sua empresa mais ágil, eficiente e preparada para crescer.",
         cta: "Inicie a transformação ",
         ctaLink: "/transformacao-digital",
     },
     {
         imgCard: iconDados,
-        title: "Dados que Guiam Decisões Lucrativas",
-        description:
-            "Transformamos dados brutos em insights estratégicos, ajudando sua empresa a tomar decisões baseadas em números, não em achismos.",
+        title: "Dados para Decisões Lucrativas",
+        description: "Transformamos dados em insights acionáveis para orientar decisões com base em números e não em achismos.",
         cta: "Ver insights",
         ctaLink: "/dados",
     },
@@ -102,32 +99,53 @@ export default function Servicos() {
 
             <div className="max-w-7xl mx-auto mt-10 sm:mt-12 lg:mt-14">
                 {isClient ? (
-                    <Swiper
-                        modules={[Autoplay]}
-                        onSwiper={setSwiperInstance}
-                        spaceBetween={24}
-                        slidesPerView={1}
-                        autoplay={{ delay: 3500, disableOnInteraction: false }}
-                        loop={services.length > 1}
-                        breakpoints={{
-                            640: { slidesPerView: 2 },
-                            1024: { slidesPerView: 3 },
-                        }}
-                    >
-                        {services.map((service) => (
-                            <SwiperSlide key={service.title} className="relative z-0 h-full flex">
-                                <Cards
-                                    imgCard={service.imgCard}
-                                    cardId={service.title}
-                                    title={service.title}
-                                    description={service.description}
-                                    ctaLink={service.ctaLink}
-                                    ctaText={service.cta}
-                                    onToggleRead={handleToggleRead}
-                                />
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
+                    <div className="relative">
+                        <Swiper
+                            modules={[Autoplay]}
+                            onSwiper={setSwiperInstance}
+                            spaceBetween={24}
+                            slidesPerView={1}
+                            autoplay={{ delay: 3500, disableOnInteraction: false }}
+                            loop={services.length > 1}
+                            grabCursor={true}
+                            allowTouchMove={true}
+                            breakpoints={{
+                                640: { slidesPerView: 2 },
+                                1024: { slidesPerView: 3 },
+                            }}
+                        >
+                            {services.map((service) => (
+                                <SwiperSlide key={service.title} className="relative z-0 h-full flex">
+                                    <Cards
+                                        imgCard={service.imgCard}
+                                        cardId={service.title}
+                                        title={service.title}
+                                        description={service.description}
+                                        ctaLink={service.ctaLink}
+                                        ctaText={service.cta}
+                                        onToggleRead={handleToggleRead}
+                                    />
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+
+                        <button
+                            type="button"
+                            aria-label="Ver serviço anterior"
+                            onClick={() => swiperInstance?.slidePrev()}
+                            className="hidden lg:inline-flex absolute left-0 top-1/2 z-10 h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-900 shadow-lg transition-colors hover:border-red-500 hover:text-red-500 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-red-500 dark:hover:text-red-500"
+                        >
+                            <ChevronLeft size={22} aria-hidden="true" />
+                        </button>
+                        <button
+                            type="button"
+                            aria-label="Ver próximo serviço"
+                            onClick={() => swiperInstance?.slideNext()}
+                            className="hidden lg:inline-flex absolute right-0 top-1/2 z-10 h-12 w-12 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-900 shadow-lg transition-colors hover:border-red-500 hover:text-red-500 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:border-red-500 dark:hover:text-red-500"
+                        >
+                            <ChevronRight size={22} aria-hidden="true" />
+                        </button>
+                    </div>
                 ) : (
                     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                         {services.slice(0, 3).map((service) => (
