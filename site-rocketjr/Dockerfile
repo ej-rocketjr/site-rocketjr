@@ -42,6 +42,9 @@ COPY docker-entrypoint.sh ./docker-entrypoint.sh
 RUN chmod +x ./docker-entrypoint.sh
 RUN mkdir -p /data
 
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
+
 EXPOSE 3000
 
 CMD ["./docker-entrypoint.sh"]
