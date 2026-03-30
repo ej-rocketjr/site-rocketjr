@@ -26,9 +26,46 @@ export default function CardsCarrossel({
 }: CardsProps) {
     const [isExpanded, setIsExpanded] = useState(false);
     const [hasOverflow, setHasOverflow] = useState(false);
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
     const descriptionRef = useRef<HTMLParagraphElement>(null);
 
     useEffect(() => {
+        const mediaQuery = window.matchMedia("(max-width: 1023px)");
+
+        function handleScreenChange(event: MediaQueryListEvent | MediaQueryList) {
+            const nextIsSmallScreen = event.matches;
+            setIsSmallScreen(nextIsSmallScreen);
+
+            if (!nextIsSmallScreen) {
+                setHasOverflow(false);
+                setIsExpanded((prev) => {
+                    if (prev) {
+                        onToggleRead?.(cardId, false);
+                    }
+
+                    return false;
+                });
+            }
+        }
+
+        handleScreenChange(mediaQuery);
+
+        const onChange = (event: MediaQueryListEvent) => {
+            handleScreenChange(event);
+        };
+
+        mediaQuery.addEventListener("change", onChange);
+
+        return () => {
+            mediaQuery.removeEventListener("change", onChange);
+        };
+    }, [cardId, onToggleRead]);
+
+    useEffect(() => {
+        if (!isSmallScreen) {
+            return;
+        }
+
         function checkOverflow() {
             const element = descriptionRef.current;
 
@@ -48,7 +85,7 @@ export default function CardsCarrossel({
         return () => {
             window.removeEventListener("resize", checkOverflow);
         };
-    }, [isExpanded]);
+    }, [isExpanded, isSmallScreen]);
 
     function handleToggleRead() {
         const nextExpanded = !isExpanded;
@@ -69,22 +106,22 @@ export default function CardsCarrossel({
 
                 <p
                     ref={descriptionRef}
-                    className={`mt-6 max-w-[34ch] text-base leading-7 text-black dark:text-white ${isExpanded ? "read-more-scroll max-h-32 overflow-y-auto pr-1" : ""}`}
+                    className={`mt-6 max-w-[34ch] text-base leading-7 text-black dark:text-white ${isSmallScreen && isExpanded ? "read-more-scroll max-h-32 overflow-y-auto pr-1" : ""}`}
                     style={
-                        !isExpanded
+                        isSmallScreen && !isExpanded
                             ? {
-                                  display: "-webkit-box",
-                                  WebkitLineClamp: 3,
-                                  WebkitBoxOrient: "vertical",
-                                  overflow: "hidden",
-                              }
+                                display: "-webkit-box",
+                                WebkitLineClamp: 3,
+                                WebkitBoxOrient: "vertical",
+                                overflow: "hidden",
+                            }
                             : undefined
                     }
                 >
                     {description}
                 </p>
 
-                {hasOverflow ? (
+                {isSmallScreen && hasOverflow ? (
                     <button
                         type="button"
                         onClick={handleToggleRead}

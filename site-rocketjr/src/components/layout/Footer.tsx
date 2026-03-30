@@ -10,6 +10,9 @@ import RaccoonMascoteRocket from "@/assets/icons/raccoon-mascote-rocket-jr.svg";
 import rocketLogoHorizontalDark from "@/assets/logos/rocket-logo-horizontal-dark.svg";
 import rocketLogoHorizontalLight from "@/assets/logos/rocket-logo-horizontal-light.svg";
 import setaVermelha from "@/assets/icons/seta-vermelha.svg";
+import logoFejea from "@/assets/logos/logo-fejea.svg";
+import logoFejeaDark from "@/assets/logos/logo-fejea-black.svg";
+import logoBrasilJr from "@/assets/logos/logo-brasiljr.svg";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -17,130 +20,114 @@ export default function Footer() {
   };
 
   return (
-    <footer className="flex flex-col bg-taupe-50 dark:bg-neutral-950 px-4 pt-4 text-black dark:text-white text-center justify-center">
-      <div className="flex flex-col justify-center items-center mt-4">
-        <div className="flex flex-row items-start gap-8 w-full justify-between">
-          <div className="hidden md:flex flex-1" />
-          <div className="flex flex-col justify-center items-center gap-10 md:gap-20 flex-1">
-            <button type="button" onClick={scrollToTop} className="flex flex-row justify-center items-center w-fit gap-2 p-3 rounded-4xl border border-red-600 cursor-pointer">
-              <span className="text-xs text-black dark:text-white">IR PARA O TOPO</span>
+    <footer className="bg-taupe-50 pt-8 text-black dark:bg-neutral-950 dark:text-white">
+      <div className="flex w-full flex-col items-center px-4 sm:px-6 lg:px-8">
+        <button type="button" onClick={scrollToTop} className="mb-8 flex w-fit items-center justify-center gap-2 rounded-4xl border border-red-600 p-3 text-center md:mb-10 cursor-pointer">
+          <span className="text-xs text-black dark:text-white">IR PARA O TOPO</span>
+          <Image
+            src={setaVermelha}
+            alt="Seta para voltar ao topo da página"
+            width={10}
+            height={10}
+          />
+        </button>
+
+        <section className="flex w-full flex-col items-center gap-8 py-4 md:gap-10">
+          <div className="flex w-full flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-16 ">
+          <Image
+            src={rocketLogoHorizontalLight}
+            alt="Logo da Rocket Jr"
+            width={400}
+            height={50}
+            className="block h-auto w-[220px] sm:w-[280px] md:w-[360px] dark:hidden"
+          />
+
+          <Image
+            src={rocketLogoHorizontalDark}
+            alt="Logo da Rocket Jr"
+            width={400}
+            height={50}
+            className="hidden h-auto w-[220px] sm:w-[280px] md:w-[360px] dark:block"
+          />
+
+          <Image
+            src={logoBrasilJr}
+            alt="Logo da Brasil JR"
+            width={200}
+            height={100}
+            className="h-auto w-[130px] sm:w-[170px] md:w-[200px]"
+          />
+
+          <Image
+            src={logoFejea}
+            alt="Logo Da Fejea"
+            width={90}
+            height={50}
+            className="hidden h-auto w-[70px] sm:w-[80px] md:w-[90px] dark:block"
+          />
+          <Image
+            src={logoFejeaDark}
+            alt="Logo Da Fejea"
+            width={90}
+            height={50}
+            className="block h-auto w-[70px] sm:w-[80px] md:w-[90px] dark:hidden"
+          />
+          </div>
+          <hr className="w-full border-red-500 dark:border-neutral-800" />
+        </section>
+
+        <article className="mb-8 w-full md:mb-10">
+          <div className="flex w-full flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+            <div className="flex flex-col gap-8 sm:flex-row sm:justify-between lg:gap-16">
+              <div className="flex flex-col gap-4 text-left">
+                <ul className="space-y-1">
+                  <li className="font-bold">Menu</li>
+                <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/">Início</Link></li>
+                <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/#servicos">Serviços</Link></li>
+                <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/quem-somos">Quem Somos</Link></li>
+                <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/#clientes">Clientes</Link></li>
+                <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/contato">Contato</Link></li>
+              </ul>
+            </div>
+
+              <div className="flex flex-col gap-4 text-left">
+                <ul className="space-y-1">
+                  <li className="font-bold">Redes Sociais</li>
+                <li className="flex items-center gap-2 hover:text-red-500 transition-colors text-black dark:text-white"><Instagram size={16} /> <Link href="https://www.instagram.com/rocketjroficial" target="_blank">@rocketjroficial</Link></li>
+                <li className="flex items-center gap-2 hover:text-red-500 transition-colors text-black dark:text-white"><Instagram size={16} /> <Link href="https://www.instagram.com/foguetinhos.ej" target="_blank">@foguetinhos.ej</Link></li>
+                <li className="flex items-center gap-2 hover:text-red-500 transition-colors text-black dark:text-white"><Linkedin size={16} /> <Link href="https://www.linkedin.com/company/rocket-jr/" target="_blank">@rocketjr</Link></li>
+              </ul>
+            </div>
+          </div>
+
+            <ul className="order-3 flex flex-col items-center justify-center flex-wrap gap-2 text-center text-sm lg:order-2 lg:flex-row lg:gap-4">
+            <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/politica-de-privacidade">Política de Privacidade</Link></li>
+            <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/termos-de-servico">Termos de Serviços</Link></li>
+            <li>2026 ROCKETJR All Rights Reserved.</li>
+          </ul>
+
+            <div className="order-2 w-full lg:order-3 lg:w-auto">
+              <div className="ml-auto flex flex-row items-center justify-center lg:justify-end">
               <Image
-                src={setaVermelha}
-                alt="Seta para voltar ao topo da página"
-                width={10}
-                height={300}
+                src={logoCircularRocket}
+                alt="Logo Circular da Rocket Jr"
+                width={100}
+                height={100}
+                className="h-auto w-[64px] sm:w-[72px] md:w-[90px]"
               />
-            </button>
 
-            <Image
-              src={rocketLogoHorizontalDark}
-              alt="Logo da RocketJR - tema escuro"
-              width={800}
-              height={300}
-              className="mt-4 max-w-62.5 md:max-w-none w-full h-auto hidden dark:block"
-            />
-
-            <Image
-              src={rocketLogoHorizontalLight
-
-              }
-              alt="Logo da RocketJR - tema claro"
-              width={800}
-              height={300}
-              className="mt-4 max-w-62.5 md:max-w-none w-full h-auto block dark:hidden"
-            />
-          </div>
-          <div className="hidden md:flex flex-1 justify-end gap-10">
-            <div className="flex flex-col gap-1 text-sm text-left ">
-              <span className="font-bold text-black dark:text-white">MENU</span>
-              <Link href="/" className="hover:text-red-500 transition-colors text-black dark:text-white">Início</Link>
-              <Link href="/#servicos" className="hover:text-red-500 transition-colors text-black dark:text-white">Serviços</Link>
-              <Link href="/quem-somos" className="hover:text-red-500 transition-colors text-black dark:text-white">Quem Somos</Link>
-              <Link href="/#clientes" className="hover:text-red-500 transition-colors text-black dark:text-white">Clientes</Link>
-              <Link href="/contato" className="hover:text-red-500 transition-colors text-black dark:text-white">Contato</Link>
-            </div>
-            <div className="flex flex-col gap-1 text-sm text-left text-black dark:text-white">
-              <span className="font-bold text-black dark:text-white">REDES SOCIAIS</span>
-              <div className="flex gap-2 items-center">
-                <Instagram />
-                <a href="https://www.instagram.com/rocketjroficial" className="hover:text-red-500 transition-colors text-black dark:text-white">@rocketjroficial</a>
+              <Image
+                src={RaccoonMascoteRocket}
+                alt="Mascote da Rocket Jr"
+                width={100}
+                height={100}
+                className="-ml-1 h-auto w-[90px] sm:w-[130px] md:w-[220px] lg:w-[280px]"
+              />
               </div>
-              <div className="flex gap-2 items-center">
-                <Instagram />
-                <a href="https://www.instagram.com/foguetinhos.ej" className="hover:text-red-500 transition-colors text-black dark:text-white">@foguetinhos.ej</a>
-              </div>
-              <div className="flex gap-2 items-center">
-                <Linkedin />
-                <a href="https://www.linkedin.com/company/rocket-jr/posts/?feedView=all" className="hover:text-red-500 transition-colors text-black dark:text-white">@rocketjr</a>
-              </div>
+              <hr className=" w-full border-red-500 dark:border-neutral-800" />
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className="flex md:hidden flex-col gap-1 text-sm text-left mt-10 px-2">
-        <span className="font-bold text-white">REDES SOCIAS</span>
-        <div className="flex gap-1 items-center">
-          <Instagram size={16} />
-          <a href="https://www.instagram.com/rocketjroficial" className="hover:text-red-500 transition-colors text-black dark:text-white">@rocketjroficial</a>
-        </div>
-        <div className="flex gap-1 items-center">
-          <Instagram size={16} />
-          <a href="https://www.instagram.com/foguetinhos.ej" className="hover:text-red-500 transition-colors text-black dark:text-white">@foguetinhos.ej</a>
-        </div>
-        <div className="flex gap-1 items-center">
-          <Linkedin size={16} />
-          <a href="https://www.linkedin.com/company/rocket-jr/posts/?feedView=all" className="hover:text-red-500 transition-colors text-black dark:text-white">@rocketjr</a>
-        </div>
-      </div>
-
-      <div className="hidden md:flex justify-between">
-        <div className="flex">
-          <Image
-            src={logoCircularRocket}
-            alt="Logo da RocketJR"
-            width={100}
-            height={300}
-            className="mt-4"
-          />
-          <Image
-            src={RaccoonMascoteRocket}
-            alt="Raccoon Mascote da RocketJR"
-            width={250}
-            height={300}
-            className="mt-4"
-          />
-        </div>
-        <div className="flex items-end gap-4 text-xs mb-5 ">
-          <Link href="/politica-de-privacidade" className="hover:text-red-500 transition-colors text-black dark:text-white">Política de Privacidade</Link>
-          <Link href="/termos-de-servico" className="hover:text-red-500 transition-colors text-black dark:text-white">Termos de Servico</Link>
-          <span className="mt-4">2026 ROCKETJR All Rights Reserved.</span>
-        </div>
-      </div>
-
-      <div className="flex md:hidden relative mt-6">
-        <div className="flex items-end gap-3 pb-4 z-10">
-          <Image
-            src={logoCircularRocket}
-            alt="Logo da RocketJR"
-            width={60}
-            height={60}
-          />
-          <div className="flex flex-col text-left text-[11px] text-white leading-relaxed">
-            <span>2026 ROCKETJR All Rights Reserved.</span>
-            <Link href="/termos-de-servico" className="hover:text-red-500 transition-colors text-white">Termos de Servico</Link>
-            <Link href="/politica-de-privacidade" className="hover:text-red-500 transition-colors text-white">Política de Privacidade</Link>
-          </div>
-        </div>
-        <div className="absolute bottom-0 right-0">
-          <Image
-            src={RaccoonMascoteRocket}
-            alt="Raccoon Mascote da RocketJR"
-            width={180}
-            height={250}
-            className="object-contain"
-          />
-        </div>
+        </article>
       </div>
     </footer>
   )
