@@ -30,21 +30,27 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 
+# Instalando curl para health checks
+RUN apk add --no-cache curl
+
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 COPY --from=builder /app/prisma ./prisma
 COPY --from=builder /app/generated ./generated
 COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/dev.db /data/dev.db
 COPY --from=builder /app/prisma.config.ts ./
 COPY docker-entrypoint.sh ./docker-entrypoint.sh
 
-RUN chmod +x ./docker-entrypoint.sh
-RUN mkdir -p /data
+RUN chmod +x ./docker-entrypoint.sh && mkdir -p /data
 
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
 
+VOLUME ["/data"]
+
 EXPOSE 3000
+
+HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
+  CMD curl -f http://localhost:3000 || exit 1
 
 CMD ["./docker-entrypoint.sh"]
