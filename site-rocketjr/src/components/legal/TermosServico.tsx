@@ -88,17 +88,17 @@ export default function TermosDeServico() {
         <p className="mb-0">&nbsp;</p>
         <p className="mb-0">Este site possui finalidade exclusivamente:</p>
         <ul className="list-disc mb-0 pl-6 sm:pl-10 lg:pl-12">
-          <li className="mb-0"> * Institucional;</li>
-          <li className="mb-0"> * Informativa;</li>
-          <li className="mb-0"> * Comercial.</li>
+          <li className="mb-0">Institucional;</li>
+          <li className="mb-0">Informativa;</li>
+          <li className="mb-0">Comercial.</li>
         </ul>
         <p className="mb-0">&nbsp;</p>
         <p className="mb-0">Seu objetivo é apresentar:</p>
         <ul className="list-disc mb-0 pl-6 sm:pl-10 lg:pl-12">
-          <li className="mb-0"> * Os serviços de desenvolvimento web e soluções digitais;</li>
-          <li className="mb-0"> * Serviços de consultoria estratégica em Tecnologia da Informação;</li>
-          <li className="mb-0"> * Portfólio de projetos realizados;</li>
-          <li className="mb-0"> * Formas de contato com a equipe.</li>
+          <li className="mb-0">Os serviços de desenvolvimento web e soluções digitais;</li>
+          <li className="mb-0">Serviços de consultoria estratégica em Tecnologia da Informação;</li>
+          <li className="mb-0">Portfólio de projetos realizados;</li>
+          <li className="mb-0">Formas de contato com a equipe.</li>
         </ul>
         <p className="mb-0">&nbsp;</p>
         <p className="mb-0">
@@ -113,9 +113,9 @@ export default function TermosDeServico() {
           Todo o conteúdo disponível neste site, incluindo textos, imagens, logotipos, identidade visual, projetos apresentados, elementos gráficos e demais materiais é:
         </p>
         <ul className="list-disc mb-0 pl-6 sm:pl-10 lg:pl-12">
-          <li className="mb-0"> * De titularidade da Rocket Júnior; ou</li>
-          <li className="mb-0"> * Utilizado mediante autorização de terceiros; ou</li>
-          <li className="mb-0"> * Apresentado como portfólio com permissão dos respectivos clientes.</li>
+          <li className="mb-0">De titularidade da Rocket Júnior; ou</li>
+          <li className="mb-0">Utilizado mediante autorização de terceiros; ou</li>
+          <li className="mb-0">Apresentado como portfólio com permissão dos respectivos clientes.</li>
         </ul>
         <p className="mb-0">&nbsp;</p>
         <p className="mb-0">
@@ -133,17 +133,17 @@ export default function TermosDeServico() {
           A Rocket Júnior se empenha para manter as informações do site claras, corretas e atualizadas. Contudo:
         </p>
         <ul className="list-disc mb-0 pl-6 sm:pl-10 lg:pl-12">
-          <li className="mb-0"> * Não garantimos que o conteúdo esteja permanentemente isento de erros ou omissões;</li>
-          <li className="mb-0"> * Informações sobre projetos apresentados podem sofrer atualizações posteriores à publicação;</li>
-          <li className="mb-0"> * O conteúdo possui caráter informativo e institucional.</li>
+          <li className="mb-0">Não garantimos que o conteúdo esteja permanentemente isento de erros ou omissões;</li>
+          <li className="mb-0">Informações sobre projetos apresentados podem sofrer atualizações posteriores à publicação;</li>
+          <li className="mb-0">O conteúdo possui caráter informativo e institucional.</li>
         </ul>
         <p className="mb-0">&nbsp;</p>
         <p className="mb-0">
           Quanto aos links direcionados para sites de clientes apresentados no portfólio:
         </p>
         <ul className="list-disc mb-0 pl-6 sm:pl-10 lg:pl-12">
-          <li className="mb-0"> * A Rocket Júnior não se responsabiliza por alterações posteriores realizadas pelos próprios clientes em seus respectivos sites;</li>
-          <li className="mb-0"> * O conteúdo desses ambientes externos é de responsabilidade exclusiva de seus proprietários.</li>
+          <li className="mb-0">A Rocket Júnior não se responsabiliza por alterações posteriores realizadas pelos próprios clientes em seus respectivos sites;</li>
+          <li className="mb-0">O conteúdo desses ambientes externos é de responsabilidade exclusiva de seus proprietários.</li>
         </ul>
         <p className="mb-0">O uso das informações disponíveis neste site é de responsabilidade do usuário.</p>
         <p className="mb-0">&nbsp;</p>
@@ -153,10 +153,10 @@ export default function TermosDeServico() {
         <p className="mb-0">&nbsp;</p>
         <p className="mb-0">Nosso site disponibiliza:</p>
         <ul className="list-disc mb-0 pl-6 sm:pl-10 lg:pl-12">
-          <li className="mb-0"> * Botões de WhatsApp;</li>
-          <li className="mb-0"> * Formulários de contato;</li>
-          <li className="mb-0"> * Links para Instagram e LinkedIn;</li>
-          <li className="mb-0"> * Links para sites de clientes.</li>
+          <li className="mb-0">Botões de WhatsApp;</li>
+          <li className="mb-0">Formulários de contato;</li>
+          <li className="mb-0">Links para Instagram e LinkedIn;</li>
+          <li className="mb-0">Links para sites de clientes.</li>
         </ul>
         <p className="mb-0">&nbsp;</p>
 
@@ -171,10 +171,10 @@ export default function TermosDeServico() {
           Ao preencher e enviar um formulário, você declara estar ciente de que os dados fornecidos serão utilizados para:
         </p>
         <ul className="list-disc mb-0 pl-6 sm:pl-10 lg:pl-12">
-          <li className="mb-0"> * Retornar seu contato;</li>
-          <li className="mb-0"> * Prestar esclarecimentos;</li>
-          <li className="mb-0"> * Apresentar propostas comerciais;</li>
-          <li className="mb-0"> * Dar continuidade ao relacionamento institucional.</li>
+          <li className="mb-0">Retornar seu contato;</li>
+          <li className="mb-0">Prestar esclarecimentos;</li>
+          <li className="mb-0">Apresentar propostas comerciais;</li>
+          <li className="mb-0">Dar continuidade ao relacionamento institucional.</li>
         </ul>
         <p className="mb-0">
           O tratamento dos dados pessoais ocorre conforme descrito na Política de Privacidade.
@@ -188,13 +188,13 @@ export default function TermosDeServico() {
           Estes Termos de Uso poderão ser atualizados a qualquer momento para refletir:
         </p>
         <ul className="list-disc mb-0 pl-6 sm:pl-10 lg:pl-12">
-          <li className="mb-0"> * Alterações nos serviços;</li>
-          <li className="mb-0"> * Mudanças na legislação;</li>
-          <li className="mb-0"> * Ajustes institucionais.</li>
+          <li className="mb-0">Alterações nos serviços;</li>
+          <li className="mb-0">Mudanças na legislação;</li>
+          <li className="mb-0">Ajustes institucionais.</li>
         </ul>
         <p className="mb-0">Recomendamos a revisão periódica deste documento.</p>
         <p className="mb-0">&nbsp;</p>
-        <p className="mb-0">Última atualização: 04 de fevereiro de 2026</p>
+        <p className="mb-0">Última atualização: 08 de abril de 2026</p>
         <p>
           Em caso de dúvidas, entre em contato conosco pelos canais oficiais disponibilizados no site.  </p>
       </div>
