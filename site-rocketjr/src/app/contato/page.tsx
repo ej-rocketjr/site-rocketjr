@@ -183,21 +183,19 @@ export default function App() {
     fontFamily: "'Bricolage Grotesque', sans-serif",
     fontSize: "14px",
     background: "transparent",
-    color: "rgba(237, 237, 237, 0.6)",
   };
   const labelBase: React.CSSProperties = {
     fontFamily: "'Bricolage Grotesque', sans-serif",
     fontSize: "15px",
     fontWeight: 700,
-    color: "white",
     textTransform: "capitalize",
   };
 
   return (
 
-    <section id="contato" className="w-full bg-black">
+    <section id="contato" className="w-full bg-white dark:bg-black">
       <HeroPages />
-      <h1 className="text-center text-[22px] md:text-[28px] lg:text-[32px] font-bold text-white mt-6 md:mt-10" style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}>
+      <h1 className="text-black dark:text-white text-center text-[22px] md:text-[28px] lg:text-[32px] font-bold mt-6 md:mt-10" style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}>
         Soluções inovadoras e tecnologicas
       </h1>
       <div className="flex flex-col md:flex-row md:items-end md:justify-between w-full px-4 md:px-6 lg:px-8 py-8 md:py-12 lg:py-16 gap-6 md:gap-8 lg:gap-12 max-w-[1400px] mx-auto">
