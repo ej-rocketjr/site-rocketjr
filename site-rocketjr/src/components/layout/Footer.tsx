@@ -93,9 +93,9 @@ export default function Footer() {
               <div className="flex flex-col gap-4 text-left">
                 <ul className="space-y-1">
                   <li className="font-bold">Redes Sociais</li>
-                <li className="flex items-center gap-2 hover:text-red-500 transition-colors text-black dark:text-white"><Instagram size={16} /> <Link href="https://www.instagram.com/rocketjroficial" target="_blank">@rocketjroficial</Link></li>
-                <li className="flex items-center gap-2 hover:text-red-500 transition-colors text-black dark:text-white"><Instagram size={16} /> <Link href="https://www.instagram.com/foguetinhos.ej" target="_blank">@foguetinhos.ej</Link></li>
-                <li className="flex items-center gap-2 hover:text-red-500 transition-colors text-black dark:text-white"><Linkedin size={16} /> <Link href="https://www.linkedin.com/company/rocket-jr/" target="_blank">@rocketjr</Link></li>
+                <li className="flex items-center gap-2 hover:text-red-500 transition-colors text-black dark:text-white"><Instagram size={16} /> <Link href="https://www.instagram.com/rocketjroficial" target="_blank" rel="noopener noreferrer">@rocketjroficial</Link></li>
+                <li className="flex items-center gap-2 hover:text-red-500 transition-colors text-black dark:text-white"><Instagram size={16} /> <Link href="https://www.instagram.com/foguetinhos.ej" target="_blank" rel="noopener noreferrer">@foguetinhos.ej</Link></li>
+                <li className="flex items-center gap-2 hover:text-red-500 transition-colors text-black dark:text-white"><Linkedin size={16} /> <Link href="https://www.linkedin.com/company/rocket-jr/" target="_blank" rel="noopener noreferrer">@rocketjr</Link></li>
               </ul>
             </div>
           </div>
