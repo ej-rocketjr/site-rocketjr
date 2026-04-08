@@ -20,7 +20,7 @@ import { useEffect, useState } from "react";
  *  - Detecta automaticamente a preferência do sistema (dark/light).
  *  - Dark mode: fundo preto com texto branco.
  *  - Light mode: fundo branco com texto preto.
- *  - Atualiza em tempo real se o usuário mudar a preferência do sistema.\\\\
+ *  - Atualiza em tempo real se o usuário mudar a preferência do sistema.
  */
 export default function PoliticasPrivacidade() {
   // Detecta a preferência inicial do sistema
@@ -114,19 +114,18 @@ export default function PoliticasPrivacidade() {
           seguintes informações:
         </p>
         <ul className="list-disc mb-0 pl-6 sm:pl-10 lg:pl-12">
-          <li className="mb-0"> * Nome completo;</li>
-          <li className="mb-0"> * Endereço de e-mail;</li>
-          <li className="mb-0"> * Número de telefone;</li>
-          <li className="mb-0"> * Nome da empresa;</li>
+          <li className="mb-0">Nome completo;</li>
+          <li className="mb-0">Endereço de e-mail;</li>
+          <li className="mb-0">Número de telefone;</li>
+          <li className="mb-0">Nome da empresa;</li>
           <li className="mb-0">
             {" "}
-            * Serviço de interesse (selecionado por meio de botões de opção);
+           Serviço de interesse (selecionado por meio de botões de opção);
           </li>
           <li className="mb-0">
             {" "}
-            * Descrição da necessidade ou mensagem enviada.
+           Descrição da necessidade ou mensagem enviada.
           </li>
-          <li className="mb-0">&nbsp;</li>
         </ul>
         <p className="mb-0">Esses dados são fornecidos voluntariamente por você.</p>
         <p className="mb-0">&nbsp;</p>
@@ -139,10 +138,10 @@ export default function PoliticasPrivacidade() {
           informações de navegação, tais como:
         </p>
         <ul className="list-disc mb-0 pl-6 sm:pl-10 lg:pl-12">
-          <li className="mb-0"> * Tipo de navegador;</li>
-          <li className="mb-0"> * Páginas acessadas;</li>
-          <li className="mb-0"> * Tempo de permanência;</li>
-          <li className="mb-0"> * Dispositivo utilizado.</li>
+          <li className="mb-0">Tipo de navegador;</li>
+          <li className="mb-0">Páginas acessadas;</li>
+          <li className="mb-0">Tempo de permanência;</li>
+          <li className="mb-0">Dispositivo utilizado.</li>
         </ul>
         <p className="mb-0">
           Essas informações são coletadas de forma automatizada e não
@@ -150,15 +149,15 @@ export default function PoliticasPrivacidade() {
           Google Analytics para:
         </p>
         <ul className="list-disc mb-0 pl-6 sm:pl-10 lg:pl-12">
-          <li className="mb-0"> * Analisar o tráfego do site;</li>
-          <li className="mb-0"> * Identificar a procura por nossos serviços;</li>
+          <li className="mb-0">Analisar o tráfego do site;</li>
+          <li className="mb-0">Identificar a procura por nossos serviços;</li>
           <li className="mb-0">
             {" "}
-            * Mapear as principais dúvidas e interesses dos visitantes;
+           Mapear as principais dúvidas e interesses dos visitantes;
           </li>
           <li className="mb-0">
             {" "}
-            * Melhorar continuamente a experiência do usuário.
+           Melhorar continuamente a experiência do usuário.
           </li>
         </ul>
         <p className="mb-0">&nbsp;</p>
@@ -171,20 +170,20 @@ export default function PoliticasPrivacidade() {
         <ul className="list-disc mb-0 pl-6 sm:pl-10 lg:pl-12">
           <li className="mb-0">
             {" "}
-            * Responder solicitações enviadas pelo formulário de contato;
+           Responder solicitações enviadas pelo formulário de contato;
           </li>
           <li className="mb-0">
             {" "}
-            * Entrar em contato para apresentar nossos serviços;
+           Entrar em contato para apresentar nossos serviços;
           </li>
-          <li className="mb-0"> * Identificar demandas recorrentes;</li>
+          <li className="mb-0">Identificar demandas recorrentes;</li>
           <li className="mb-0">
             {" "}
-            * Melhorar nossos serviços e estratégias digitais;
+           Melhorar nossos serviços e estratégias digitais;
           </li>
           <li className="mb-0">
             {" "}
-            * Otimizar a experiência de navegação no site.
+           Otimizar a experiência de navegação no site.
           </li>
         </ul>
         <p className="mb-0">&nbsp;</p>
@@ -197,10 +196,10 @@ export default function PoliticasPrivacidade() {
           Nosso site pode conter links para plataformas de terceiros, incluindo:
         </p>
         <ul className="list-disc mb-0 pl-6 sm:pl-10 lg:pl-12">
-          <li className="mb-0"> * WhatsApp;</li>
-          <li className="mb-0"> * Instagram;</li>
-          <li className="mb-0"> * LinkedIn;</li>
-          <li className="mb-0"> * Sites de clientes.</li>
+          <li className="mb-0">WhatsApp;</li>
+          <li className="mb-0">Instagram;</li>
+          <li className="mb-0">LinkedIn;</li>
+          <li className="mb-0">Sites de clientes.</li>
         </ul>
         <p className="mb-0">
           Ao acessar esses links, você será direcionado para ambientes externos,
@@ -224,9 +223,9 @@ export default function PoliticasPrivacidade() {
           exceto:
         </p>
         <ul className="list-disc mb-0 pl-6 sm:pl-10 lg:pl-12">
-          <li className="mb-0"> * Quando houver obrigação legal;</li>
-          <li className="mb-0"> * Para cumprimento de determinação judicial;</li>
-          <li className="mb-0"> * Para exercício regular de direitos.</li>
+          <li className="mb-0">Quando houver obrigação legal;</li>
+          <li className="mb-0">Para cumprimento de determinação judicial;</li>
+          <li className="mb-0">Para exercício regular de direitos.</li>
         </ul>
         <p className="mb-0">&nbsp;</p>
 
@@ -238,18 +237,17 @@ export default function PoliticasPrivacidade() {
         <ul className="list-disc mb-0 pl-6 sm:pl-10 lg:pl-12">
           <li className="mb-0">
             {" "}
-            * Confirmação da existência de tratamento de dados;
+           Confirmação da existência de tratamento de dados;
           </li>
-          <li className="mb-0"> * Acesso aos seus dados pessoais;</li>
+          <li className="mb-0">Acesso aos seus dados pessoais;</li>
           <li className="mb-0">
             {" "}
-            * Correção de dados incompletos ou desatualizados;
+           Correção de dados incompletos ou desatualizados;
           </li>
           <li className="mb-0">
             {" "}
-            * Exclusão de dados tratados com base em consentimento.
+           Exclusão de dados tratados com base em consentimento.
           </li>
-          <li className="mb-0">&nbsp;</li>
         </ul>
         <p className="mb-0">
           Para exercer seus direitos, entre em contato através do canal
@@ -269,7 +267,7 @@ export default function PoliticasPrivacidade() {
           Recomendamos que você revise este documento periodicamente.
         </p>
         <p className="mb-0">&nbsp;</p>
-        <p className="mb-0">Última atualização: 04 de fevereiro de 2026</p>
+        <p className="mb-0">Última atualização: 08 de abril de 2026</p>
         <p>
           Em caso de dúvidas, entre em contato conosco pelos canais oficiais
           disponibilizados no site.
