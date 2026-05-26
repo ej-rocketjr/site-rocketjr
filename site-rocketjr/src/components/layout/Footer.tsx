@@ -34,44 +34,44 @@ export default function Footer() {
 
         <section className="flex w-full flex-col items-center gap-8 py-4 md:gap-10">
           <div className="flex w-full flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-16 ">
-          <Image
-            src={rocketLogoHorizontalLight}
-            alt="Logo da Rocket Jr"
-            width={400}
-            height={50}
-            className="block h-auto w-[220px] sm:w-[280px] md:w-[360px] dark:hidden"
-          />
+            <Image
+              src={rocketLogoHorizontalLight}
+              alt="Logo da Rocket Jr"
+              width={400}
+              height={50}
+              className="block h-auto w-[220px] sm:w-[280px] md:w-[360px] dark:hidden"
+            />
 
-          <Image
-            src={rocketLogoHorizontalDark}
-            alt="Logo da Rocket Jr"
-            width={400}
-            height={50}
-            className="hidden h-auto w-[220px] sm:w-[280px] md:w-[360px] dark:block"
-          />
+            <Image
+              src={rocketLogoHorizontalDark}
+              alt="Logo da Rocket Jr"
+              width={400}
+              height={50}
+              className="hidden h-auto w-[220px] sm:w-[280px] md:w-[360px] dark:block"
+            />
 
-          <Image
-            src={logoBrasilJr}
-            alt="Logo da Brasil JR"
-            width={200}
-            height={100}
-            className="h-auto w-[130px] sm:w-[170px] md:w-[200px]"
-          />
+            <Image
+              src={logoBrasilJr}
+              alt="Logo da Brasil JR"
+              width={200}
+              height={100}
+              className="h-auto w-[130px] sm:w-[170px] md:w-[200px]"
+            />
 
-          <Image
-            src={logoFejea}
-            alt="Logo Da Fejea"
-            width={90}
-            height={50}
-            className="hidden h-auto w-[70px] sm:w-[80px] md:w-[90px] dark:block"
-          />
-          <Image
-            src={logoFejeaDark}
-            alt="Logo Da Fejea"
-            width={90}
-            height={50}
-            className="block h-auto w-[70px] sm:w-[80px] md:w-[90px] dark:hidden"
-          />
+            <Image
+              src={logoFejea}
+              alt="Logo Da Fejea"
+              width={90}
+              height={50}
+              className="hidden h-auto w-[70px] sm:w-[80px] md:w-[90px] dark:block"
+            />
+            <Image
+              src={logoFejeaDark}
+              alt="Logo Da Fejea"
+              width={90}
+              height={50}
+              className="block h-auto w-[70px] sm:w-[80px] md:w-[90px] dark:hidden"
+            />
           </div>
           <hr className="w-full border-red-500 dark:border-neutral-800" />
         </section>
@@ -82,25 +82,25 @@ export default function Footer() {
               <div className="flex flex-col gap-4 text-left">
                 <ul className="space-y-1">
                   <li className="font-bold">Menu</li>
-                <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/">Início</Link></li>
-                <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/#servicos">Serviços</Link></li>
-                <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/quem-somos">Quem Somos</Link></li>
-                <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/#clientes">Clientes</Link></li>
-                <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/contato">Contato</Link></li>
-              </ul>
-            </div>
+                  <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/">Início</Link></li>
+                  <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/#servicos">Serviços</Link></li>
+                  <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/quem-somos">Quem Somos</Link></li>
+                  <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/#clientes">Clientes</Link></li>
+                  <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/contato">Contato</Link></li>
+                </ul>
+              </div>
 
               <div className="flex flex-col gap-4 text-left">
                 <ul className="space-y-1">
                   <li className="font-bold">Redes Sociais</li>
-                <li className="flex items-center gap-2 hover:text-red-500 transition-colors text-black dark:text-white"><Instagram size={16} /> <Link href="https://www.instagram.com/rocketjroficial" target="_blank" rel="noopener noreferrer">@rocketjroficial</Link></li>
-                <li className="flex items-center gap-2 hover:text-red-500 transition-colors text-black dark:text-white"><Instagram size={16} /> <Link href="https://www.instagram.com/foguetinhos.ej" target="_blank" rel="noopener noreferrer">@foguetinhos.ej</Link></li>
-                <li className="flex items-center gap-2 hover:text-red-500 transition-colors text-black dark:text-white"><Linkedin size={16} /> <Link href="https://www.linkedin.com/company/rocket-jr/" target="_blank" rel="noopener noreferrer">@rocketjr</Link></li>
-              </ul>
-            </div>
+                  <li className="flex items-center gap-2 hover:text-red-500 transition-colors text-black dark:text-white"><Instagram size={16} /> <Link href="https://www.instagram.com/rocketjroficial" target="_blank" rel="noopener noreferrer">@rocketjroficial</Link></li>
+                  <li className="flex items-center gap-2 hover:text-red-500 transition-colors text-black dark:text-white"><Instagram size={16} /> <Link href="https://www.instagram.com/foguetinhos.ej" target="_blank" rel="noopener noreferrer">@foguetinhos.ej</Link></li>
+                  <li className="flex items-center gap-2 hover:text-red-500 transition-colors text-black dark:text-white"><Linkedin size={16} /> <Link href="https://www.linkedin.com/company/rocket-jr/" target="_blank" rel="noopener noreferrer">@rocketjr</Link></li>
+                </ul>
+              </div>
           </div>
 
-            <ul className="order-3 flex flex-col items-center justify-center flex-wrap gap-2 text-center text-sm lg:order-2 lg:flex-row lg:gap-4">
+          <ul className="order-3 flex flex-col items-center justify-center flex-wrap gap-2 text-center text-sm lg:order-2 lg:flex-row lg:gap-4">
             <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/politica-de-privacidade">Política de Privacidade</Link></li>
             <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/termos-de-servico">Termos de Serviços</Link></li>
             <li>2026 ROCKETJR All Rights Reserved.</li>
@@ -108,21 +108,21 @@ export default function Footer() {
 
             <div className="order-2 w-full lg:order-3 lg:w-auto">
               <div className="ml-auto flex flex-row items-center justify-center lg:justify-end">
-              <Image
-                src={logoCircularRocket}
-                alt="Logo Circular da Rocket Jr"
-                width={100}
-                height={100}
-                className="h-auto w-[64px] sm:w-[72px] md:w-[90px]"
-              />
+                <Image
+                  src={logoCircularRocket}
+                  alt="Logo Circular da Rocket Jr"
+                  width={100}
+                  height={100}
+                  className="h-auto w-[64px] sm:w-[72px] md:w-[90px]"
+                />
 
-              <Image
-                src={RaccoonMascoteRocket}
-                alt="Mascote da Rocket Jr"
-                width={100}
-                height={100}
-                className="-ml-1 h-auto w-[90px] sm:w-[130px] md:w-[220px] lg:w-[280px]"
-              />
+                <Image
+                  src={RaccoonMascoteRocket}
+                  alt="Mascote da Rocket Jr"
+                  width={100}
+                  height={100}
+                  className="-ml-1 h-auto w-[90px] sm:w-[130px] md:w-[220px] lg:w-[280px]"
+                />
               </div>
               <hr className=" w-full border-red-500 dark:border-neutral-800" />
             </div>
