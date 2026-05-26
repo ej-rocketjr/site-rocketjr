@@ -100,33 +100,55 @@ export default function Footer() {
               </div>
           </div>
 
-          <ul className="order-3 flex flex-col items-center justify-center flex-wrap gap-2 text-center text-sm lg:order-2 lg:flex-row lg:gap-4">
-            <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/politica-de-privacidade">Política de Privacidade</Link></li>
-            <li className="hover:text-red-500 transition-colors text-black dark:text-white"><Link href="/termos-de-servico">Termos de Serviços</Link></li>
-            <li>2026 ROCKETJR All Rights Reserved.</li>
-          </ul>
+          <div className="order-2 flex w-full flex-col items-center justify-center gap-8 pt-8">
+            <ul className="order-1 flex flex-col items-center justify-center flex-wrap gap-2 text-center text-sm lg:order-2 lg:flex-row lg:gap-4">
+              <li className="hover:text-red-500 transition-colors text-black dark:text-white">
+                <Link href="/politica-de-privacidade">
+                  Política de Privacidade
+                </Link>
+              </li>
 
-            <div className="order-2 w-full lg:order-3 lg:w-auto">
-              <div className="ml-auto flex flex-row items-center justify-center lg:justify-end">
-                <Image
-                  src={logoCircularRocket}
-                  alt="Logo Circular da Rocket Jr"
-                  width={100}
-                  height={100}
-                  className="h-auto w-[64px] sm:w-[72px] md:w-[90px]"
-                />
+              <li className="hover:text-red-500 transition-colors text-black dark:text-white">
+                <Link href="/termos-de-servico">
+                  Termos de Serviços
+                </Link>
+              </li>
 
-                <Image
-                  src={RaccoonMascoteRocket}
-                  alt="Mascote da Rocket Jr"
-                  width={100}
-                  height={100}
-                  className="-ml-1 h-auto w-[90px] sm:w-[130px] md:w-[220px] lg:w-[280px]"
-                />
-              </div>
-              <hr className=" w-full border-red-500 dark:border-neutral-800" />
+              <li>2026 ROCKETJR All Rights Reserved.</li>
+            </ul>
+
+            <div className="order-2 flex flex-col items-center justify-center gap-2 text-center text-sm">
+              <p className="text-center text-sm text-black dark:text-white">
+                <strong>Endereço:</strong> Rua Fernandes de Barros, nº 17 - Centro Histórico, Penedo - AL
+              </p>
+
+              <p className="text-center text-sm text-black dark:text-white">
+                <strong>CNPJ:</strong> 59.783.840/0001-10
+              </p>
             </div>
           </div>
+
+          <div className="order-3 w-full lg:order-3 lg:w-auto">
+            <div className="ml-auto flex flex-row items-center justify-center lg:justify-end">
+              <Image
+                src={logoCircularRocket}
+                alt="Logo Circular da Rocket Jr"
+                width={100}
+                height={100}
+                className="h-auto w-[64px] sm:w-[72px] md:w-[90px]"
+              />
+
+              <Image
+                src={RaccoonMascoteRocket}
+                alt="Mascote da Rocket Jr"
+                width={100}
+                height={100}
+                className="-ml-1 h-auto w-[90px] sm:w-[130px] md:w-[220px] lg:w-[280px]"
+              />
+            </div>
+            <hr className=" w-full border-red-500 dark:border-neutral-800" />
+          </div>
+        </div>
         </article>
       </div>
     </footer>
