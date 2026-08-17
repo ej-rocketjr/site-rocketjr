@@ -27,7 +27,7 @@ export default function Home() {
     <main>
       <HelpRacconPage />
       <Hero />
-      <Servicos />
+
 
       <ScrollReveal delayMs={120}>
         <Clientes />
