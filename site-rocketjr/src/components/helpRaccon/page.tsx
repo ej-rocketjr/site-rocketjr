@@ -11,8 +11,8 @@ export default function HelpRacconPage() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsInitialPhase(false);
-            setShowMessage(false); // 
-        }, 30000); // 
+            setShowMessage(false);
+        }, 30000);
 
         return () => clearTimeout(timer); 
     }, []);
@@ -44,10 +44,11 @@ export default function HelpRacconPage() {
                         <p className="text-white text-sm">
                             Ei! Quer crescer no digital? Criamos sites, landing pages e e-commerces focados em gerar resultados para o seu negócio. Clique aqui e entre em contato com a gente pelo WhatsApp!
                         </p>
-                        <div className="absolute bottom-[-8px] right-6 w-4 h-4 transform rotate-45 shadow-lg rounded-tl bg-neutral-900"></div>
+                        <div className="absolute bottom-[-8px] right-6 w-4 h-4 transform rotate-45 shadow-lg rounded-tl bg-neutral-900" />
                     </div>
                 )}
             <button
+                type="button"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 onClick={handleWhatsAppClick}
