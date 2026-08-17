@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import CursorBlur from "@/components/ui/cursorBlur";
 import "./globals.css";
 import Footer from "@/components/layout/Footer";
+import Script from "next/dist/client/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -84,6 +85,20 @@ export default function RootLayout({
         <CursorBlur />
         <Header />
         {children}
+
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18393885434"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-ads-config" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18393885434');
+          `}
+        </Script>
         <Footer />
       </body>
     </html>
