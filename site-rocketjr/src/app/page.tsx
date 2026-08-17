@@ -4,6 +4,7 @@ import Servicos from "@/components/sections/Servicos";
 import Clientes from "@/components/sections/Clientes";
 import QuemSomos from "@/components/sections/QuemSomos";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import HelpRacconPage from "@/components/helpRaccon/page";
 
 export const metadata: Metadata = {
   title: "Início - RocketJR | Soluções Digitais e Desenvolvimento Web",
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
+      <HelpRacconPage />
       <Hero />
       <Servicos />
 
