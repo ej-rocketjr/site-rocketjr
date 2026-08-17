@@ -4,7 +4,7 @@ import Header from "@/components/layout/Header";
 import CursorBlur from "@/components/ui/cursorBlur";
 import "./globals.css";
 import Footer from "@/components/layout/Footer";
-import Script from "next/dist/client/script";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
