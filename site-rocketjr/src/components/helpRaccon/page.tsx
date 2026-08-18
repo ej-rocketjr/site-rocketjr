@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import React, { useState, useEffect } from "react";  
-import raccon from "@/assets/icons/raccoon-mascote-rocket-jr.svg";
+import zap from "@/assets/whatsapp.png";
+
 
 export default function HelpRacconPage() {
     const [showMessage, setShowMessage] = useState(true); 
@@ -52,15 +53,16 @@ export default function HelpRacconPage() {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 onClick={handleWhatsAppClick}
-                className="hover:scale-110 transition-transform cursor-pointer focus:outline-none"
+                className="group relative flex h-16 w-16 items-center justify-center rounded-full border-green-300 bg-green-500 shadow-lg shadow-green-900/30 transition-all duration-200 hover:scale-105 hover:shadow-xl hover:shadow-green-900/40 active:scale-95 focus:outline-none"
                 aria-label="Fale conosco no WhatsApp"
             >
+                <span className="absolute inset-0 rounded-full border-2 border-green-300/60 animate-ping [animation-duration:2.6s]" />
                 <Image
-                    src={raccon}
-                    alt="Imagem do mascote da RocketJR, um guaxinim"
+                    src={zap}
+                    alt="Ícone do WhatsApp"
                     width={100}
-                    height={10}
-                    className="w-18 h-18 rounded-full border-1 border-zinc-700 object-cover bg-zinc-900"
+                    height={100}
+                    className="relative z-10 h-13 w-13 rounded-full object-cover"
                 />
             </button>
         </div>
