@@ -19,7 +19,10 @@ export const metadata: Metadata = {
 export default function ContatoLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  return children;
-
-  <HelpRacconPage />;
+  return (
+    <>
+      {children}
+      <HelpRacconPage />
+    </>
+  );
 }
