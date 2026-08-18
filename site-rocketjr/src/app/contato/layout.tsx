@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import HelpRacconPage from "@/components/helpRaccon/page";
 
 export const metadata: Metadata = {
   title: "Contato",
@@ -18,5 +19,10 @@ export const metadata: Metadata = {
 export default function ContatoLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  return children;
+  return (
+    <>
+      {children}
+      <HelpRacconPage />
+    </>
+  );
 }
