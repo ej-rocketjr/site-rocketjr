@@ -46,8 +46,6 @@ RUN chmod +x ./docker-entrypoint.sh && mkdir -p /data
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
 
-VOLUME ["/data"]
-
 EXPOSE 3000
 
 HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
