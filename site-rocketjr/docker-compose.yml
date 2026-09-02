@@ -25,12 +25,12 @@ services:
       DATABASE_URL: file:/data/dev.db
 
       # NextAuth
-      NEXTAUTH_URL: http://localhost:3000
-      NEXTAUTH_SECRET: ${NEXTAUTH_SECRET:-***REMOVIDO***}
+      NEXTAUTH_URL: ${NEXTAUTH_URL:-http://localhost:3000}
+      NEXTAUTH_SECRET: "${NEXTAUTH_SECRET:?erro: defina NEXTAUTH_SECRET no .env}"
 
       # Admin credentials (proteja isso com .env em produção!)
-      ADMIN_EMAIL: ${ADMIN_EMAIL:-***REMOVIDO***}
-      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-***REMOVIDO***}
+      ADMIN_EMAIL: "${ADMIN_EMAIL:?erro: defina ADMIN_EMAIL no .env}"
+      ADMIN_PASSWORD: "${ADMIN_PASSWORD:?erro: defina ADMIN_PASSWORD no .env}"
 
     # Persistência de dados
     volumes:
